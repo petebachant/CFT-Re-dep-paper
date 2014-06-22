@@ -187,6 +187,35 @@ In this study we set out to measure the effects of scale, both Reynolds and
 Froude scales, on the performance of the turbine, and its near-wake
 characteristics.
 
+\subsection{Previous Work}
+\todo[inline]{Add lit review here}
+
+\subsection{Causes for Reynolds Number Dependence}
+
+Turbine performance is strongly dependent on the lift-to-drag ratio $l/d$ acting
+on the blades, which is a function of the blades' angles of attack $\alpha$.
+These angles of attack are a function of turbine tip speed ratio, induction
+(slowing/turning of the free stream flow prior to reaching the turbine), and
+turbine rotation or azimuthal angle $\theta$. Looking at static airfoil data, we
+see that the static stall angle---the angle just beyond that at which $l/d$ is
+maximum, characterized by flow separation near the leading edge---increases with
+blade chord Reynolds number $Re_c$. This can be explained as the transition to a
+turbulent boundary layer adjacent to the blade delaying separation. However,
+static foil performance does not tell the whole story for a cross-flow turbine.
+The azimuthal, and therefore temporal variation of $\alpha$ in a cross-flow
+turbine implies the occurrence of dynamic stall at tip speed ratios at and below
+those of maximum rotor torque\cite{Para2002}. We then must understand the
+effects of Reynolds number on the dynamic stall process.
+
+As previously mentioned, the near-wake of a CFT is not very similar to a simple
+drag source, or plane shear flow. One of the mean wake's streamwise vortex pairs
+can be predicted by potential flow theory as a result of finite-span blades
+producing lift (blade end effects), but the other---caused by viscous effects,
+i.e., dynamic stall---is not. We can attempt to predict changes
+\todo[inline]{Finish this thought with Reynolds number dependence of these
+simpler flows, and set up the question whether or not we can assume these will
+combine linearly to produce the wake $Re$-dependence we see.}
+
 \section{Experimental Setup}
 
 Experiments were performed in the University of New Hampshire's tow/wave tank
@@ -194,9 +223,8 @@ turbine test bed. The turbine model is dubbed the UNH-RVAT, for Reference
 Vertical Axis Turbine, which is designed to be a generic case for numerical
 model testing, similar to the Sandia National Labs/US Department of Energy RM2
 River Turbine. Details of the turbine and experimental setup are described in
-\cite{Bachant2014_JOT}.
-
-\todo[inline]{Put up CAD model for citation/download on figshare.}
+\cite{Bachant2014_JOT}, and a CAD model of the turbine is available from
+\cite{Bachant2014_CAD}.
 
 
 \subsection{Test Plan} 
