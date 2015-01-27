@@ -1,0 +1,11 @@
+*.aux
+*.bbl
+*.out
+*.gz
+*.tdo
+*.pdf
+*.png
+archive
+*.log
+*.blg
+*.swp
