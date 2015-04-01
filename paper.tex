@@ -344,7 +344,29 @@ plotted versus Reynolds number.}
 \label{fig:perf-Re-dep}
 \end{figure}
 
+\subsubsection{Understanding via Static Foil Coefficients}
+
+To help understand---and possibly predict---the $Re$-sensitivity on turbine
+performance, a series of foil coefficient datasets were computed with the XFOIL
+viscous panel method code.
+
+The turbine torque coefficient $C_T$ can be related to the blade section
+chordwise force coefficient $C_c$ by
+\begin{equation}
+C_T = \frac{C_c c}{2R} \frac{|U_\mathrm{rel}|^2}{U_\infty^2},
+\end{equation}
+where the blade section chordwise force (for zero preset pitch)
+\begin{equation}
+C_c = C_l \sin \alpha - C_d \cos \alpha.
+\end{equation}
+
+
 \todo[inline]{Add foil characteristics computed by XFOIL here.}
+
+Note that the common static foil performance metrics fail to show Reynolds
+number dependence as close as the max geometric torque coefficient. This means
+that the turbine kinematics play an important role, even if the exact dynamics
+of the flow are not known.
 
 \subsection{Wake Characteristics}
 
