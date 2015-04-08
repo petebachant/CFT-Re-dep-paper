@@ -298,7 +298,7 @@ Figure~\ref{fig:wake-locations}.
 
 \begin{figure}
 \centering
-%\includegraphics[width=0.9\textwidth]{figures/turbine_coordinate_system}
+\includegraphics[width=0.9\textwidth]{figures/turbine_coordinate_system}
 \caption{Wake measurement coordinate system and locations. Dimensions are in
 meters.} 
 \label{fig:wake-locations}
@@ -330,6 +330,7 @@ This is caused by the stall delay from a more turbulent boundary later on the
 blade suction side.
 
 \begin{figure}[ht]
+\includegraphics[width=0.95\textwidth]{figures/perf_curves}
 \caption{Mean power (left) and drag (right) coefficient curves plotted for
 multiple Reynolds numbers.}
 \label{fig:perf-curves}
@@ -339,6 +340,7 @@ Mean power and drag coefficients at $\lambda=1.9$ are plotted in
 Figure~\ref{fig:perf-Re-dep}
 
 \begin{figure}[ht]
+\includegraphics[width=0.95\textwidth]{figures/perf_re_dep}
 \caption{Mean power (left) and drag (right) coefficients at $\lambda=1.9$
 plotted versus Reynolds number.} 
 \label{fig:perf-Re-dep}
@@ -360,9 +362,28 @@ where the blade section chordwise force (for zero preset pitch)
 C_c = C_l \sin \alpha - C_d \cos \alpha.
 \end{equation}
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/all_foils_re_dep}
+\caption{Foil section characteristics computed by XFOIL for various $Re_c$.}
+\label{fig:foil-Re-dep}
+\end{figure}
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/foil_kinematics_ct}
+\caption{Geometric angle of attack (a), relative velocity (b) and torque coefficient
+(c) calculated with a NACA 0020 foil.}
+\label{fig:blade-kinematics}
+\end{figure}
 
-\todo[inline]{Add foil characteristics computed by XFOIL here.}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.65\textwidth]{figures/cft_re_dep_foils}
+\caption{Reynolds number depenence of the peak torque coefficient calculated via
+static foil coefficients and blade kinematics.}
+\label{fig:foils-C_T-Re-dep}
+\end{figure}
 
 Note that the common static foil performance metrics fail to show Reynolds
 number dependence as close as the max geometric torque coefficient. This means
@@ -380,7 +401,13 @@ plot.}
 
 \subsubsection{Mean Momentum Transport}
 
-\todo[inline]{Make bar graph for all $Re$.}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth]{figures/mom_bar_graph}
+\caption{Momentum transport quantities.}
+\label{fig:mom-bar-graph}
+\end{figure}
 
 
 \subsubsection{Dominant Timescales}
@@ -393,7 +420,12 @@ changes relative to inertial subrange.}
 The relative importance of various physical processes on mean kinetic energy
 transport/recovery in the streamwise direction $\p K / \p x$ are plotted in...
 
-\todo[inline]{Recreate the kinetic energy bar graph for all $Re$.}
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth]{figures/K_trans_bar_graph}
+\caption{Mean kinetic energy transport quantities.}
+\label{fig:K-bar-graph}
+\end{figure}
 
 
 \section{Conclusions}
