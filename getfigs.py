@@ -14,7 +14,8 @@ figdir = os.path.join(os.path.expanduser("~"), "Research",
 figlist = ["perf_curves.pdf",
            "perf_re_dep.pdf",
            "K_trans_bar_graph.pdf",
-           "mom_bar_graph.pdf"]
+           "mom_bar_graph.pdf",
+	   "wake_spectra.pdf"]
 
 for fig in figlist:
     shutil.copy2(os.path.join(figdir, fig), os.path.join("figures", fig))
