@@ -348,24 +348,6 @@ show absolute differences, or RMS, or something}
 \todo[inline]{Plot asymptotic behavior for a bunch of locations all on the same
 plot.}
 
-\subsubsection{Mean Momentum Transport}
-
-
-
-% % Results from analysis below -- if this is correct, it's interesting!
-%U recovery rate (%/D) = 12.4557769415
-%U recovery rate (%/D) = 9.99024007906
-%U recovery rate (%/D) = 8.63502170622
-%U recovery rate (%/D) = 8.55449412257
-%U recovery rate (%/D) = 7.832672642
-
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.9\textwidth]{figures/mom_bar_graph}
-\caption{Momentum transport quantities.}
-\label{fig:mom-bar-graph}
-\end{figure}
 
 
 \subsubsection{Dominant Timescales}
@@ -381,7 +363,18 @@ lines indicate $[1, 3, 6, 9]$ times the turbine rotational frequency.}
 \label{fig:wake-spectra}
 \end{figure}
 
-\subsubsection{Mean Kinetic Energy Transport}
+
+
+\subsubsection{Mean Momentum and Kinetic Energy Transport}
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/mom_bar_graph}
+\caption{Momentum transport quantities.}
+\label{fig:mom-bar-graph}
+\end{figure}
+
 
 The relative importance of various physical processes on mean kinetic energy
 transport/recovery in the streamwise direction $\p K / \p x$ are plotted in...
@@ -391,6 +384,15 @@ transport/recovery in the streamwise direction $\p K / \p x$ are plotted in...
 \includegraphics[width=0.9\textwidth]{figures/K_trans_bar_graph}
 \caption{Mean kinetic energy transport quantities.}
 \label{fig:K-bar-graph}
+\end{figure}
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.65\textwidth]{figures/wake_trans_totals}
+\caption{Normalized transport totals from Figures~\ref{fig:mom-bar-graph} and 
+\ref{fig:K-bar-graph} plotted versus Reynolds number.}
+\label{fig:wake-trans-totals}
 \end{figure}
 
 
