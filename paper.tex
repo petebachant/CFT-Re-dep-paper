@@ -276,8 +276,6 @@ Full performance curves for various Reynolds numbers are plotted in
 Figure~\ref{fig:perf-curves}. There is essentially no change in the shape of the
 drag coefficient curves---merely an upward shift in $C_D$ with increasing $Re$.
 
-\todo[inline]{Discuss drag coefficient curves.} 
-
 In general, maximum $C_P$ increases with Reynolds number, which is due to an
 increase in the foil lift-to-drag ratio. The power coefficient curves also show
 a downward shift in the optimal tip speed ratio with increasing Reynolds number.
@@ -291,8 +289,22 @@ multiple Reynolds numbers.}
 \label{fig:perf-curves}
 \end{figure}
 
-Mean power and drag coefficients at $\lambda=1.9$ are plotted in
-Figure~\ref{fig:perf-Re-dep}
+Mean power and drag coefficients at $\lambda=1.9$ are plotted for all Reynolds
+numbers in Figure~\ref{fig:perf-Re-dep}. There is a drastic improvement in $C_P$
+with increasing Reynolds number for the lower values. Power coefficient then
+becomes  essentially $Re$-independent at $Re_D = 0.8 \times 10^6$, which
+corresponds to an approximate average blade chord Reynolds number $Re_{c,
+\mathrm{ave}} = 2.1 \times 10^5$. This threshold is consistent with the behavior
+of the blade boundary layer transitioning from laminar to turbulent, thereby
+promoting reattachment of the laminar separation bubble.
+
+The behavior of the mean rotor drag coefficient is similar, though the changes
+are less dramatic. This is likely due to cross-flow turbine geometry, where
+increases in blade drag at lower $Re$ somewhat offset the reduction in lift, to
+keep total streamwise force from changing as much as the rotor torque. The
+tendency for $C_D$ to continue increasing with $Re$ may also be a consequence of
+increasing Froude number, which therefore increases free surface deformation and
+wave drag during towing without increasing flow through the turbine.
 
 \begin{figure}[ht]
 \includegraphics[width=0.95\textwidth]{figures/perf_re_dep}
