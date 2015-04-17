@@ -313,14 +313,41 @@ plotted versus Reynolds number.}
 \label{fig:perf-Re-dep}
 \end{figure}
 
-\subsubsection{Understanding via Static Foil Coefficients}
+\subsubsection{Relation to Static Foil Characteristics}
 
 To help understand---and possibly predict---the $Re$-sensitivity on turbine
-performance, a series of foil coefficient datasets were computed with the XFOIL
-viscous panel method code.
+performance, a series of static foil coefficient datasets were computed with the
+XFOIL viscous panel method code \cite{Drela1989}, implemented as part of the
+open-source turbine design software QBlade. Simulations were run with the
+default settings and zero Mach number, for the approximate average blade chord
+Reynolds numbers encountered in the experiments.
 
-The turbine torque coefficient $C_T$ can be related to the blade section
-chordwise force coefficient $C_c$ by
+To investigate the effects of the blades' ``virtual camber'' due to their
+circular path \cite{Migliore1980}, the XFOIL calculations were performed for
+20\% thick foils with 0\% (NACA 0020), 2\% (NACA 2520), and 4\% (NACA 4520)
+camber about their half-chord location. A 4\% camber approximates the maximum
+distance between the blade chord line and path for the UNH-RVAT and the 2\%
+camber takes into account the reduction in virtual flow curvature from the
+non-curved inflow velocity by dividing by the tip speed ratio $\lambda=1.9$.
+
+Results from the XFOIL calculations are shown in Figure~\ref{fig:foil-Re-dep},
+where values of maximum lift coefficient, minimum drag coefficient, and maximum
+lift-to-drag ratio are normalized (for comparison between foils) and plotted
+versus $Re_c$. In general, larger camber is associated with decreased foil
+performance at lower Reynolds number.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/all_foils_re_dep}
+\caption{Foil section characteristics computed by XFOIL for various $Re_c$.}
+\label{fig:foil-Re-dep}
+\end{figure}
+
+In conjunction with the cross-flow turbine blade kinematics, the foil
+coefficients were used to approximate turbine performance by calculating the
+peak torque coefficient on the upstream half of the blade path. The turbine
+torque coefficient $C_T$ can be related to the blade section chordwise force
+coefficient $C_c$ by
 \begin{equation}
 C_T = \frac{C_c c}{2R} \frac{|U_\mathrm{rel}|^2}{U_\infty^2},
 \end{equation}
@@ -329,12 +356,18 @@ where the blade section chordwise force (for zero preset pitch)
 C_c = C_l \sin \alpha - C_d \cos \alpha.
 \end{equation}
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.95\textwidth]{figures/all_foils_re_dep}
-\caption{Foil section characteristics computed by XFOIL for various $Re_c$.}
-\label{fig:foil-Re-dep}
-\end{figure}
+The relative blade velocity was calculated by adding the free stream to the
+opposite of the blade tangential velocity. Note that this neglects any
+induction, or slowing of the free stream by the turbine forces, which would be
+present in a momentum/streamtube model. Since we were not looking to predict
+absolute performance but rather relative changes with $Re$, this method was
+deemed acceptable as it is extremely simple and fast to compute. 
+
+Values for the blade angle of attack, relative velocity, and torque coefficient
+are plotted in Figure~\ref{fig:blade-kinematics}. The effects of static stall
+are clearly present in the torque coefficient plot, and by the time the angle of
+attack has decreased below that of stall, the relative velocity is so low that
+there is not much contribution to the torque coefficient.
 
 \begin{figure}[ht]
 \centering
@@ -344,6 +377,23 @@ C_c = C_l \sin \alpha - C_d \cos \alpha.
 \label{fig:blade-kinematics}
 \end{figure}
 
+Results for the peak torque coefficient for each foil are plotted versus $Re_c$
+in Figure~\ref{fig:foils-C_T-Re-dep}. It is interesting that the convergence of
+$C_{T_\mathrm{max}}$ with increasing Reynolds number is more dramatic than any of the
+common foil characteristics plotted in Figure~\ref{fig:foil-Re-dep}, meaning
+that the cross-flow turbine's unique kinematics must be taken into account when
+attempting to predict the effect of transitional Reynolds numbers on turbine
+performance. 
+
+From the peak torque coefficient metric, the Reynolds number independence is
+achieved at lower values, and more dramatically. We see that the trend of the
+NACA 0020 curve matches almost perfectly at low $Re$, but the trend to continue
+increasing linearly is not matched by the experimental data, which looks to
+behave more like the cambered foil results. Though this method is very
+approximate, it nevertheless appears to be a reasonable way to predict the
+transitional Reynolds number regime for cross-flow turbine performance using
+only 2-D static airfoil characteristics
+
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.65\textwidth]{figures/cft_re_dep_foils}
@@ -352,10 +402,6 @@ only static foil coefficients and blade kinematics.}
 \label{fig:foils-C_T-Re-dep}
 \end{figure}
 
-Note that the common static foil performance metrics fail to show Reynolds
-number dependence as close as the max geometric torque coefficient. This means
-that the turbine kinematics play an important role, even if the exact dynamics
-of the flow are not known.
 
 \subsection{Wake Characteristics}
 
