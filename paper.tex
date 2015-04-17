@@ -416,7 +416,7 @@ plot.}
 
 
 
-\subsubsection{Dominant Timescales}
+\subsubsection{Dominant Timescales and Turbulence Spectra}
 
 \todo[inline]{Look at how spectra change when turbine rotational frequency
 changes relative to inertial subrange.}
@@ -431,8 +431,24 @@ lines indicate $[1, 3, 6, 9]$ times the turbine rotational frequency.}
 
 
 
-\subsubsection{Mean Momentum and Kinetic Energy Transport}
+\subsubsection{Transport of Mean Momentum and Kinetic Energy}
 
+The relative importance of various physical processes on mean streamwise
+momentum and kinetic energy transport/recovery in the streamwise direction are
+plotted in Figures~\ref{fig:mom-bar-graph} and \ref{fig:K-bar-graph},
+respectively. We note that similar to \cite{Bachant2015-JoT}, the vertical
+advection at this point in the wake is the dominant contributor to positive wake
+recovery, caused by the unique vortex pattern created by the blade tips and
+wakes.
+
+We see that in general, levels of turbulent transport are slightly lower at
+lower Reynolds numbers. The viscous diffusion and dissipation, though still
+three orders of magnitude smaller than the other terms, do increase at low
+Reynolds numbers, which is consistent with the definition of the Reynolds number
+in general.
+
+\todo[inline]{At what $Re$ will the viscous terms get large enough to start
+messing with the balance of the equation?}
 
 \begin{figure}[ht]
 \centering
@@ -441,16 +457,20 @@ lines indicate $[1, 3, 6, 9]$ times the turbine rotational frequency.}
 \label{fig:mom-bar-graph}
 \end{figure}
 
-
-The relative importance of various physical processes on mean kinetic energy
-transport/recovery in the streamwise direction $\p K / \p x$ are plotted in...
-
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.9\textwidth]{figures/K_trans_bar_graph}
 \caption{Mean kinetic energy transport quantities.}
 \label{fig:K-bar-graph}
 \end{figure}
+
+
+Totals for all the wake transport terms calculated are plotted in
+Figure~\ref{fig:wake-trans-totals}. We see that in general wake transport is
+enhanced at lower Reynolds numbers and levels off consistent with the power
+coefficient data. This is an important consideration if studying sub-scale
+models of turbine arrays, where increased levels of wake recovery will motivate
+different ideal array configurations when compared with full-scale turbines.
 
 
 \begin{figure}[ht]
