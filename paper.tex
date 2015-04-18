@@ -187,33 +187,31 @@ airfoil data, we see that the static stall angle---the angle just beyond that at
 which $l/d$ is maximum---increases with blade chord Reynolds number $Re_c$. This
 in general is caused by the blade boundary becoming more turbulent as a fraction
 of the chord length, diminishes the negative effects of a laminar separation
-bubble occurring near the leading edge. A review of low Reynolds number airfoil
-behavior is presented in \cite{Lissaman1983}.
-
-As previously mentioned, the near-wake of a CFT is not very similar to a simple
-drag source, or plane shear flow. One of the mean wake's streamwise vortex pairs
-can be predicted by potential flow theory as a result of finite-span blades
-producing lift (blade end effects), but the other---caused by viscous effects,
-i.e., dynamic stall---is not. We can attempt to predict changes
-\todo[inline]{Finish this thought with Reynolds number dependence of these
-simpler flows, and set up the question whether or not we can assume these will
-combine linearly to produce the wake $Re$-dependence we see.}
+bubble occurring near the leading edge. For smooth airfoils, this transition can
+cause a dramatic increase in foil performance, a shown in
+Figure~\ref{fig:McMasters} at a blade chord Reynolds number on the order of
+$10^5$ \cite{McMasters1980}. A review of low Reynolds number airfoil behavior is
+presented in \cite{Lissaman1983}.
 
 \begin{figure}[ht]
 \caption{Airfoil lift to drag ratio as a function of Reynolds number, from 
 \cite{McMasters1980}.}
+\label{fig:McMasters}
 \end{figure}
 
 \subsubsection{On Dynamic Foil Behavior}
 
 Static foil performance does not tell the whole story for a cross-flow turbine.
 The azimuthal, and therefore temporal variation of $\alpha$ in a cross-flow
-turbine implies the occurrence of dynamic stall at tip speed ratios at and below
-those of maximum rotor torque\cite{Para2002}. We then must understand the
-effects of Reynolds number on the dynamic stall process.
+turbine implies dynamic loading. Furthermore, the blades commonly undergo
+dynamic stall for tip speed ratios at and below those of maximum rotor
+torque\cite{Para2002}. We then must understand the effects of Reynolds number on
+the dynamic stall process.
 
 Dynamic effects on blade loading can be distinguished between attached and
 separated conditions. 
+
+\todo[inline]{Find reference to describe $Re$ effects on dynamic foil behavior.}
 
 Bousman showed that dynamic stall was insensitive to Reynolds number for $Re=1.0
 \times 10^5$--$2.5 \times 10^5$ \cite{Bousman2000-evaluation}.
@@ -223,7 +221,9 @@ Bousman showed that dynamic stall was insensitive to Reynolds number for $Re=1.0
 We expect that lower lift on the blades at lower $Re$ will weaken tip vortex
 shedding, and decrease the levels of turbulence shed from the blade boundary
 layers. As mentioned previously, the dynamic stall vortex shedding is not
-expected to have a large Reynolds number sensitivity.
+expected to have a large Reynolds number sensitivity, though a larger separation
+bubble at lower $Re$ may induce higher levels of turbulence as shed vortices
+become unstable and break down.
 
 \todo[inline]{What do studies in the literature tell us about $Re$ effects
 on shear flows, wakes, and vortex flows?}
