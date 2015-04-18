@@ -101,19 +101,29 @@ drivers of overall performance and interaction between multiple turbines.}
 \section{Introduction}
 
 Scaled physical models are often used in science and engineering to approximate
-real-world systems. In the fields of wind and marine hydrokinetic (MHK) energy,
-scaled physical models are used to validate predictive numerical models, predict
-full-scale performance of individual turbines, and design or investigate arrays
-of devices. Despite being significantly less expensive, there is still some
-concern at which scale an experiment must be performed to be relevant to
-full-scale application. 
+real-world systems. However, the principle of dynamic similarity allows for
+geometrically scaled systems to be dynamically identical in scale if certain
+nondimensional physical parameters are matched. In the case of fluid systems,
+the most important parameter is often the Reynolds number, which quantifies the
+importance of viscosity on the flow. As such, hereafter we will use the word
+``scale'' to refer to this dynamical scale rather than the geometric scale.
+
+With regards to wind and marine hydrokinetic (MHK) turbines, scaled physical
+models are used to validate predictive numerical models, predict full-scale
+performance of individual turbines, and design or investigate arrays of devices.
+Despite being significantly less expensive, there is still some concern at which
+scale an experiment must be performed to be relevant to full-scale application.
 
 For numerical models, one might obtain favorable predictions for scaled systems
 due to modified physics. If the numerical model is then considered
 ``validated,'' there is a risk that its application at full-scale may produce
 incorrect predictions. For scaled physical prototypes, it is of interest how
 small---since size, or scale generally correlates inversely with cost---the
-prototype can be while remaining a reliable predictor of full-scale behavior.
+prototype can be while remaining a reliable predictor of full-scale behavior. At
+the very least, it is necessary to test at a scale where results can be
+extrapolated, i.e. changes are occurring quasi-linearly without dramatic changes
+in the underlying physical principles governing the behavior of interest, e.g.
+power production in the case of a wind or MHK turbine.
 
 When designing or studying arrays, it is common to use very small
 (geometrically) scaled devices. 
@@ -136,11 +146,11 @@ considerations at multiple Reynolds numbers, to examine the implications on how
 small scale, i.e. low Reynolds number experiments may be used to study flows in
 turbine arrays.
 
-Previously we took a general look at how maximum performance and some 2-D wake
-profiles are affected by Reynolds number, but here we look deeper. In this study
-we set out to measure the effects of scale, i.e. Reynolds number on the
-performance of the turbine, and its near-wake characteristics. We were looking
-to find a threshold scale beyond which a physical model study could reliably
+Bachant and Wosnik observed how maximum performance and 2-D near-wake profiles
+are affected by Reynolds number, but here we look deeper. In this study we set
+out to measure the effects of scale, i.e. Reynolds number, on the performance of
+the turbine, and its more detailed near-wake characteristics. We were looking to
+find a threshold scale beyond which a physical model study could reliably
 predict full-scale performance. We were also looking to investigate the
 sensitivity as small scales, and what the implications might be for validating
 the prediction capabilities of numerical models.
@@ -164,12 +174,7 @@ turbine rotation or azimuthal angle $\theta$. Looking at static airfoil data, we
 see that the static stall angle---the angle just beyond that at which $l/d$ is
 maximum, characterized by flow separation near the leading edge---increases with
 blade chord Reynolds number $Re_c$. This can be explained as the transition to a
-turbulent boundary layer adjacent to the blade delaying separation. However,
-static foil performance does not tell the whole story for a cross-flow turbine.
-The azimuthal, and therefore temporal variation of $\alpha$ in a cross-flow
-turbine implies the occurrence of dynamic stall at tip speed ratios at and below
-those of maximum rotor torque\cite{Para2002}. We then must understand the
-effects of Reynolds number on the dynamic stall process.
+turbulent boundary layer adjacent to the blade delaying separation. 
 
 As previously mentioned, the near-wake of a CFT is not very similar to a simple
 drag source, or plane shear flow. One of the mean wake's streamwise vortex pairs
@@ -186,6 +191,12 @@ combine linearly to produce the wake $Re$-dependence we see.}
 \end{figure}
 
 \subsubsection{On Dynamic Foil Behavior}
+
+Static foil performance does not tell the whole story for a cross-flow turbine.
+The azimuthal, and therefore temporal variation of $\alpha$ in a cross-flow
+turbine implies the occurrence of dynamic stall at tip speed ratios at and below
+those of maximum rotor torque\cite{Para2002}. We then must understand the
+effects of Reynolds number on the dynamic stall process.
 
 Dynamic effects on blade loading can be distinguished between attached and
 separated conditions. 
