@@ -102,10 +102,11 @@ drivers of overall performance and interaction between multiple turbines.}
 
 Scaled physical models are often used in science and engineering to approximate
 real-world systems. In the fields of wind and marine hydrokinetic (MHK) energy,
-scaled physical models are used to validate numerical models, test prototypes of
-individual devices, and design or investigate arrays of devices. Despite being
-significantly less expensive, there is still some concern at which scale an
-experiment must be performed to be relevant to full-scale application.
+scaled physical models are used to validate predictive numerical models, predict
+full-scale performance of individual turbines, and design or investigate arrays
+of devices. Despite being significantly less expensive, there is still some
+concern at which scale an experiment must be performed to be relevant to
+full-scale application. 
 
 For numerical models, one might obtain favorable predictions for scaled systems
 due to modified physics. If the numerical model is then considered
@@ -114,18 +115,26 @@ incorrect predictions. For scaled physical prototypes, it is of interest how
 small---since size, or scale generally correlates inversely with cost---the
 prototype can be while remaining a reliable predictor of full-scale behavior.
 
-When designing or studying arrays, it is very common to use very small
-(geometrically) scaled devices. Sometimes these are not even models of turbines,
-but wake generating objects, e.g., porous disks, that are meant to replicate the
+When designing or studying arrays, it is common to use very small
+(geometrically) scaled devices. 
+% %
+\todo[inline]{Get a reference for this, and a sample geometric scale.} 
+% %
+Sometimes these are not even models of turbines, but
+wake generating objects, e.g., porous disks, that are meant to replicate the
 wakes of real turbines. In this case, it is of interest to determine at what
 scale one might be able to realistically study wake flows in an array, and also
-to evaluate the effectiveness of a wake generator, i.e., a wake generator may do
-a fine job simulating a scaled turbine, but how well can it simulate a real
-turbine?
+to evaluate the effectiveness of a wake generator. In other words, a wake
+generator may do a fine job simulating a scaled turbine, but how well can it
+simulate a real turbine?
 
 Previously, Bachant and Wosnik \cite{Bachant2015-JoT} showed that a cross-flow
-turbine wake's unique mean flow field is responsible for accelerated wake
-recovery when compared with conventional axial-flow propeller-type turbines.
+turbine wake's unique vortical mean flow field is responsible for accelerated
+wake recovery when compared with conventional axial-flow propeller-type
+turbines. In this study we seek to replicate the same energy balance
+considerations at multiple Reynolds numbers, to examine the implications on how
+small scale, i.e. low Reynolds number experiments may be used to study flows in
+turbine arrays.
 
 Previously we took a general look at how maximum performance and some 2-D wake
 profiles are affected by Reynolds number, but here we look deeper. In this study
@@ -144,10 +153,6 @@ In this study we are focused on a turbine constructed from foils---a lift-driven
 device in contrast to drag-driven. A logical starting point for understanding
 the effects of $Re$ on overall turbine loading is to look at simplified cases
 of individual foils, with respect to their static and dynamic loading. 
-
-Chamorro et al. showed that turbulence statistics in an AFT wake became
-$Re$-independent at $Re_D \approx 1 \times 10^5$, with mean velocity slightly
-earlier at $Re_D \approx 5 \times 10^4$ \cite{Chamorro2012}.
 
 \subsubsection{On Static Foil Behavior}
 
@@ -197,6 +202,10 @@ expected to have a large Reynolds number sensitivity.
 
 \todo[inline]{What do studies in the literature tell us about $Re$ effects
 on shear flows, wakes, and vortex flows?}
+
+Chamorro et al. showed that turbulence statistics in an AFT wake became
+$Re$-independent at $Re_D \approx 1 \times 10^5$, with mean velocity slightly
+earlier at $Re_D \approx 5 \times 10^4$ \cite{Chamorro2012}.
 
 \section{Experimental Setup}
 
