@@ -15,8 +15,10 @@ figlist = ["perf_curves.pdf",
            "perf_re_dep.pdf",
            "K_trans_bar_graph.pdf",
            "mom_bar_graph.pdf",
-	   "wake_spectra.pdf",
-	   "wake_trans_totals.pdf"]
+           "wake_spectra.pdf",
+           "wake_trans_totals.pdf",
+           "meancontquiv_10.pdf",
+           "k_contours_10.pdf"]
 
 for fig in figlist:
     shutil.copy2(os.path.join(figdir, fig), os.path.join("figures", fig))
