@@ -10,3 +10,4 @@ archive
 *.blg
 *.swp
 !figures/*
+figures/SolidWorks
