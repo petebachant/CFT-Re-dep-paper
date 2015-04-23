@@ -245,10 +245,8 @@ Experiments were performed in the University of New Hampshire's tow/wave tank
 turbine test bed. The turbine model is dubbed the UNH-RVAT, for Reference
 Vertical Axis Turbine, which is designed to be a generic case for numerical
 model testing, similar to the Sandia National Labs/US Department of Energy RM2
-River Turbine, but with higher solidity, or blade chord to radius ratio. Details
-of the turbine and experimental setup, shown in Figure~\ref{fig:turbine} and
-Figure~\ref{fig:exp-setup}, respectively, are described in
-\cite{Bachant2015-JoT}, and a CAD model of the turbine is available from
+River Turbine, but with higher solidity, or blade chord to radius ratio. A CAD
+model of the turbine, depicted in \ref{fig:turbine}, is available from
 \cite{Bachant2014-RVAT-CAD}.
 
 \begin{figure}[ht!]
@@ -260,6 +258,23 @@ measurements.}
 \label{fig:turbine}
 \end{figure}
 
+
+The turbine was mounted in a frame constructed from NACA 0020 sections. The
+turbine shaft ran up through the water surface, coupled to a permanent magnet
+servo motor with a 20:1 gearbox. This servo was controlled by the tow tank's
+main motion controller for high synchronization with the carriage motion. A
+rotary torque transducer was installed inline between the servo and the turbine,
+and the servo was also mounted on a slewing ring bearing, which allowed a
+redundant measurement of torque via an arm and load cell used to counteract the
+turbine moment. The frame was mounted to the carriage via linear guides, such
+that the total streamwise drag force was transferred to a pair of S-beam load
+cells, providing the rotor drag measurements, after a measured tare drag was
+subtracted in post processing. Similarly, a tare torque was measured by rotating
+the turbine shaft in air. Turbine angular and tow carriage linear position were
+measured using quadrature encoder signals, with $10^5$ counts-per-rev for the
+turbine and 10 $\mathrm{\mu m}$ resolution for the carriage position. These
+signals, along with the torque and drag signals, were sampled at 2 kHz.
+
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=0.75\textwidth]{figures/exp_setup_drawing}
@@ -267,6 +282,11 @@ measurements.}
 \label{fig:exp-setup}
 \end{figure}
 
+Wake velocity was measured using a Nortek Vectrino+ acoustic Doppler velocimeter
+(ADV), sampling at 200 Hz. The probe was mounted on an automated positioning
+system, also controlled by the tow tank's main motion controller. The ADV and
+DAQ systems' sampling times were synchronized by triggering the start of data
+acquisition via a pulse sent from the motion controller.
 
 \subsection{Test Plan} 
 
