@@ -318,11 +318,18 @@ meters.}
 
 \subsection{Data Processing}
 
-From each set of tows, a standard time interval was set, and each run was
+From each set of tows, a standard time interval was set, which allowed the
+turbine performance and wake to reach a quasi-periodic state. Each run was
 analyzed to compute statistics over this interval, truncating the end slightly
-to achieve and integer number of blade passages.
+to achieve and integer number of blade passages. Turbine shaft angular velocity
+and tow carriage speed were calculated using a second order central differencing
+scheme on the respective position measurements. Power and drag coefficients are
+calculated as instantaneous quantities using the carriage speed as the free
+stream velocity. 
 
-The experimental data and processing/plotting code are available from
+Wake velocity data were filtered for spurious ``spikes'' by removing datapoints
+8 standard deviations or 0.9 m/s from the mean. The experimental data and code
+for processing and visualization are available from
 \cite{Bachant2015-RVAT-Re-dep-data}.
 
 
