@@ -33,6 +33,7 @@
 \usepackage{graphicx}
 %\usepackage{subfigure,psfig}
 \usepackage[draft]{todonotes}
+\usepackage{lineno}
 
 \def \p{\partial}
 \def \d{\mathrm{d}}
@@ -95,7 +96,7 @@ drivers of overall performance and interaction between multiple turbines.}
 %\JEL{}
 
 \begin{document}
-
+%\linenumbers
 \listoftodos
 
 \section{Introduction}
@@ -359,9 +360,10 @@ for processing and visualization are available from
 
 \subsection{Performance}
 
-Full performance curves for various Reynolds numbers are plotted in
-Figure~\ref{fig:perf-curves}. There is essentially no change in the shape of the
-drag coefficient curves---merely an upward shift in $C_D$ with increasing $Re$.
+Full power and rotor drag coefficient curves for various Reynolds numbers are
+plotted in Figure~\ref{fig:cp-curves} and Figure~\ref{fig:cd-curves},
+respectively. There is essentially no change in the shape of the drag
+coefficient curves---merely an upward shift in $C_D$ with increasing $Re$.
 
 In general, maximum $C_P$ increases with Reynolds number, which is due to an
 increase in the foil lift-to-drag ratio. The power coefficient curves also show
@@ -371,10 +373,18 @@ blade suction side.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/perf_curves}
-\caption{Mean power (left) and drag (right) coefficient curves plotted for
+\includegraphics[width=0.65\textwidth]{figures/cp_curves}
+\caption{Mean power coefficient curves plotted for
 multiple Reynolds numbers.}
-\label{fig:perf-curves}
+\label{fig:cp-curves}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.65\textwidth]{figures/cd_curves}
+\caption{Mean rotor drag coefficient curves plotted for
+multiple Reynolds numbers.}
+\label{fig:cd-curves}
 \end{figure}
 
 Mean power and drag coefficients at $\lambda=1.9$ are plotted for all Reynolds
@@ -549,7 +559,7 @@ noise.}
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/wake_spectra}
+\includegraphics[width=0.85\textwidth]{figures/wake_spectra}
 \caption{Cross-stream velocity (normalized by $U_\infty$) spectra at $z/H=0.25$, 
 $y/R=-1.0$ (a) and $y/R=1.5$ (b). Dashed vertical
 lines indicate $[1, 3, 6, 9]$ times the turbine rotational frequency.}

@@ -11,7 +11,8 @@ import shutil
 figdir = os.path.join(os.path.expanduser("~"), "Research",
                       "Experiments", "RVAT Re dep", "Figures")
 
-figlist = ["perf_curves.pdf",
+figlist = ["cp_curves.pdf",
+           "cd_curves.pdf",
            "perf_re_dep.pdf",
            "K_trans_bar_graph.pdf",
            "mom_bar_graph.pdf",
@@ -23,7 +24,7 @@ figlist = ["perf_curves.pdf",
 for fig in figlist:
     shutil.copy2(os.path.join(figdir, fig), os.path.join("figures", fig))
 
-    
+
 figdir = os.path.join(os.path.expanduser("~"), "Google Drive", "Research",
                       "Foils", "Data", "NACAXX20_QBlade", "figures")
 
