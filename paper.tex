@@ -103,11 +103,20 @@ drivers of overall performance and interaction between multiple turbines.}
 
 Scaled physical models are often used in science and engineering to approximate
 real-world systems. The principle of dynamic similarity allows for geometrically
-scaled systems to be dynamically similar in scale if certain nondimensional
+scaled systems to be dynamically identical in scale if certain nondimensional
 physical parameters are matched. In the case of fluid systems, the most
-important parameter is often the Reynolds number, which quantifies the
-importance of viscosity on the flow physics. As such, hereafter we will use the
-word ``scale'' to refer to this dynamical scale rather than the geometric scale.
+important nondimensional parameter is often the Reynolds number, which
+quantifies the importance of inertial forces over viscous forces on the flow
+physics. It should be noted that in general the geometric scale of a physical
+model is not necessarily the same as its dynamical scale. In the case of
+geometrically similar physical models of turbines and propellers operating under
+kinematic similarity, i.e. at the same tip speed or advance ratio, however, the
+dynamical scale can be (is) the same as the geometric scale. It is the dynamical
+scale of the model which we are concerned with hereafter.
+
+\todo[inline]{Need to find a good way to succintly introduce scaling 
+subleties.}
+
 
 With regards to wind and marine hydrokinetic (MHK) turbines, scaled physical
 models are used to validate predictive numerical models, predict full-scale
