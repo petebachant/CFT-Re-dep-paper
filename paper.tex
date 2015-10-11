@@ -491,7 +491,7 @@ multiple Reynolds numbers.}
 \label{fig:cd-curves}
 \end{figure}
 
-Mean power and drag coefficients at $\lambda=1.9$ are plotted vs.\ Reynolds
+Mean power and drag coefficients at $\lambda=1.9$ are plotted versus Reynolds
 number in Figure~\ref{fig:perf-Re-dep}. There is a drastic improvement in $C_P$
 with increasing Reynolds number at lower values of Reynolds number. The power
 coefficient then becomes  essentially $Re$-independent at $Re_D = 0.8 \times
@@ -499,6 +499,7 @@ coefficient then becomes  essentially $Re$-independent at $Re_D = 0.8 \times
 $Re_{c, \mathrm{ave}} = 2.1 \times 10^5$. This threshold is consistent with the
 behavior of the blade boundary layer transitioning from laminar to turbulent,
 thereby promoting reattachment of the laminar separation bubble.
+
 \todo[inline]{Is there still a laminar separation bubble near the leading edge
     at these Reynolds numbers?}
 
@@ -521,18 +522,20 @@ wave drag during towing without increasing flow through the turbine.
 \label{fig:perf-Re-dep}
 \end{figure}
 
+
 \subsubsection{Relation to Static Foil Characteristics}
 
 To help understand---and possibly predict---the $Re$-sensitivity on turbine
 performance, a series of static foil coefficient datasets were computed with the
-XFOIL viscous panel method code \cite{Drela1989}, a commonly used tool for airfoil analysis, e.g. \cite{Castelli2011, Walker2014}, implemented as part of the
-open source turbine design software QBlade \cite{Marten2013}. Simulations were run for an angle of
-attack range of 0--40 degrees, in increments of 0.5 degrees. Solver parameters
-used a 100 panels, a fixed speed, zero Mach number, \texttt{NCrit=9} (default
-$\mathrm{e}^n$ transition criteria parameter for an average wind tunnel), and no
-forced boundary layer transition. Characteristics for computed for the
-approximate average blade chord Reynolds numbers encountered in the tow tank
-experiments.
+XFOIL viscous panel method code \cite{Drela1989}, a commonly used tool for
+airfoil analysis, e.g. \cite{Castelli2011, Walker2014}, implemented as part of
+the open source turbine design software QBlade \cite{Marten2013}. Simulations
+were run for an angle of attack range of 0--40 degrees, in increments of 0.5
+degrees. Solver parameters used a 100 panels, a fixed speed, zero Mach number,
+\texttt{NCrit=9} (default $\mathrm{e}^n$ transition criteria parameter for an
+average wind tunnel), and no forced boundary layer transition. Characteristics
+for computed for the approximate average blade chord Reynolds numbers
+encountered in the tow tank experiments.
 
 To investigate the effects of the blades' ``virtual camber'' due to their
 circular path \cite{Migliore1980}, the XFOIL calculations were performed for
