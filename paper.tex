@@ -332,22 +332,12 @@ numerical model testing, similar to the Sandia National Labs/US Department of
 Energy RM2 River Turbine \cite{Neary2014}, but with higher solidity, or blade
 chord to radius ratio.
 
-The UNH-RVAT turbine has three blades made from NACA 0020 profiles with 0.140 m
+The UNH-RVAT turbine has three blades made from NACA 0020 profiles with 0.14 m
 chord. The blades are mounted at mid-chord w.r.t. the turbine axis, and the
 turbine has a height (blade span) of 1 m and a diameter of 1 m, c.f.
-Figure~\ref{fig:turbine}. The turbine test bed allows precise control and
-measurement of the turbine shaft angle and angular velocity, and therefore tip
-speed ratio, through a permanent magnet servo motor. The primary torque
-measurement was provided by an in-line torque cell, with a redundant measurement
-by a moment arm and load cell and an indirect measurement through the motor via
-its torque constant. The turbine was mounted with in a low-drag frame
-constructed from NACA 0020 foil sections.  The frame is attached to the tow
-carriage by four linear bearings, allowing the total streamwise drag force to be
-measured by a pair of S-beam load cells. Turbine rotor drag is calculated by
-subtracting the test bed tare drag. A schematic of the turbine test bed is shown
-in Figure~\ref{fig:exp-setup}. Additional details of the turbine and
-experimental setup are described in \cite{Bachant2015-JoT}, and a CAD model of
-the turbine is available from \cite{Bachant2014-RVAT-CAD}.
+Figure~\ref{fig:turbine}. The rotor has a relatively high solidity $Nc/(\pi D) =
+0.13$ and large chord-to-radius ratio $c/R = 0.28$. A CAD model of the turbine
+is available from \cite{Bachant2014-RVAT-CAD}.
 
 \begin{figure}[ht!]
 \centering
@@ -361,22 +351,23 @@ the turbine is available from \cite{Bachant2014-RVAT-CAD}.
 \label{fig:turbine}
 \end{figure}
 
-
-The turbine was mounted in a frame constructed from NACA 0020 sections. The
-turbine shaft ran up through the water surface, coupled to a permanent magnet
-servo motor with a 20:1 gearbox. This servo was controlled by the tow tank's
-main motion controller for high synchronization with the carriage motion. A
-rotary torque transducer was installed inline between the servo and the turbine,
-and the servo was also mounted on a slewing ring bearing, which allowed a
-redundant measurement of torque via an arm and load cell used to counteract the
-turbine moment. The frame was mounted to the carriage via linear guides, such
-that the total streamwise drag force was transferred to a pair of S-beam load
-cells, providing the rotor drag measurements, after a measured tare drag was
-subtracted in post processing. Similarly, a tare torque was measured by rotating
-the turbine shaft in air. Turbine angular and tow carriage linear position were
-measured using quadrature encoder signals, with $10^5$ counts-per-rev for the
-turbine and 10 $\mathrm{\mu m}$ resolution for the carriage position. These
-signals, along with the torque and drag signals, were sampled at 2 kHz.
+The turbine was mounted in a frame constructed from NACA 0020 sections, shown in
+Figure~\ref{fig:exp-setup}. The turbine shaft ran up through the water surface,
+coupled to a permanent magnet servo motor with a 20:1 gearbox, providing precise
+control over shaft RPM. This servo was controlled by the tow tank's main motion
+controller for high synchronization with the carriage motion, thereby giving
+precise measurement and control of tip speed ratio. A rotary torque transducer
+was installed inline between the servo and the turbine, and the servo was also
+mounted on a slewing ring bearing, which allowed a redundant measurement of
+torque via an arm and load cell used to counteract the turbine moment. The frame
+was mounted to the carriage via linear guides, such that the total streamwise
+drag force was transferred to a pair of S-beam load cells, providing the rotor
+drag measurements, after a measured tare drag was subtracted in post processing.
+Similarly, a tare torque was measured by rotating the turbine shaft in air.
+Turbine angular and tow carriage linear position were measured using quadrature
+encoder signals, with $10^5$ counts-per-rev for the turbine and 10 $\mathrm{\mu
+    m}$ resolution for the carriage position. These signals, along with the torque
+and drag signals, were sampled at 2 kHz.
 
 \begin{figure}[ht!]
 \centering
@@ -389,7 +380,8 @@ Wake velocity was measured using a Nortek Vectrino+ acoustic Doppler velocimeter
 (ADV), sampling at 200 Hz. The probe was mounted on an automated positioning
 system, also controlled by the tow tank's main motion controller. The ADV and
 DAQ systems' sampling times were synchronized by triggering the start of data
-acquisition via a pulse sent from the motion controller.
+acquisition via a pulse sent from the motion controller. Additional details of
+the turbine and experimental setup are described in \cite{Bachant2015-JoT}.
 
 
 \subsection{Test Plan}
