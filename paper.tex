@@ -756,12 +756,11 @@ In this study it was demonstrated that the performance of a high solidity
 ($c/R=0.28$) cross-flow turbine becomes essentially $Re$-independent at a
 Reynolds number based on turbine diameter of $Re_D \approx 10^6$, or an
 approximate Reynolds number based on blade chord of $Re_c \approx 2 \times
-10^5$.
-
-These results suggest that to validate predictive engineering models, one must
-use data of at least this scale, especially for validation of high-fidelity CFD
-models, where transition to turbulence may be completely different between
-scaled physical model and full-scale prototype.
+10^5$. The left side of the $C_P$--$\lambda$ curve is further diminished at low
+$Re$ due to deeper stalling. The $Re$-independent threshold corresponds to that
+at which the foil suction surface boundary layer becomes turbulent before having
+to recover static pressure against the adverse pressure gradient, highlighted in
+\cite{Lissaman1983, McMasters1980, Carmichael1981}.
 
 We propose a method for predicting Reynolds number dependence of a cross-flow
 turbine using static airfoil characteristics and turbine blade kinematics. It is
@@ -777,13 +776,30 @@ kinematics was shown to be a reasonable indicator for predicting Reynolds number
 dependence of an actual cross-flow turbine operating under dynamic conditions,
 including dynamic stall.
 
-If using scaled physical models to predict array performance, it is important to
-keep all turbines in the regime where the power coefficient varies linearly to
-avoid exaggerated power deficiencies for downstream turbines, despite
-similarities in wake characteristics. These results also suggest that low
-Reynolds number physical model studies of turbine arrays may see exaggerated
-levels of wake recovery, leading to inadequate or inappropriate spacing or
-layouts.
+At lower Reynolds numbers we observed lower levels of turbulence in the wake at
+$x/D=1$, along with lower levels of turbulent transport with respect to mean
+streamwise momentum and mean kinetic energy recovery in the streamwise
+direction. Vertical advection---the largest transport mechanism
+measured---showed little $Re$-dependence, whereas the negative effects of
+cross-stream advection was enhanced at high $Re$. Despite being order of
+magnitude smaller than other transport processes, viscous diffusion increased
+rapidly with decreasing $Re$. Overall, the total wake transport measured leveled
+off at essentially the same Reynolds number that the performance did.
+
+From these results we can make the recommendation that physical model tests be
+on the order $Re_D \sim 10^6$ to provide predictions of full-scale performance.
+This threshold also applies to the validation of predictive engineering models,
+especially for high-fidelity CFD models, where the boundary layer is to be
+resolved, since transition to turbulence plays an important role in overall
+blade loading.
+
+If using scaled physical models to predict array performance, where turbine
+power output is measured, it may also be important to keep all turbines in the
+regime where the power coefficient varies linearly to avoid exaggerated power
+deficiencies for downstream turbines, despite similarities in wake
+characteristics. Results here also suggest that low Reynolds number physical
+model studies of turbine arrays may see exaggerated levels of wake recovery,
+leading to inadequate or inappropriate spacing or layouts.
 
 
 \acknowledgements{Acknowledgements}
