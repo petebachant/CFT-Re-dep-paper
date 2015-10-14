@@ -117,14 +117,20 @@ hydrokinetic energy; wind energy; VAWT}
 
 Scaled physical models are often used in science and engineering to approximate
 real-world systems. The principle of dynamic similarity allows for geometrically
-scaled systems to be dynamically identical in scale if certain nondimensional
+scaled systems to be dynamically identical if certain nondimensional
 physical parameters are matched. In the case of fluid systems, the most
 important nondimensional parameter is often the Reynolds number, which
 quantifies the importance of inertial forces over viscous forces on the flow
-physics. It should be noted that in general the geometric scale of a physical
-model is not necessarily the same as its dynamical scale. As such, hereafter we
-will use the word ``scale'' to refer to this dynamical scale rather than the
-geometric scale.
+physics:
+\begin{equation}
+    \frac{Ul}{\nu},
+    \label{eq:Re}
+\end{equation}
+where $U$ and $l$ are characteristic velocity and length scales, respectively,
+and $\nu$ is the fluid kinematic viscosity. In general the geometric scale of a
+physical model is not necessarily the same as its dynamical scale. As such,
+hereafter we will use the word ``scale'' to refer to this dynamical scale or
+Reynolds number.
 
 With regards to wind and marine hydrokinetic (MHK) turbines, scaled physical
 models are used to validate predictive numerical models, predict full-scale
