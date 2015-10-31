@@ -1,4 +1,4 @@
-# Effects of Reynolds Number on the Performance and Near-Wake Dynamics of a Vertical-Axis Cross-Flow Turbine
+# Effects of Reynolds Number on the Energy Conversion and Near-Wake Dynamics of a High Solidity Vertical-Axis Cross-Flow Turbine
 
 This repository contains the source files for our journal article analyzing
 Reynolds number effects on the performance and near-wake
