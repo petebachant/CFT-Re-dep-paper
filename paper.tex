@@ -82,16 +82,16 @@ Colovos Rd., Durham, NH, USA}
 
 % Abstract (Less than 200 words)
 \abstract{The performance and wake characteristics of cross-flow (vertical axis)
-    turbines depend on many parameters: solidity, blade profile, blade pitch, number
-    of blades, strut drag, operational parameters such as tip speed ratio---and
-    Reynolds number. Tolerable mismatch between physical model Reynolds number and
-    full-scale Reynolds number was investigated from both the perspective of
-    predicting full scale performance and flow dynamics, as well as numerical model
-    validation. Experiments were performed with a large laboratory-scale high
+    turbines depend on many parameters: solidity, blade profile, blade pitch, 
+    number of blades, strut drag, operational parameters such as tip speed 
+    ratio---and Reynolds number.  
+    Experiments were performed with a large laboratory-scale high
     solidity cross-flow turbine to investigate Reynolds number dependence of
-    performance and wake transport characteristics, and to determine what an
+    performance and wake transport characteristics. A key question was what an
     acceptable Reynolds number mismatch is for scaled physical model tests of
-    cross-flow turbines. It was demonstrated that the performance of the cross-flow
+    cross-flow turbines, both from the perspective of predicting full scale 
+    performance and flow dynamics, as well as numerical model validation.
+    It was demonstrated that the performance of the cross-flow
     turbine becomes essentially $Re$-independent at a Reynolds number based on
     turbine diameter of $Re_D \approx 10^6$, or an approximate Reynolds number based
     on blade chord of $Re_c \approx 2 \times 10^5$. A simple model that calculates
@@ -119,11 +119,11 @@ Scaled physical models are often used in science and engineering to approximate
 real-world systems. The principle of dynamic similarity allows for geometrically
 scaled systems to be dynamically identical if certain nondimensional
 physical parameters are matched. In the case of fluid systems, the most
-important nondimensional parameter is often the Reynolds number, which
+important nondimensional parameter is often the Reynolds number, $Re$, which
 quantifies the importance of inertial forces over viscous forces on the flow
 physics:
 \begin{equation}
-    \frac{Ul}{\nu},
+    Re = \frac{Ul}{\nu},
     \label{eq:Re}
 \end{equation}
 where $U$ and $l$ are characteristic velocity and length scales, respectively,
@@ -190,7 +190,8 @@ maximum radius). More recently, Polagye and Cavagnaro observed significant
 Reynolds number sensitivity for a high solidity helical cross-flow turbine
 \cite{Polagye2013b}, and Bravo et al. observed power coefficient of a
 straight-bladed VAWT to become Reynolds number independent at $Re_c \approx 4
-\times 10^5$ \cite{Bravo2007}. Bachant and Wosnik \cite{Bachant2014} observed
+\times 10^5$ \cite{Bravo2007}. Bachant and Wosnik \cite{Bachant2014} first 
+observed
 Reynolds number independence of power coefficient at optimal tip speed ratio for
 a high solidity cross-flow turbine at $Re_D \approx 10^6$ or
 $Re_{c,\mathrm{avg}} \approx 2 \times 10^5$.
@@ -401,13 +402,13 @@ each.
 \begin{tabular}{ccc}
 Tow speed (m/s) & $Re_D$ & $Re_{c,\mathrm{ave}}$ ($\lambda = 1.9$) \\
 \hline
-0.3 & $3.0 \times 10^5$ & $8.0 \times 10^4$ \\
-0.4 & $4.0 \times 10^5$ & $1.1 \times 10^5$ \\
-0.5 & $5.0 \times 10^5$ & $1.3 \times 10^5$ \\
-0.6 & $6.0 \times 10^5$ & $1.6 \times 10^5$ \\
-0.7 & $7.0 \times 10^5$ & $1.9 \times 10^5$ \\
-0.8 & $0.8 \times 10^5$ & $2.1 \times 10^5$ \\
-0.9 & $0.9 \times 10^5$ & $2.4 \times 10^5$ \\
+0.3 & $0.3 \times 10^6$ & $0.8 \times 10^5$ \\
+0.4 & $0.4 \times 10^6$ & $1.1 \times 10^5$ \\
+0.5 & $0.5 \times 10^6$ & $1.3 \times 10^5$ \\
+0.6 & $0.6 \times 10^6$ & $1.6 \times 10^5$ \\
+0.7 & $0.7 \times 10^6$ & $1.9 \times 10^5$ \\
+0.8 & $0.8 \times 10^6$ & $2.1 \times 10^5$ \\
+0.9 & $0.9 \times 10^6$ & $2.4 \times 10^5$ \\
 1.0 & $1.0 \times 10^6$ & $2.7 \times 10^5$ \\
 1.1 & $1.1 \times 10^6$ & $2.9 \times 10^5$ \\
 1.2 & $1.2 \times 10^6$ & $3.2 \times 10^5$ \\
@@ -506,8 +507,9 @@ The behavior of the mean rotor drag coefficient is similar, though the changes
 are less dramatic. This is likely due to cross-flow turbine geometry, where
 increases in blade drag at lower $Re$ somewhat offsets the reduction in lift, to
 keep total streamwise force from changing as much as the rotor torque. The
-tendency for $C_D$ to continue increasing with $Re$ may also be a consequence of
-increasing Froude number, which therefore increases free surface deformation and
+tendency for $C_D$ to continue increasing with $Re$ may also include the 
+effects of an 
+increasing Froude number, which increases free surface deformation and
 wave drag during towing without increasing flow through the turbine.
 
 \begin{figure}[ht]
@@ -769,7 +771,8 @@ number sensitivity---a better predictor than conventional quantifications of
 airfoil performance, e.g., lift-to-drag ratio. The simple peak geometric torque
 coefficient model predicted Reynolds number independence for Reynolds numbers
 based on blade chord of $Re_c > 2 \times 10^5$. Is it also shown from this
-metric that foils with higher camber are more Reynolds number dependent but have
+metric that foils with higher camber are more Reynolds number dependent at 
+lower Reynolds number but have
 smaller slopes in the linear regime. The Reynolds number dependence of the peak
 torque coefficient calculated from static foil data and cross-flow turbine
 kinematics was shown to be a reasonable indicator for predicting Reynolds number
@@ -783,7 +786,9 @@ direction. Vertical advection---the largest transport mechanism
 measured---showed little $Re$-dependence, whereas the negative effects of
 cross-stream advection was enhanced at high $Re$. Despite being order of
 magnitude smaller than other transport processes, viscous diffusion increased
-rapidly with decreasing $Re$. Overall, the total wake transport measured leveled
+rapidly with decreasing $Re$, and is expected to become significant to the wake 
+dynamics around $Re_D \sim 10^4$.
+Overall, the total wake transport measured leveled
 off at essentially the same Reynolds number that the performance did.
 
 From these results we can make the recommendation that physical model tests be
@@ -805,8 +810,9 @@ leading to inadequate or inappropriate spacing or layouts.
 \acknowledgements{Acknowledgements}
 
 The authors would like to acknowledge funding through a National Science
-Foundation CAREER award (PI Wosnik, NSF-CBET 1150797, program manager Dr. Ram
-Gupta), a grant through the Leslie S. Hubbard Marine Program Endowment to
+Foundation CAREER award (PI Wosnik, NSF-CBET 1150797, program manager Dr. 
+Gregory L. Rorrer), a grant through the Leslie S. Hubbard Marine Program 
+Endowment to
 purchase acoustic flow measurement instrumentation, and a grant for laboratory
 infrastructure upgrades through the US Department of Energy.
 
