@@ -11,3 +11,4 @@ archive
 *.swp
 !figures/*
 figures/SolidWorks
+*.zip
