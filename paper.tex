@@ -694,7 +694,62 @@ stable at higher $Re$.
 \subsubsection{Transport of Mean Momentum and Kinetic Energy}
 
 The relative importance of various physical processes on mean streamwise
-momentum and kinetic energy transport/recovery in the streamwise direction are
+momentum and kinetic energy transport/recovery in the streamwise direction were
+assessed by examining the governing equations rearranged to isolate the
+streamwise partial derivative ($\partial / \partial x$) for the quantities of
+interest \cite{Bachant2015-JoT}, i.e. momentum:
+
+\begin{equation}
+	\begin{split}
+		\frac{\p U}{\p x}  =  
+		\frac{1}{U} \bigg{[}
+		& - V\frac{\p U}{\p y}
+		- W\frac{\p U}{\p z} \\
+		& -\frac{1}{\rho}\frac{\p P}{\p x} \\
+		& - \frac{\p}{\p x} \overline{u'u'}
+		- \frac{\p}{\p y} \overline{u'v'}
+		- \frac{\p}{\p z} \overline{u'w'} \\
+		& + \nu\left(\frac{\p^2 U}{\p x^2}
+		+ \frac{\p^2 U}{\p y^2}
+		+ \frac{\p^2 U}{\p z^2} \right)
+		\bigg{]}.
+	\end{split}
+	\label{eq:momentum}
+\end{equation}
+and mean kinetic energy:
+\begin{equation}
+	\begin{split}
+		\frac{\p K}{\p x}
+		=
+		\frac{1}{U}
+		\bigg{[}
+		& - \underbrace{V \frac{\p K}{\p y}}_{y\text{-adv.}}
+		- \underbrace{W \frac{\p K}{\p z}}_{z\text{-adv.}}
+		% Pressure work:
+		- \frac{1}{\rho}\frac{\p}{\p x_j} P U_i \delta_{ij}
+		% Work by viscous forces
+		+ \frac{\p}{\p x_j} 2 \nu U_i S_{ij} % Not sure if that's capital S...
+		% Turbulent transport of K
+		- \underbrace{
+		\frac{1}{2}\frac{\p}{\p x_j} \overline{u_i' u_j'} U_i
+		}_{\text{Turb. trans.}} \\
+		% Production of k
+		& + 
+		\underbrace{
+		\overline{u_i' u_j'} \frac{\p U_i}{\p x_j}
+		}_{k\text{-prod.}}
+		% Mean dissipation
+		- 
+		\underbrace{
+		2 \nu S_{ij}S_{ij}
+		}_{\text{Mean diss.}}
+		\bigg{]}.
+	\label{eq:K-full}
+	\end{split}
+\end{equation}
+
+Results from the terms available (i.e. excluding $\partial / \partial x$) from
+the right hand sides of Equations~\ref{eq:momentum} and \ref{eq:K-full} are
 plotted in Figures~\ref{fig:mom-bar-graph} and \ref{fig:K-bar-graph},
 respectively. We note that similar to \cite{Bachant2015-JoT}, the vertical
 advection at this point in the wake is the dominant contributor to positive wake
