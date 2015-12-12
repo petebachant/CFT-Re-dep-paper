@@ -556,10 +556,12 @@ torque coefficient $C_T$ can be related to the blade section chordwise force
 coefficient $C_c$ by
 \begin{equation}
 C_T = \frac{C_c c}{2R} \frac{|U_\mathrm{rel}|^2}{U_\infty^2},
+\label{eq:ct}
 \end{equation}
 where the blade section chordwise force (for zero preset pitch) is given by
 \begin{equation}
 C_c = C_l \sin \alpha - C_d \cos \alpha.
+\label{eq:cc}
 \end{equation}
 
 The relative blade velocity $U_\mathrm{rel}$ was calculated by vector addition
@@ -829,18 +831,34 @@ to recover static pressure against the adverse pressure gradient, highlighted in
 \cite{Lissaman1983, McMasters1980, Carmichael1981}.
 
 We propose a method for predicting Reynolds number dependence of a cross-flow
-turbine using static airfoil characteristics and turbine blade kinematics. It is
-shown that the peak torque coefficient computed this way shows similar Reynolds
-number sensitivity---a better predictor than conventional quantifications of
-airfoil performance, e.g., lift-to-drag ratio. The simple peak geometric torque
-coefficient model predicted Reynolds number independence for Reynolds numbers
-based on blade chord of $Re_c > 2 \times 10^5$. Is it also shown from this
-metric that foils with higher camber are more Reynolds number dependent at lower
-Reynolds number but have smaller slopes in the linear regime. The Reynolds
-number dependence of the peak torque coefficient calculated from static foil
-data and cross-flow turbine kinematics was shown to be a reasonable indicator
-for predicting Reynolds number dependence of an actual cross-flow turbine
-operating under dynamic conditions, including dynamic stall.
+turbine using static airfoil characteristics and turbine blade kinematics:
+\begin{enumerate}
+    \item Acquire static lift and drag coefficient data for the desired blade
+    profile.
+    
+    \item For azimuthal angles of 0--180 degrees and a given tip speed ratio,
+    calculate the geometric angle of attack and relative velocity magnitude from
+    the blade and undisturbed free stream velocity ($\equiv 1$) vectors.
+    
+    \item With arrays of geometric angle of attack and relative velocity
+    magnitude, calculate the blade chordwise force and then rotor torque
+    coefficient from Equations~\ref{eq:cc} and \ref{eq:ct}, respectively.
+    
+    \item Extract the maximum value of $C_T$, and repeat this process for static
+    foil data at multiple $Re$.
+\end{enumerate}
+
+It was shown that the peak torque coefficient computed this way shows similar
+Reynolds number sensitivity---a better predictor than conventional
+quantifications of airfoil performance, e.g., lift-to-drag ratio. The simple
+peak geometric torque coefficient model predicted Reynolds number independence
+for Reynolds numbers based on blade chord of $Re_c > 2 \times 10^5$. Is it also
+shown from this metric that foils with higher camber are more Reynolds number
+dependent at lower Reynolds number but have smaller slopes in the linear regime.
+The Reynolds number dependence of the peak torque coefficient calculated from
+static foil data and cross-flow turbine kinematics was shown to be a reasonable
+indicator for predicting Reynolds number dependence of an actual cross-flow
+turbine operating under dynamic conditions, including dynamic stall.
 
 At lower Reynolds numbers we observed lower levels of turbulence in the wake at
 $x/D=1$, along with lower levels of turbulent transport with respect to mean
