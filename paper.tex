@@ -116,20 +116,20 @@ hydrokinetic energy; wind energy; VAWT}
 
 Scaled physical models are often used in science and engineering to approximate
 real-world systems. The principle of dynamic similarity allows for geometrically
-scaled systems to be dynamically identical if certain nondimensional
-physical parameters are matched. In the case of fluid systems, the most
-important nondimensional parameter is often the Reynolds number, $Re$, which
-quantifies the importance of inertial forces over viscous forces on the flow
-physics:
-\begin{equation}
-    Re = \frac{Ul}{\nu},
-    \label{eq:Re}
-\end{equation}
-where $U$ and $l$ are characteristic velocity and length scales, respectively,
-and $\nu$ is the fluid kinematic viscosity. In general the geometric scale of a
-physical model is not necessarily the same as its dynamical scale. As such,
-hereafter we will use the word ``scale'' to refer to this dynamical scale or
-Reynolds number.
+scaled systems to be dynamically identical if certain nondimensional physical
+parameters are matched. In the case of fluid systems, the most important
+nondimensional parameter is often the Reynolds number, $Re$, which quantifies
+the importance of inertial forces over viscous forces on the flow physics: $Re
+\equiv Ul/\nu$, where $U$ and $l$ are characteristic velocity and length scales,
+respectively, and $\nu$ is the fluid kinematic viscosity. The other common
+dynamical scale---for systems with a free surface---is the Froude number $Fr
+\equiv U/\sqrt{gl}$, where $g$ is the gravitational acceleration. Matching both
+Froude and Reynolds number is difficult for the same fluid, which is illustrated
+by the relation $Re = l^{3/2} g^{1/2} Fr / \nu$, since $Re$ scales linearly with
+$l$, or the geometric scale. In general the geometric scale of a physical model
+is not necessarily the same as its dynamical scale. As such, hereafter we will
+use the word ``scale'' to refer to this dynamical scale or Reynolds number and
+assume Froude number is small enough to be negligible.
 
 With regards to wind and marine hydrokinetic (MHK) turbines, scaled physical
 models are used to validate predictive numerical models, predict full-scale
