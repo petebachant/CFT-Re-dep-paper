@@ -751,10 +751,13 @@ and mean kinetic energy:
 Results from the terms available (i.e. excluding $\partial / \partial x$) from
 the right hand sides of Equations~\ref{eq:momentum} and \ref{eq:K-full} are
 plotted in Figures~\ref{fig:mom-bar-graph} and \ref{fig:K-bar-graph},
-respectively. We note that similar to \cite{Bachant2015-JoT}, the vertical
-advection at this point in the wake is the dominant contributor to positive wake
-recovery, caused by the unique vortex pattern created by the blade tips and
-wakes.
+respectively. Derivatives were computed using a second order finite difference
+scheme, with central differencing for interior points, and inward facing schemes
+for the boundaries. A weighted average for each term was then calculated based
+on the grid spacing. We note that similar to \cite{Bachant2015-JoT}, the
+vertical advection at this point in the wake is the dominant contributor to
+positive wake recovery, caused by the unique vortex pattern created by the blade
+tips and wakes.
 
 We see that in general, levels of turbulent transport are slightly lower at
 larger Reynolds numbers. The viscous diffusion and dissipation, though still
@@ -763,18 +766,34 @@ Reynolds numbers, which is consistent with the physical meaning of the Reynolds
 number in general. From these results one might expect that the viscous effects
 will become significant to the wake dynamics around $Re_D \sim 10^4$.
 
+Transport due to cross-stream advection appears to become more negative at
+higher $Re$. This could be a consequence of increasing free surface deformation
+(higher $Fr$), which then decreases the effective flow cross-sectional area
+downstream of the turbine, forcing more flow to accelerate around the sides of
+the turbine.
+
 \begin{figure}[ht!]
-\centering
-\includegraphics[width=0.9\textwidth]{figures/mom_bar_graph}
-\caption{Momentum transport quantities.}
-\label{fig:mom-bar-graph}
+    \centering
+    
+    \includegraphics[width=0.9\textwidth]{figures/mom_bar_graph}
+    
+    \caption{Normalized momentum transport quantities computed as weighted
+        averages from Equation~\ref{eq:momentum}.}
+    
+    \label{fig:mom-bar-graph}
 \end{figure}
 
 \begin{figure}[ht!]
-\centering
-\includegraphics[width=0.9\textwidth]{figures/K_trans_bar_graph}
-\caption{Mean kinetic energy transport quantities.}
-\label{fig:K-bar-graph}
+    \centering
+    
+    \includegraphics[width=0.9\textwidth]{figures/K_trans_bar_graph}
+    
+    \caption{Normalized mean kinetic energy transport quantities computed as
+        weighted averages based on Equation~\ref{eq:K-full}. Note that directions of
+        the turbulent transport terms refer to the directions of their partial
+        derivatives.}
+    
+    \label{fig:K-bar-graph}
 \end{figure}
 
 The totals for all the wake transport terms calculated in
@@ -815,13 +834,12 @@ number sensitivity---a better predictor than conventional quantifications of
 airfoil performance, e.g., lift-to-drag ratio. The simple peak geometric torque
 coefficient model predicted Reynolds number independence for Reynolds numbers
 based on blade chord of $Re_c > 2 \times 10^5$. Is it also shown from this
-metric that foils with higher camber are more Reynolds number dependent at 
-lower Reynolds number but have
-smaller slopes in the linear regime. The Reynolds number dependence of the peak
-torque coefficient calculated from static foil data and cross-flow turbine
-kinematics was shown to be a reasonable indicator for predicting Reynolds number
-dependence of an actual cross-flow turbine operating under dynamic conditions,
-including dynamic stall.
+metric that foils with higher camber are more Reynolds number dependent at lower
+Reynolds number but have smaller slopes in the linear regime. The Reynolds
+number dependence of the peak torque coefficient calculated from static foil
+data and cross-flow turbine kinematics was shown to be a reasonable indicator
+for predicting Reynolds number dependence of an actual cross-flow turbine
+operating under dynamic conditions, including dynamic stall.
 
 At lower Reynolds numbers we observed lower levels of turbulence in the wake at
 $x/D=1$, along with lower levels of turbulent transport with respect to mean
@@ -830,10 +848,9 @@ direction. Vertical advection---the largest transport mechanism
 measured---showed little $Re$-dependence, whereas the negative effects of
 cross-stream advection was enhanced at high $Re$. Despite being order of
 magnitude smaller than other transport processes, viscous diffusion increased
-rapidly with decreasing $Re$, and is expected to become significant to the wake 
-dynamics around $Re_D \sim 10^4$.
-Overall, the total wake transport measured leveled
-off at essentially the same Reynolds number that the performance did.
+rapidly with decreasing $Re$, and is expected to become significant to the wake
+dynamics around $Re_D \sim 10^4$. Overall, the total wake transport measured
+leveled off at essentially the same Reynolds number that the performance did.
 
 From these results we can make the recommendation that physical model tests be
 on the order $Re_D \sim 10^6$ to provide predictions of full-scale performance.
