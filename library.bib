@@ -193,7 +193,7 @@
   Abstract                 = {The present study deals with the efficiency of cross flow water current turbine for free stream conditions versus power farm conditions. In the first part, a single turbine for free fluid flow conditions is considered. The simulations are carried out with a new in house code which couples a Navier–Stokes computation of the outer flow field with a description of the inner flow field around the turbine. The latter is based on experimental results of a Darrieus wind turbine in an unbounded domain. This code is applied for the description of a hydraulic turbine. In the second part, the interest of piling up several turbines on the same axis of rotation to make a tower is investigated. Not only is it profitable because only one alternator is needed but the simulations demonstrate the advantage of the tower configuration for the efficiency. The tower is then inserted into a cluster of several lined up towers which makes a barge. Simulations show that the average barge efficiency rises as the distance between towers is decreased and as the number of towers is increased within the row. Thereby, the efficiency of a single isolated turbine is greatly increased when set both into a tower and into a cluster of several towers corresponding to possible power farm arrangements.},
   File                     = {:Turbines, Cross-Flow\\Antheaume, 2008, Hydraulic darrieus turbines efficiency for free fluid flow conditions versus power farm conditions.pdf:PDF},
   Owner                    = {pete},
-  Review                   = {Actuator line method},
+  Review                   = {Actuator surface method -- uses BE theory but averaged over revolution for steady flow},
   Timestamp                = {2013.07.11}
 }
 
@@ -1757,6 +1757,7 @@ based on {CFD}},
   Pages                    = {1-13},
   Volume                   = {3},
 
+  Doi                      = {10.1063/1.3608170},
   File                     = {:Turbines, Arrays\\Dabiri, 2011, Potential order-of-magnitude enhancement of wind farm power density via counter-rotating VAWT arrays.pdf:PDF},
   Keywords                 = {cross-flow, farms, arrays},
   Owner                    = {Pete},
@@ -1823,6 +1824,21 @@ based on {CFD}},
   File                     = {:UNH Related\\Darnell, 1996, A Towing Carriage for the UNH Towing and Wave Making Basin.pdf:PDF},
   Owner                    = {Pete},
   Timestamp                = {2015.09.12}
+}
+
+@Article{Davidson2009,
+  Title                    = {Large Eddy Simulations: how to evaluate resolution},
+  Author                   = {Lars Davidson},
+  Journal                  = {International Journal of Heat and Fluid Flow},
+  Year                     = {2009},
+  Number                   = {5},
+  Pages                    = {1016--1025},
+  Volume                   = {30},
+
+  File                     = {:CFD\\Davidson, 2009, Large Eddy Simulations - how to evalutate resolution.pdf:PDF},
+  Keywords                 = {LES},
+  Owner                    = {Pete},
+  Timestamp                = {2015.11.12}
 }
 
 @Article{Deglaire2009,
@@ -3132,6 +3148,19 @@ predicting the performance of H-Darrieus with a high solidity."},
   Timestamp                = {2014.09.18}
 }
 
+@Article{Keck2012,
+  Title                    = {A numerical investigation of nacelle anemometry for a HAWT using actuator disc and line models in CFX},
+  Author                   = {Rolf-Erik Keck},
+  Journal                  = {Renewable Energy},
+  Year                     = {2012},
+  Pages                    = {72--84},
+  Volume                   = {48},
+
+  Doi                      = {10.1016/j.renene.2012.04.004},
+  Owner                    = {Pete},
+  Timestamp                = {2015.11.15}
+}
+
 @Article{Khalfallah2007,
   Title                    = {Effect of dust on the performance of wind turbines},
   Author                   = {Mohammed G. Khalfallah and Aboelyazied M. Koliub},
@@ -3180,6 +3209,7 @@ predicting the performance of H-Darrieus with a high solidity."},
   Pages                    = {1-13},
   Volume                   = {13},
 
+  Doi                      = {10.1080/14685248.2012.712698},
   File                     = {:Turbines, Cross-Flow\\Kinzel et al, 2012, Energy exchange in an array of vertical-axis wind turbines.pdf:PDF},
   Keywords                 = {cross-flow, farms, arrays,},
   Owner                    = {Pete},
@@ -4049,9 +4079,22 @@ predicting the performance of H-Darrieus with a high solidity."},
   Year                     = {2014},
   Volume                   = {133},
 
-  File                     = {:home/pete/Google Drive/Library/Turbines, Arrays/Mehta et al, 2014, Large eddy simulation of wind farm aerodynamics, a review.pdf:PDF},
+  File                     = {:Turbines, Arrays/Mehta et al, 2014, Large eddy simulation of wind farm aerodynamics, a review.pdf:PDF},
   Owner                    = {pete},
   Timestamp                = {2014.09.21}
+}
+
+@Article{Meneveau1996,
+  Title                    = {A Lagrangian dynamic subgrid-scale model of turbulence},
+  Author                   = {Charles Meneveau and Thomas S. Lund and William H. Cabot},
+  Journal                  = {Journal of Fluid Mechanics},
+  Year                     = {1996},
+  Pages                    = {353-385},
+  Volume                   = {319},
+
+  File                     = {:CFD\\Meneveau et al, 1996, A Lagrangian dynamic subgrid-scale model of turbulence.pdf:PDF},
+  Owner                    = {Pete},
+  Timestamp                = {2015.12.05}
 }
 
 @Article{Menter1994,
@@ -4722,6 +4765,20 @@ Technology},
   Timestamp                = {2013.06.22}
 }
 
+@Article{Pope2004,
+  Title                    = {Ten questions concerning the large-eddy simulation of turbulent flows},
+  Author                   = {Stephen B Pope},
+  Journal                  = {New Journal of Physics},
+  Year                     = {2004},
+  Number                   = {35},
+  Pages                    = {1--24},
+  Volume                   = {6},
+
+  File                     = {:CFD\\Pope, 2004, Ten questions concerning the large-eddy simulation of turbulent flows.pdf:PDF},
+  Owner                    = {Pete},
+  Timestamp                = {2015.11.12}
+}
+
 @Article{Porte-Agel2011,
   Title                    = {Large-eddy simulation of atmospheric boundary layer flow through wind turbines and wind farms},
   Author                   = {Fernando Porte-Agel and Yu-Ting Wu and Hao Lu and Robert J. Conzemius},
@@ -5034,6 +5091,7 @@ Technology},
   Year                     = {2014},
 
   File                     = {:Turbines, Modeling\\Sarlak et al, 2014, Comparison of two LES codes for wind turbine wake studies.pdf:PDF},
+  Keywords                 = {large eddy simulation},
   Owner                    = {Pete},
   Timestamp                = {2014.08.18}
 }
@@ -6186,7 +6244,7 @@ and Søren J. Andersen},
   Journal                  = {Boundary-Layer Meteorol},
   Year                     = {2013},
 
-  File                     = {:home/pete/Google Drive/Library/Turbines, Arrays/Wu and Porte-Agel, 2013, Simulation of turbulent flow inside and above wind farms, model validation and layout effects.pdf:PDF},
+  File                     = {:Turbines, Arrays/Wu and Porte-Agel, 2013, Simulation of turbulent flow inside and above wind farms, model validation and layout effects.pdf:PDF},
   Owner                    = {pete},
   Timestamp                = {2014.09.21}
 }
@@ -6271,6 +6329,19 @@ and Søren J. Andersen},
   Timestamp                = {2014.09.18}
 }
 
+@Article{Yoon2005,
+  Title                    = {Reynolds number scaling of flow in a Rushton turbine stirred tank. Part I—Mean flow, circular jet and tip vortex scaling},
+  Author                   = {H.S. Yoon and D.F. Hill and S. Balachandar and R.J. Adrian and M.Y. Ha},
+  Journal                  = {Chemical Engineering Science},
+  Year                     = {2005},
+  Pages                    = {3169--3183},
+  Volume                   = {60},
+
+  File                     = {:Fluid Mechanics, Vortex Flows\\Yoon et al, 2005, Reynolds number scaling of flow in a Rushton turbine stirred tank. Part I - mean flow, circular jet and tip vortex scaling.pdf:PDF},
+  Owner                    = {Pete},
+  Timestamp                = {2015.12.13}
+}
+
 @Article{Zahle2007,
   Title                    = {On the Influence of Far-Wake Resolution on Wind Turbine Flow Simulations},
   Author                   = {Frederik Zahle and Niels N. Sørensen},
@@ -6313,6 +6384,19 @@ and Søren J. Andersen},
   File                     = {:Turbines, Cross-Flow/Zanon et al, 2012, A vortex panel model for the simulation of the wake flow past a vertical axis wind turbine in dynamic stall.pdf:PDF},
   Owner                    = {pete},
   Timestamp                = {2014.04.28}
+}
+
+@Article{Zhong2015,
+  Title                    = {Lagrangian dynamic large-eddy simulation of wind turbine near wakes combined with an actuator line method},
+  Author                   = {Hongmin Zhong and Pingan Du and Fangning Tang and Li Wang},
+  Journal                  = {Applied Energy},
+  Year                     = {2015},
+  Pages                    = {224--233},
+  Volume                   = {144},
+
+  Doi                      = {10.1016/j.apenergy.2015.01.082},
+  Owner                    = {Pete},
+  Timestamp                = {2015.11.15}
 }
 
 @comment{jabref-meta: selector_keywords:}
