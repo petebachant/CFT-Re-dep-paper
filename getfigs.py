@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-"""
-This script copies figures from the RVAT Reynolds number dependence
+"""This script copies figures from the RVAT Reynolds number dependence
 experiment directory.
 """
 
@@ -19,7 +18,8 @@ figlist = ["cp_curves.pdf",
            "wake_spectra.pdf",
            "wake_trans_totals.pdf",
            "meancontquiv_10.pdf",
-           "k_contours_10.pdf"]
+           "k_contours_10.pdf",
+           "mean_u_k_profiles.pdf"]
 
 for fig in figlist:
     shutil.copy2(os.path.join(figdir, fig), os.path.join("figures", fig))
