@@ -301,9 +301,13 @@ similar to the Sandia National Labs/US Department of Energy RM2 River Turbine
 The UNH-RVAT turbine has three blades made from NACA 0020 profiles with 0.14 m
 chord. The blades are mounted at mid-chord w.r.t. the turbine axis, and the
 turbine has a height (blade span) of 1 m and a diameter of 1 m, c.f.
-Figure~\ref{fig:turbine}. The rotor has a relatively high solidity $Nc/(\pi D) =
-0.13$ and large chord-to-radius ratio $c/R = 0.28$. A CAD model of the turbine
-is available from \cite{Bachant2014-RVAT-CAD}.
+Figure~\ref{fig:turbine}. The blockage ratio produced by the rotor's frontal
+area is 11\%, which we have decided not to correct for, as reliable methods are
+not yet agreed upon for CFTs \cite{Cavagnaro2014}. As such, blockage should be
+taken into account when using these data for model validation, i.e., the
+experimental domain should be mimicked. The rotor has a relatively high solidity
+$Nc/(\pi D) = 0.13$ and large chord-to-radius ratio $c/R = 0.28$. A CAD model of
+the turbine is available from \cite{Bachant2014-RVAT-CAD}.
 
 \begin{figure}[ht!]
 \centering
