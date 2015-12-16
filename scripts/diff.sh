@@ -4,8 +4,8 @@
 # a commit hash, tag, etc.
 
 rev=$1
-git show $rev:paper.tex > Archive/paper-$rev.tex
-latexdiff --exclude-textcmd="section,subsection,subsubsection" --math-markup=off Archive/paper-$rev.tex Archive/paper-unix.tex > paper-$rev-diff.tex
+git show $rev:paper.tex > archive/paper-$rev.tex
+latexdiff --exclude-textcmd="section,subsection,subsubsection" --math-markup=off archive/paper-$rev.tex archive/paper-unix.tex > paper-$rev-diff.tex
 latexmk paper-$rev-diff.tex -pdf -f
-mv paper-$rev-diff.pdf Archive
+mv paper-$rev-diff.pdf archive
 rm paper-$rev*
