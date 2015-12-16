@@ -4,4 +4,12 @@ This repository contains the source files for our journal article analyzing
 Reynolds number effects on the performance and near-wake
 of a vertical-axis cross-flow turbine.
 
-This paper can also be edited via ShareLaTeX: https://www.sharelatex.com/project/55258b7a86486cd24b838523
+
+## Creating a "diff" version
+
+You will need Perl installed. [ActiveState
+Perl](http://www.activestate.com/activeperl/downloads) is a nice choice.
+
+For example, to diff between the tag `v1`:
+
+    scripts/diff.sh v1
