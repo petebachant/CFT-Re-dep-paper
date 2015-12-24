@@ -5,7 +5,7 @@
 
 rev=$1
 git show $rev:paper.tex > archive/paper-$rev.tex
-latexdiff --exclude-textcmd="section,subsection,subsubsection" --math-markup=off archive/paper-$rev.tex archive/paper-unix.tex > paper-$rev-diff.tex
+latexdiff --exclude-textcmd="section,subsection,subsubsection" --math-markup=off archive/paper-$rev.tex paper.tex > paper-$rev-diff.tex
 latexmk paper-$rev-diff.tex -pdf -f
 mv paper-$rev-diff.pdf archive
 rm paper-$rev*
