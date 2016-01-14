@@ -86,10 +86,10 @@ Colovos Rd., Durham, NH, USA}
 % Abstract (Less than 200 words)
 \abstract{Experiments were performed with a large laboratory-scale high solidity
     cross-flow turbine to investigate Reynolds number effects on performance and
-    wake characteristics, to establish scale thresholds for physical and numerical
-    modeling of individual devices and arrays. It was demonstrated that the
-    performance of the cross-flow turbine becomes essentially $Re$-independent at a
-    Reynolds number based on turbine diameter of $Re_D \approx 10^6$, or an
+    wake characteristics, and to establish scale thresholds for physical and
+    numerical modeling of individual devices and arrays. It was demonstrated that
+    the performance of the cross-flow turbine becomes essentially $Re$-independent
+    at a Reynolds number based on turbine diameter of $Re_D \approx 10^6$, or an
     approximate average Reynolds number based on blade chord of $Re_c \approx 2
     \times 10^5$. A simple model that calculates peak torque coefficient from static
     foil data and cross-flow turbine kinematics was shown to be a reasonable
@@ -127,13 +127,13 @@ the importance of inertial forces over viscous forces on the flow physics
 velocity and length scales, respectively, and $\nu$ is the fluid kinematic
 viscosity. The other common dynamical scale---for systems with a free
 surface---is the Froude number $Fr \equiv U/\sqrt{gl}$, where $g$ is the
-gravitational acceleration. Matching both Froude and Reynolds number is
-difficult for the same fluid, which is illustrated by the relation $Re = l^{3/2}
-g^{1/2} Fr / \nu$, since $Re$ scales linearly with $l$, or the geometric scale.
-In general the geometric scale of a physical model is not necessarily the same
-as its dynamical scale. As such, hereafter we will use the word ``scale'' to
-refer to this dynamical scale or Reynolds number and assume Froude number is
-small enough to be negligible.
+gravitational acceleration. Matching both Froude and Reynolds number is not
+possible for a scaled model in a given fluid, which is illustrated by the
+relation $Re = l^{3/2} g^{1/2} Fr / \nu$, since $Re$ scales linearly with $l$,
+or the geometric scale. In general the geometric scale of a physical model is
+not necessarily the same as its dynamical scale. As such, hereafter we will use
+the word ``scale'' to refer to this dynamical scale or Reynolds number and
+assume Froude number is small enough to be negligible.
 
 With regards to wind and marine hydrokinetic (MHK) turbines, scaled physical
 models are used to validate predictive numerical models, predict full-scale
@@ -176,12 +176,12 @@ diminishing at the higher Reynolds numbers, especially for turbines of lower
 solidity ($Nc/R$, where $N$ is the number of blades and $R$ is the turbine's
 maximum radius). More recently, Polagye and Cavagnaro \cite{Polagye2013b}
 observed significant Reynolds number sensitivity for a high solidity helical
-cross-flow turbine, and Bravo et al. \cite{Bravo2007} observed power coefficient
-of a straight-bladed VAWT to become Reynolds number independent at $Re_c \approx
-4 \times 10^5$. Bachant and Wosnik \cite{Bachant2014} observed Reynolds number
-independence of power coefficient at optimal tip speed ratio for a high solidity
-cross-flow turbine at $Re_D \approx 10^6$ or $Re_{c,\mathrm{avg}} \approx 2
-\times 10^5$.
+cross-flow turbine, and Bravo et al. \cite{Bravo2007} observed the power
+coefficient of a straight-bladed VAWT to become Reynolds number independent at
+$Re_c \approx 4 \times 10^5$. Bachant and Wosnik \cite{Bachant2014} observed
+Reynolds number independence of power coefficient at optimal tip speed ratio for
+a high solidity cross-flow turbine at $Re_D \approx 10^6$ or
+$Re_{c,\mathrm{avg}} \approx 2 \times 10^5$.
 
 The wake of a 2-D cross-flow turbine in the dynamic stall regime has been
 studied via laser Doppler velocimetry by Brochier et al. \cite{Brochier1986} and
@@ -348,12 +348,12 @@ the torque and drag signals, were sampled at 2 kHz.
 \end{figure}
 
 Wake velocity was measured using a Nortek Vectrino+ acoustic Doppler velocimeter
-(ADV), which has a 6 mm diameter sampling volume, and sampled at 200 Hz. The
-probe was mounted on an automated positioning system, also controlled by the tow
-tank's main motion controller. The ADV and DAQ systems' sampling times were
-synchronized by triggering the start of data acquisition via a pulse sent from
-the motion controller. Additional details of the turbine and experimental setup
-are described in \cite{Bachant2015-JoT}.
+(ADV), which has an approximately 6 mm diameter sampling volume, and sampled at
+200 Hz. The probe was mounted on an automated positioning system, also
+controlled by the tow tank's main motion controller. The ADV and DAQ systems'
+sampling times were synchronized by triggering the start of data acquisition via
+a pulse sent from the motion controller. Additional details of the turbine and
+experimental setup are described in \cite{Bachant2015-JoT}.
 
 
 \subsection{Test Plan}
@@ -416,14 +416,14 @@ Figure~\ref{fig:wake-locations}.
 From each set of tows, a standard time interval was set, which allowed the
 turbine performance and wake to reach a quasi-periodic state. Each run was
 analyzed to compute statistics over this interval, truncating the end slightly
-to achieve and integer number of blade passages. Turbine shaft angular velocity
-and tow carriage speed were calculated using as second order central
-differencing scheme on the respective position measurements. Power and drag
-coefficients are calculated as instantaneous quantities using the carriage speed
-as the free stream velocity.
+to achieve an integer number of blade passages. Turbine shaft angular velocity
+and tow carriage speed were calculated using a second order central differencing
+scheme on the respective position measurements. Power and drag coefficients were
+calculated as instantaneous quantities using the carriage speed as the free
+stream velocity.
 
 Wake velocity data were filtered for spurious ``spikes'' by removing datapoints
-8 standard deviations or 0.9 m/s from the mean. The experimental data and code
+8 standard deviations, or 0.9 m/s from the mean. The experimental data and code
 for processing and visualization are available from
 \cite{Bachant2015-RVAT-Re-dep-data}.
 
@@ -432,7 +432,7 @@ for processing and visualization are available from
 
 Uncertainty was considered from a combination of systematic and random errors.
 The random error was inferred from the sample standard deviation (on a
-per-revolution basis) and the systematic from the sensor calibrations or
+per-revolution basis) and the systematic error from the sensor calibrations or
 datasheets. Combining both sources of error, along with their propagation into
 quantities derived from multiple measurements, followed the procedures outlined
 in Coleman and Steele \cite{ColemanSteele}, described below.
@@ -482,7 +482,7 @@ included on the plots. Expanded uncertainty estimates for mean wake velocities
 \begin{table}
     \centering
 \begin{tabular}{cccc}
-$U_\infty$ (m/s) &                $U$ &                $V$ &                $W$ \\
+$U_\infty$ (m/s) &          $U$ (m/s) &          $V$ (m/s) &          $W$ (m/s) \\
 \hline
            $0.4$ & $1 \times 10^{-2}$ & $7 \times 10^{-3}$ & $6 \times 10^{-3}$ \\
            $0.6$ & $1 \times 10^{-2}$ & $8 \times 10^{-3}$ & $8 \times 10^{-3}$ \\
@@ -536,7 +536,7 @@ slight upward shift in $C_D$ with increasing $Re$.
 Mean power and drag coefficients at $\lambda=1.9$ are plotted versus Reynolds
 number in Figure~\ref{fig:perf-Re-dep}. Note that the large error bars for $C_P$
 at low $Re$ are dominated by systematic error estimates for the torque
-transducer, since torque values are at the lower end of the measurement range.
+transducer, since torque values are at the lower end of its measurement range.
 However, the uncertainty due to random error or repeatability remains relatively
 low. There is a drastic improvement in $C_P$ with increasing Reynolds number at
 lower values of Reynolds number. The power coefficient then becomes  essentially
@@ -552,8 +552,9 @@ changes are less dramatic. This is likely due to cross-flow turbine geometry,
 where increases in blade drag at lower $Re$ somewhat offsets the reduction in
 lift, causing the total streamwise force to vary less than the rotor torque. The
 tendency for $C_D$ to continue increasing with $Re$ may also include the effects
-of an increasing Froude number, which increases free surface deformation and
-wave drag during towing without increasing flow through the turbine.
+of an increasing Froude number (from faster tow speeds), which increases free
+surface deformation and wave drag during towing without increasing flow through
+the turbine.
 
 \begin{figure}[ht]
 \centering
