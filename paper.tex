@@ -617,7 +617,8 @@ coefficient $C_c$ by
 C_T = \frac{C_c c}{2R} \frac{|U_\mathrm{rel}|^2}{U_\infty^2},
 \label{eq:ct}
 \end{equation}
-where the blade section chordwise force (for zero preset pitch) is given by
+where the blade section chordwise force coefficient (for zero preset pitch) is
+given by
 \begin{equation}
 C_c = C_l \sin \alpha - C_d \cos \alpha.
 \label{eq:cc}
@@ -661,12 +662,13 @@ From the peak torque coefficient metric plotted in
 Figure~\ref{fig:foils-C_T-Re-dep}, the Reynolds number independence is achieved
 at lower values, and more dramatically. We see that the trend of the
 (non-cambered) NACA 0020 curve matches almost perfectly up to $Re_c \approx 2.1
-\times 10^5$, but then continues to increase linearly with a small slope with
-$Re$. This is not matched by the experimental data, which at higher $Re$ looks
-more like the cambered foil results. Though this method is very approximate, it
-nevertheless appears to be a reasonable way to predict the transitional Reynolds
-number regime for cross-flow turbine performance using only 2-D static airfoil
-characteristics
+\times 10^5$, but then continues to increase slowly and linearly with $Re$. This
+is not matched by the experimental data, which at higher $Re$ looks more like
+the cambered foil results. Though this method does not provide absolute
+predictions of turbine performance, it predicts the transitional Reynolds number
+regime for cross-flow turbine performance using only 2-D static airfoil
+characteristics, i.e., Reynolds number scaling of the peak $C_T$ computed this
+way behaves much like that of the measured turbine performance.
 
 \begin{figure}[ht!]
 \centering
@@ -741,7 +743,7 @@ govern the downstream evolution of mean momentum and kinetic energy.
 \subsubsection{Dominant Timescales and Turbulence Spectra}
 
 Spectra of the cross-stream velocity normalized by the free stream were
-computing using a fast Fourier transform-based method, applying a Hanning window
+computed using a fast Fourier transform-based method, applying a Hanning window
 and averaging over four adjacent frequency bands to decrease confidence
 intervals. These spectra are plotted in Figure~\ref{fig:wake-spectra} for
 regions on either side of the turbine. On the $-y$ side of the turbine there is
@@ -842,22 +844,23 @@ boundaries. A weighted average for each term was then calculated based on the
 grid spacing. We note that similar to \cite{Bachant2015-JoT}, the vertical
 advection at this point in the wake is the dominant contributor to positive wake
 recovery, caused by the unique vortex pattern created by the blade tips and
-wakes.
+blade wakes.
 
 We see that in general, levels of turbulent transport are slightly lower at
 larger Reynolds numbers. The viscous diffusion and dissipation, though still
 three orders of magnitude smaller than the other terms, do increase at low
 Reynolds numbers, which is consistent with the physical meaning of the Reynolds
 number itself. From these results one might expect that the viscous effects will
-become significant to the wake dynamics around $Re_D \sim 10^4$.
+become significant to the wake dynamics as Reynolds number is decreased below
+$Re_D \sim 10^4$.
 
 Transport due to cross-stream advection appears to become more negative at
 higher $Re$. This could be a consequence of increasing free surface deformation
 (higher $Fr$), which then decreases the effective flow cross-sectional area
 downstream of the turbine, forcing more flow to accelerate around the sides of
-the turbine. Note that we also see slightly higher drag coefficients at higher
-$Re$ (potentially for the same reason), which also helps explain larger negative
-values of cross-stream advection.
+the turbine. Note that we also observe slightly higher drag coefficients at
+higher $Re$ (potentially for the same reason), which also helps explain larger
+negative values of cross-stream advection.
 
 \begin{figure}[ht!]
     \centering
@@ -908,12 +911,12 @@ In this study it was demonstrated that the performance of a high solidity
 ($c/R=0.28$) cross-flow turbine becomes essentially $Re$-independent at a
 Reynolds number based on turbine diameter of $Re_D \approx 10^6$, or an
 approximate Reynolds number based on blade chord of $Re_c \approx 2 \times
-10^5$. The power coefficient values on the left side of the $C_P$--$\lambda$
-curve are further reduced at low $Re$ due to deeper stalling. The
-$Re$-independent threshold corresponds to that at which the foil suction surface
-boundary layer becomes turbulent before having to recover static pressure
-against the adverse pressure gradient, highlighted in \cite{Lissaman1983,
-    McMasters1980, Carmichael1981}.
+10^5$. The power coefficient values on the left hand side of the
+$C_P$--$\lambda$ curve are reduced more than those on the right hand side at low
+$Re$ due to deeper stalling. The $Re$-independent threshold corresponds to that
+at which the foil suction surface boundary layer becomes turbulent before having
+to recover static pressure against the adverse pressure gradient, highlighted in
+\cite{Lissaman1983, McMasters1980, Carmichael1981}.
 
 We propose a method for predicting Reynolds number dependence of a cross-flow
 turbine using static airfoil characteristics and turbine blade kinematics:
@@ -946,23 +949,23 @@ respect to mean streamwise momentum and mean kinetic energy recovery in the
 streamwise direction. Vertical advection---the largest transport mechanism
 measured---showed little $Re$-dependence, whereas the negative effects of
 cross-stream advection were enhanced at high $Re$, which may be due to larger
-free surface deformation reducing the near-wake's cross-sectional area. Despite
-being orders of magnitude smaller than other transport processes, viscous
-diffusion increased rapidly with decreasing $Re$, and is expected to become
-significant to the wake dynamics around $Re_D \sim 10^4$. Overall, the total
-wake transport measured leveled off at essentially the same Reynolds number that
-the performance did---$Re_D \approx 0.8 \time 10^6$.
+free surface deformation effectively reducing the near-wake's cross-sectional
+area. Despite being orders of magnitude smaller than other transport processes,
+viscous diffusion increased rapidly with decreasing $Re$, and is expected to
+become significant to the wake dynamics around $Re_D \sim 10^4$. Overall, the
+total wake transport measured leveled off at essentially the same Reynolds
+number that the performance did---$Re_D \approx 0.8 \times 10^6$.
 
-From these results we recommend that physical model tests be performed at $Re_D
-\sim 10^6$ to provide reasonable predictions of full-scale performance. This
-threshold also applies to the validation of predictive engineering models,
-especially for high-fidelity CFD models where the boundary layer is to be
-resolved, since transition to turbulence plays an important role in overall
-blade loading. Note that in our case blockage, though reasonably low, may be
-increasing flow through the turbine compared with a free case, which could mean
-$Re$ thresholds for free flows could be slightly higher, though a reliable
-blockage correction algorithm has not yet been agreed upon for CFTs
-\cite{Cavagnaro2014}.
+From these results we recommend that physical model tests of cross-flow turbines
+be performed at $Re_D \sim 10^6$ or greater to provide reasonable predictions of
+full-scale performance. This threshold also applies to the validation of
+predictive engineering models, especially for high-fidelity CFD models where the
+boundary layer is to be resolved, since transition to turbulence plays an
+important role in overall blade loading. Note that in our case blockage, though
+reasonably low, may be increasing flow through the turbine compared with a free
+case, which could mean $Re$ thresholds for free flows could be slightly higher,
+though a reliable blockage correction algorithm has not yet been agreed upon for
+CFTs \cite{Cavagnaro2014}.
 
 If using scaled physical models to predict array performance, where turbine
 power output is measured, it may also be important to keep all turbines in the
