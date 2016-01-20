@@ -2658,6 +2658,21 @@ medium-solidity {D}arrieus Vertical Axis Wind Turbines},
   Timestamp                = {2013.08.01}
 }
 
+@TechReport{Gregorek1989,
+  Title                    = {Steady state and oscillatory aerodynamic characteristics of a {NACA} 0021 airfoil},
+  Author                   = {G. M. Gregorek and M. J. Hoffman and M. J. Berchak},
+  Institution              = {Sandia National Laboratories},
+  Year                     = {1989},
+
+  Address                  = {Albuquerque, NM 87185},
+  Month                    = {August},
+  Type                     = {Data Report},
+
+  File                     = {:Fluid Mechanics, of Foils\\Gregorek et al, 1989, Steady state and oscillatory aerodynamic characteristics of a NACA 0021 airfoil.pdf:PDF},
+  Owner                    = {Pete},
+  Timestamp                = {2016.01.15}
+}
+
 @PhdThesis{Gretton2009,
   Title                    = {The hydrodynamic analysis of a vertical axis tidal current turbine},
   Author                   = {Gareth I. Gretton},
@@ -3098,6 +3113,7 @@ medium-solidity {D}arrieus Vertical Axis Wind Turbines},
   Pages                    = {1-11},
   Volume                   = {136},
 
+  Abstract                 = {The objective of this work is to develop and test a set of general guidelines for choosing parameters to be used in the state-of-the-art actuator line method (ALM) for modeling wind turbine blades in computational fluid dynamics (CFD). The actuator line method is being increasingly used for the computation of wake interactions in large wind farms in which fully blade-resolving simulations are expensive and require complicated rotating meshes. The focus is on actuator line behavior using fairly isotropic grids of low aspect ratio typically used for large-eddy simulation (LES). Forces predicted along the actuator lines need to be projected onto the flow field as body forces, and this is commonly accomplished using a volumetric projection. In this study, particular attention is given to the spanwise distribution of the radius of this projection. A new method is proposed where the projection radius varies along the blade span following an elliptic distribution. The proposed guidelines for actuator line parameters are applied to the National Renewable Energy Laboratory's (NREL's) Phase VI rotor and the NREL 5-MW turbine. Results obtained are compared with available data and the blade-element code XTurb-PSU. It is found that the new criterion for the projection radius leads to improved prediction of blade tip loads for both blade designs.},
   Doi                      = {10.1115/1.4026252},
   File                     = {:Turbines, Modeling\\Jha et al, 2014, Guidelines for Volume Force Distributions Within Actuator Line Modeling of Wind Turbines on Large-Eddy Simulation-Type Grids.pdf:PDF},
   Owner                    = {Pete},
@@ -3240,6 +3256,9 @@ predicting the performance of H-Darrieus with a high solidity."},
   Pages                    = {72--84},
   Volume                   = {48},
 
+  Abstract                 = {In order to control a horizontal axis wind turbine (HAWT) in an optimal manner, one needs accurate measurements of the oncoming wind conditions. The method currently used by large wind power manufacturers is to measure wind speed and direction on top of the nacelle behind the rotor. In order for such measurements to give correct readings, a correction for the effect of rotor disturbance on the oncoming wind field is needed. This requires use of so-called nacelle transfer functions (NTF). An NTF is an empirical function that relates the undisturbed wind field to the measured wind speed and direction at the nacelle. Currently, the NTF is obtained through a series of costly and time consuming field measurement campaigns. The use of numerical methods, such as the one presented in this article, could both reduce the time needed to acquire an NTF and provide a means to improve NTF accuracy.
+
+In this article, two different numerical models based on actuator disc and line techniques are implemented in Ansys CFX. The models are benchmarked against the Blade Element Momentum model (BEM) and against field measurements taken at the nacelle anemometer location of a Vestas V90 turbine. The overall agreement between the CFX actuator models and the reference data sources is found to be very satisfactory. The conclusion of the study is that the proposed models, in their current form, are suitable tools for research and development activities targeting nacelle anemometry or near wake aerodynamics. With some further development to include inflow turbulence and non-axial induction, the models have the potential to be used for generating a numerical NTF.},
   Doi                      = {10.1016/j.renene.2012.04.004},
   Owner                    = {Pete},
   Timestamp                = {2015.11.15}
@@ -3959,6 +3978,28 @@ predicting the performance of H-Darrieus with a high solidity."},
   Timestamp                = {2015.05.26}
 }
 
+@Article{Martinez-Tossas2015a,
+  Title                    = {Large Eddy Simulation of wind turbine wakes: detailed comparisons of two codes focusing on effects of numerics and subgrid modeling},
+  Author                   = {Luis A. Martinez-Tossas and Matthew J Churchfield and Charles Meneveau},
+  Journal                  = {Journal of Physics: Conference Series},
+  Year                     = {2015},
+  Volume                   = {625},
+
+  Abstract                 = {In this work we report on results from a detailed comparative numerical study
+from two Large Eddy Simulation (LES) codes using the Actuator Line Model (ALM). The
+study focuses on prediction of wind turbine wakes and their breakdown when subject to uniform
+inflow. Previous studies have shown relative insensitivity to subgrid modeling in the context
+of a finite-volume code. The present study uses the low dissipation pseudo-spectral LES code
+from Johns Hopkins University (LESGO) and the second-order, finite-volume OpenFOAM code
+(SOWFA) from the National Renewable Energy Laboratory. When subject to uniform inflow,
+the loads on the blades are found to be unaffected by subgrid models or numerics, as expected.
+The turbulence in the wake and the location of transition to a turbulent state are affected by
+the subgrid-scale model and the numerics.},
+  File                     = {:Turbines, Modeling\\Martinez-Tossas et al, 2015, Large Eddy Simulation of wind turbine wakes - detailed comparisons of two codes focusing on effects of numerics and subgrid modeling.pdf:PDF},
+  Owner                    = {Pete},
+  Timestamp                = {2016.01.18}
+}
+
 @Article{Masson1998,
   Title                    = {Appropriate Dynamic-Stall Models for Performance Predictions of VAWTs with NLF Blades},
   Author                   = {Christian Masson and Christophe Leclerc and Ion Paraschivoiu},
@@ -4364,6 +4405,18 @@ predicting the performance of H-Darrieus with a high solidity."},
   Timestamp                = {2013.10.15}
 }
 
+@TechReport{Neary2011,
+  Title                    = {Reference inflow characterization for river resource reference model (RM2)},
+  Author                   = {Neary, V.S.},
+  Institution              = {Oak Ridge National Laboratory},
+  Year                     = {2011},
+  Number                   = {ORNL/TM-2011/360},
+
+  Owner                    = {Pete},
+  Timestamp                = {2016.01.16},
+  Url                      = {http://info.ornl.gov/sites/publications/files/Pub32455.pdf}
+}
+
 @InProceedings{Neary2013,
   Title                    = {{US Department of Energy (DOE)} National Lab Activities in Marine Hydrokinetics: Scaled Model Testing of {DOE} Reference Turbines},
   Author                   = {Neary, V.S. and Fontaine, A.A. and Bachant, P. and Wosnik, M. and Michelen, C. and Meyer, R.J. and Gunawan, B. and Straka, W.A.},
@@ -4376,6 +4429,19 @@ predicting the performance of H-Darrieus with a high solidity."},
   File                     = {:Turbines, Modeling\\Neary et al, 2013, USDOE Reference Model Turbine Testing, EWTEC.pdf:PDF},
   Owner                    = {Pete},
   Timestamp                = {2013.12.14}
+}
+
+@InProceedings{Neary2014a,
+  Title                    = {Methodology for design and economic analysis of marine energy conversion (MEC) technologies},
+  Author                   = {Neary, V.S. and Lawson, M. and Previsic, M. and Copping, A. and Hallett, K.C. and LaBonte A. and Rieks, J. and Murray, D.},
+  Booktitle                = {Proceedings of the Marine Energy Technology Symposium (METS2014)},
+  Year                     = {2014},
+
+  Address                  = {Seattle, WA},
+  Month                    = {April},
+
+  Owner                    = {Pete},
+  Timestamp                = {2016.01.16}
 }
 
 @Article{Neary2013b,
@@ -4509,6 +4575,19 @@ predicting the performance of H-Darrieus with a high solidity."},
 
   Owner                    = {Pete},
   Timestamp                = {2014.03.24}
+}
+
+@Article{Orlandi2015,
+  Title                    = {{3D} {URANS} analysis of a vertical axis wind turbine in skewed flows},
+  Author                   = {A. Orlandi and M. Collu and S. Zanforlin and A. Shires},
+  Journal                  = {J. Wind Eng. Ind. Aerodyn.},
+  Year                     = {2015},
+  Pages                    = {77--84},
+  Volume                   = {147},
+
+  File                     = {:Turbines, Cross-Flow\\Orlandi et al, 2015, 3D URANS analysis of a vertical axis wind turbine in skewed flows.pdf:PDF},
+  Owner                    = {Pete},
+  Timestamp                = {2016.01.18}
 }
 
 @InProceedings{Ostavan2013,
@@ -6121,6 +6200,18 @@ and Søren J. Andersen},
   File                     = {:CFD\\Versteeg, An introduction to computational fluid dynamics.djvu:Djvu},
   Owner                    = {Pete},
   Timestamp                = {2013.11.05}
+}
+
+@Article{Vincent2010,
+  Title                    = {A New Class of High-Order Energy Stable Flux Reconstruction Schemes},
+  Author                   = {P.E. Vincent and P. Castonguay and A. Jameson},
+  Journal                  = {J. Sci. Comput.},
+  Year                     = {2010},
+
+  Doi                      = {10.1007/s10915-010-9420-z},
+  File                     = {:CFD\\Vincent et al, 2010, A new class of high-order eergy stable flux reconstruction schemes.pdf:PDF},
+  Owner                    = {Pete},
+  Timestamp                = {2016.01.15}
 }
 
 @Article{Viola2014,
