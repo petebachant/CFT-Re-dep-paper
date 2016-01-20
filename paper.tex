@@ -1,5 +1,5 @@
-%  LaTeX support: latex@mdpi.com
-%  In case you need support, please attach any log files that you could have,
+% LaTeX support: latex@mdpi.com
+% In case you need support, please attach any log files that you could have,
 % and specify the details of your LaTeX setup (which operating system and LaTeX
 % version / tools you are using).
 
@@ -11,15 +11,20 @@
 
 %=================================================================
 
-\documentclass[energies,article,accept,moreauthors,pdftex,12pt,a4paper]{mdpi}
+\documentclass[energies,article,accept,moreauthors,pdftex,10pt,a4paper]{mdpi}
 
 %=================================================================
-\setcounter{page}{1}
-\lastpage{x}
+\firstpage{1} %%MDPI internal note: new layout%%
+\lastpage{\pageref*{LastPage}}
+\makeatletter %%MDPI internal note: new layout%%
+\setcounter{page}{\@firstpage} %%MDPI internal note: new layout%%
+\makeatother %%MDPI internal note: new layout%%
+\articlenumber{0000}
 \doinum{10.3390/------}
-\pubvolume{xx}
-\pubyear{2015}
-\history{Received: xx / Accepted: xx / Published: xx}
+\pubvolume{9}
+\pubyear{2016}
+\externaleditor{Academic Editor: Sukanta Basu}
+\history{Received: 1 November 2015; Accepted: 15 January 2016; Published: date}
 %------------------------------------------------------------------
 % The following line should be uncommented if the LaTeX file is uploaded to
 % arXiv.org
@@ -35,30 +40,36 @@
 \usepackage[draft]{todonotes}
 \usepackage{lineno}
 \usepackage[utf8]{inputenc}
-
+\usepackage{booktabs} 
+\usepackage{multirow}
+\usepackage{soul}
+\usepackage{microtype}
 \def \p{\partial}
 \def \d{\mathrm{d}}
 \def \D{\mathrm{D}}
+\setitemize{parsep=6pt,itemsep=0pt,leftmargin=*,labelsep=5mm}
+\setenumerate{parsep=6pt,itemsep=0pt,leftmargin=*,labelsep=5mm}
+\setlist[description]{itemsep=0mm}
 
 %=================================================================
 %% Please use the following mathematics environments:
-%\theoremstyle{mdpi}
-%\newcounter{thm}
-%\setcounter{thm}{0}
-%\newcounter{ex}
-%\setcounter{ex}{0}
-%\newcounter{re}
-%\setcounter{re}{0}
-%\newtheorem{Theorem}[thm]{Theorem}
-%\newtheorem{Lemma}[thm]{Lemma}
-%\newtheorem{Characterization}[thm]{Characterization}
-%\newtheorem{Proposition}[thm]{Proposition}
-%\newtheorem{Property}[thm]{Property}
-%\newtheorem{Problem}[thm]{Problem}
-%\newtheorem{Example}[ex]{Example}
-%\newtheorem{Remark}[re]{Remark}
-%\newtheorem{Corollary}[thm]{Corollary}
-%\newtheorem{Definition}[thm]{Definition}
+\theoremstyle{mdpi}
+\newcounter{thm}
+\setcounter{thm}{0}
+\newcounter{ex}
+\setcounter{ex}{0}
+\newcounter{re}
+\setcounter{re}{0}
+\newtheorem{Theorem}[thm]{Theorem}
+\newtheorem{Lemma}[thm]{Lemma}
+\newtheorem{Characterization}[thm]{Characterization}
+\newtheorem{Proposition}[thm]{Proposition}
+\newtheorem{Property}[thm]{Property}
+\newtheorem{Problem}[thm]{Problem}
+\newtheorem{Example}[ex]{Example}
+\newtheorem{Remark}[re]{Remark}
+\newtheorem{Corollary}[thm]{Corollary}
+\newtheorem{Definition}[thm]{Definition}
 %% For proofs, please use the proof environment (the amsthm package is loaded by
 % the MDPI class).
 
@@ -66,45 +77,45 @@
 
 % Full title of the paper (Capitalized)
 \Title{Effects of Reynolds Number on the Energy Conversion and Near-Wake
-    Dynamics of a High Solidity Vertical-Axis Cross-Flow Turbine}
+ Dynamics of a High Solidity Vertical-Axis Cross-Flow Turbine}
 
 % Authors (Add full first names)
-\Author{Peter Bachant $^{1,}$* and Martin Wosnik $^{1}$*}
+\Author{Peter Bachant * and Martin Wosnik *}
 
 % Affiliations / Addresses (Add [1] after \address if there is only one
 % affiliation.)
-\address{%
-$^{1}$ Center for Ocean Renewable Energy, University of New Hampshire, 24
-Colovos Rd., Durham, NH, USA}
+\address[1]{%
+ Center for Ocean Renewable Energy, University of New Hampshire, 24
+Colovos Rd., \mbox{Durham, NH \hl{zip code}, USA}}
 
 % Contact information of the corresponding author (Add [2] after \corres if
 % there are more than one corresponding author.)
-\corres[2]{pxL3@unh.edu, martin.wosnik@unh.edu}
+\corres[2]{\hspace{-1em} Correspondence: pxL3@unh.edu (P.B.); martin.wosnik@unh.edu (M.W.); \linebreak Tel.: \hl{(P.B.); (M.W.)}}
 
-\linenumbers
+%\linenumbers
 
 % Abstract (Less than 200 words)
 \abstract{Experiments were performed with a large laboratory-scale high solidity
-    cross-flow turbine to investigate Reynolds number effects on performance and
-    wake characteristics, and to establish scale thresholds for physical and
-    numerical modeling of individual devices and arrays. It was demonstrated that
-    the performance of the cross-flow turbine becomes essentially $Re$-independent
-    at a Reynolds number based on turbine diameter of $Re_D \approx 10^6$, or an
-    approximate average Reynolds number based on blade chord of $Re_c \approx 2
-    \times 10^5$. A simple model that calculates peak torque coefficient from static
-    foil data and cross-flow turbine kinematics was shown to be a reasonable
-    estimator for predicting Reynolds number dependence of an actual cross-flow
-    turbine operating under dynamic conditions. Mean velocity and turbulence
-    measurements in the near-wake showed subtle differences over the range of $Re$
-    investigated. However, when transport terms for the streamwise momentum and mean
-    kinetic energy were calculated, a similar $Re$ threshold was revealed. These
-    results imply that physical model studies of cross-flow turbines should achieve
-    $Re_D \sim 10^6$ to properly approximate both the performance and wake dynamics
-    of full scale devices and arrays.}
+ cross-flow turbine to investigate Reynolds number effects on performance and
+ wake characteristics and to establish scale thresholds for physical and
+ numerical modeling of individual devices and arrays.~It was demonstrated that
+ the performance of the cross-flow turbine becomes essentially $Re$-independent
+ at a Reynolds number based on a turbine diameter of $Re_D \approx 10^6$ or an
+ approximate average Reynolds number based on a blade chord of $Re_c \approx 2
+ \times 10^5$.~A simple model that calculates the peak torque coefficient from static
+ foil data and cross-flow turbine kinematics was shown to be a reasonable
+ estimator for predicting the Reynolds number dependence of an actual cross-flow
+ turbine operating under dynamic conditions. Mean velocity and turbulence
+ measurements in the near-wake showed subtle differences over the range of $Re$
+ investigated.~However, when transport terms for the streamwise momentum and mean
+ kinetic energy were calculated, a similar $Re$ threshold was revealed. These
+ results imply that physical model studies of cross-flow turbines should achieve
+ $Re_D \sim 10^6$ to properly approximate both the performance and wake dynamics
+ of full-scale devices and arrays.}
 
 % Keywords: add 3 to 10 keywords
-\keyword{Reynolds number; cross-flow turbine; turbine performance; marine
-hydrokinetic energy; wind energy; VAWT; scale model}
+\keyword{\textls[-10]{Reynolds number; cross-flow turbine; turbine performance; marine
+hydrokinetic energy}; wind energy; {VAWT}; scale model}
 
 % The fields PACS, MSC, and JEL may be left empty or commented out if not
 % applicable
@@ -118,77 +129,81 @@ hydrokinetic energy; wind energy; VAWT; scale model}
 \section{Introduction}
 
 Scaled physical models are often used in science and engineering to approximate
-real-world systems. The principle of dynamic similarity allows for geometrically
-scaled systems to be dynamically identical if certain nondimensional physical
+real-world systems. The principle of dynamic similarity allows for geometrically-scaled systems to be dynamically identical if certain nondimensional physical
 parameters are matched. In the case of fluid systems, the most important
 nondimensional parameter is often the Reynolds number, $Re$, which quantifies
 the importance of inertial forces over viscous forces on the flow physics
-\cite{Acheson1990}: $Re \equiv Ul/\nu$, where $U$ and $l$ are characteristic
+\cite{Acheson1990}: \hl {$Re \equiv Ul/\nu$, } 
+%please check the symbol ``\equiv '' and make sure it is correct
+where $U$ and $l$ are characteristic
 velocity and length scales, respectively, and $\nu$ is the fluid kinematic
-viscosity. The other common dynamical scale---for systems with a free
-surface---is the Froude number $Fr \equiv U/\sqrt{gl}$, where $g$ is the
-gravitational acceleration. Matching both Froude and Reynolds number is not
+viscosity. The~other common dynamical scale, for systems with a free
+surface, is the Froude number \hl {$Fr \equiv U/\sqrt{gl}$,}
+%please check the symbol ``\equiv '' and make sure it is correct
+  where $g$ is the
+gravitational acceleration. Matching both the Froude and Reynolds number is not
 possible for a scaled model in a given fluid, which is illustrated by the
 relation $Re = l^{3/2} g^{1/2} Fr / \nu$, since $Re$ scales linearly with $l$,
-or the geometric scale. In general the geometric scale of a physical model is
-not necessarily the same as its dynamical scale. As such, hereafter we will use
-the word ``scale'' to refer to this dynamical scale or Reynolds number and
-assume Froude number is small enough to be negligible.
+or the geometric scale. In general, the geometric scale of a physical model is
+not necessarily the same as its dynamical scale. As such, hereafter, we will use
+the word ``scale'' to refer to this dynamical scale or the Reynolds number and
+assume the Froude number is small enough to be~ negligible.
 
 With regards to wind and marine hydrokinetic (MHK) turbines, scaled physical
 models are used to validate predictive numerical models, predict full-scale
-performance of individual turbines, and design or investigate arrays of devices.
-Scaled models have the benefit of being significantly less expensive, however, a
-key question is whether or not an acceptable scale mismatch exists. Similarly,
-it is questionable whether numerical models validated with physical model data
-obtained orders of magnitude away from prototype scale should be considered
+performance of individual turbines and design or investigate arrays of devices.
+Scaled models have the benefit of being significantly less expensive; however, a
+key question is whether or not an acceptable scale mismatch exists. Similarly,~it is questionable whether numerical models validated with physical model data
+obtained orders of magnitude away from the prototype scale should be considered
 validated at all. An example of the errors that can result from the
-extrapolation of small scale experiments can be found in \cite{Baker1991}.
+extrapolation of small-scale experiments can be found in \cite{Baker1991}.
 
 The performance and wake characteristics of cross-flow (vertical-axis) turbines
 depend on turbine solidity, blade profile (lift/drag, dynamic stall at reduced
 frequency of turbine rotation, symmetry, thickness, camber), blade pitch, number
-of blades, strut drag and operational parameters such as tip speed ratio---{\em
-    and} on Reynolds number \cite{Para2002}. Note that an average blade chord
+of blades, strut drag and operational parameters, such as tip speed ratio, {
+ and} on the Reynolds number \cite{Para2002}. Note that an average blade chord
 Reynolds number, $Re_{c,\mathrm{avg}} \approx \lambda U_\infty c/ \nu$, can be
-expressed in terms of tip speed ratio $\lambda \equiv \omega R/ U_\infty$, where
+expressed in terms of tip speed ratio \hl {$\lambda \equiv \omega R/ U_\infty$, } 
+%please check the symbol ``\equiv '' and make sure it is correct
+where
 $U_\infty$ is the free stream velocity, $c$ is the blade chord length, $\nu$ is
-the fluid kinematic viscosity, $\omega$ is the rotor's angular velocity, and $R$
+the fluid kinematic viscosity, $\omega$ is the rotor's angular velocity and $R$
 is the rotor radius. The value of $\lambda$ at which a turbine reaches peak
 performance in general decreases with turbine solidity $Nc/(\pi D)$
 \cite{Templin1974}, which allows for the use of a simpler Reynolds number based
 on turbine diameter $Re_D \equiv U_\infty D/\nu$.
 
 Solidity often directly correlates with the chord-to-radius ratio $c/R$. Rotors
-with $c/R \ge 0.1$ are considered high solidity \cite{Fiedler2009}, for which
+with $c/R \ge 0.1$ are considered to have high solidity \cite{Fiedler2009}, for which
 so-called flow curvature or virtual camber effects become significant
 \cite{Migliore1980}. These effects arise from the blade sections' circular
-paths, and can complicate the comparison with behavior of an airfoil in a linear
+paths and can complicate the comparison with the behavior of an airfoil in a linear
 flow.
 
-Blackwell et al. \cite{Blackwell1976} investigated the effects of Reynolds
-number on the performance of a 2 m diameter Darrieus vertical-axis cross-flow
+Blackwell \emph{et al.} \cite{Blackwell1976} investigated the effects of Reynolds
+number on the performance of a 2-m diameter Darrieus vertical-axis cross-flow
 wind turbine with NACA 0012 blades. By varying wind tunnel speed, the turbine
-was made to operate at approximately constant blade chord Reynolds number $Re_c$
-ranging from $1 \times 10^5$ to $3 \times 10^5$. In this regime the turbine
+was made to operate at an approximately constant blade chord Reynolds number $Re_c$
+ranging from $1 \times 10^5$ to $3 \times 10^5$. In this regime, the turbine
 power coefficient $C_P$ was shown to be sensitive to $Re_c$, with sensitivity
 diminishing at the higher Reynolds numbers, especially for turbines of lower
 solidity ($Nc/R$, where $N$ is the number of blades and $R$ is the turbine's
 maximum radius). More recently, Polagye and Cavagnaro \cite{Polagye2013b}
 observed significant Reynolds number sensitivity for a high solidity helical
-cross-flow turbine, and Bravo et al. \cite{Bravo2007} observed the power
+cross-flow turbine, and Bravo \emph{et al.} \cite{Bravo2007} observed the power
 coefficient of a straight-bladed VAWT to become Reynolds number independent at
 $Re_c \approx 4 \times 10^5$. Bachant and Wosnik \cite{Bachant2014} observed
-Reynolds number independence of power coefficient at optimal tip speed ratio for
+Reynolds number independence of the power coefficient at the optimal tip speed ratio for
 a high solidity cross-flow turbine at $Re_D \approx 10^6$ or
 $Re_{c,\mathrm{avg}} \approx 2 \times 10^5$.
 
-The wake of a 2-D cross-flow turbine in the dynamic stall regime has been
-studied via laser Doppler velocimetry by Brochier et al. \cite{Brochier1986} and
-in 3-D with particle image velocimetry (PIV) by Fujisawa and Shibuya
+The wake of a 2D cross-flow turbine in the dynamic stall regime has been
+studied via laser Doppler velocimetry by Brochier \emph{et al.} \cite{Brochier1986} and
+in 3D with particle image velocimetry (PIV) by Fujisawa and Shibuya
 \cite{Fujisawa2001}. However, both of these studies were performed at very low
-Reynolds numbers---$Re_D = 10^4$ and $10^3$, respectively. Tescione et al.
-\cite{Tescione2014} studied the wake of a vertical-axis wind turbine at optimal
+Reynolds numbers: $Re_D = 10^4$ and $10^3$, respectively. Tescione \emph{et al.}
+\cite{Tescione2014} studied the wake of a vertical-axis wind turbine at the optimal
 tip speed ratio in a wind tunnel using stereo PIV at an approximate blade chord
 Reynolds number $Re_c = 1.7 \times 10^5$; very close to the $Re$-independence
 criteria reported in \cite{Bachant2014}, though it was not confirmed if this was
@@ -202,82 +217,82 @@ undertaken here.
 Scale effects on axial-flow or horizontal-axis wind turbines are better
 understood, and investigators have methods for compensating. Krogstad and
 Adaramola \cite{Krogstad2012a} observed Reynolds number independence of the
-performance of a 0.9 m diameter axial-flow turbine rotor at $Re_D \approx 5
+performance of a 0.9-m diameter axial-flow turbine rotor at $Re_D \approx 5
 \times 10^5$ in wind tunnel tests. Their turbine blades had an S826 profile
-along their entire span, a profile chosen for its $Re$-independence. Walker et
-al. \cite{Walker2014} similarly chose a NACA 63-618 foil for their axial-flow
+along their entire span, a profile chosen for its $Re$-independence. Walker \emph{et
+al.} \cite{Walker2014} similarly chose a NACA 63-618 foil for their axial-flow
 turbine tests in a towing tank, which were performed at a mid-span Reynolds
-number $Re_c = 4 \times 10^5$. McTavish et al. \cite{McTavish2013} showed how
+number $Re_c = 4 \times 10^5$. McTavish \emph{et al.} \cite{McTavish2013} showed how
 the near-wake expansion for an axial-flow rotor is increased at higher Reynolds
 numbers, concluding that physical models should be designed with
 $Re$-independence in mind if they are to be run at low $Re$. It is uncertain,
 however, if these methods work equally well for cross-flow turbines.
 
 When designing or studying arrays, it is common to use very small
-(geometrically) scaled devices \cite{Chamorro2011, Chamorro2011b}. It is
+(geometrically) scaled \mbox{devices \cite{Chamorro2011, Chamorro2011b}}. It is
 therefore important to realize the limitations of evaluating both the power
-output of turbines and the wake recovery when Reynolds number is very far from
-full scale. Sometimes models used are not turbines, but wake generating objects,
+output of turbines and the wake recovery when the Reynolds number is very far from
+full scale. Sometimes,~the models used are not turbines, but wake-generating objects,
 e.g., porous disks, that are meant to replicate the wakes of real turbines
 \cite{Goldenberg1983}. In this case, it is of interest to determine at what
-Reynolds number one might be able to realistically study wake flows in an array,
+Reynolds number one might be able to realistically study wake flows in an array
 and also to evaluate the effectiveness of a wake generator. In other words, a
 wake generator may do a fine job simulating a scaled turbine, but how well can
 it simulate a full-scale device? Note that for a porous disk, the Reynolds
-number of interest is diameter-based, since it is the scaling of the far-wake
-dynamics that matters.
+number of interest is diameter based, since it is the scaling of the far-wake
+dynamics that~ matters.
 
 Vertical-axis wind turbine array field experiments have revealed that improved
 wake recovery allows for closer spacing when compared to conventional axial-flow
-propeller-type turbines \cite{Dabiri2011, Kinzel2012}. It was observed
+propeller-type \mbox{turbines \cite{Dabiri2011, Kinzel2012}}. It~was observed
 experimentally that a high solidity vertical-axis cross-flow turbine's near-wake
-produces a unique vertical mean velocity field---generated by blade tip vortex
-shedding---the advection by which is the largest contributor to streamwise
-momentum and energy transport or recovery \cite{Bachant2015-JoT}. In this study
+produces a unique vertical mean velocity field, generated by blade tip vortex
+shedding, the advection by which is the largest contributor to streamwise
+momentum and energy transport or recovery \cite{Bachant2015-JoT}. In~this study,
 we seek to replicate those same momentum and energy balance considerations at
-multiple Reynolds numbers, to examine the implications on how scaled, i.e., low
-Reynolds number experiments may be used to study flows in turbine arrays.
+multiple Reynolds numbers, to examine the implications on how scaled, \emph{i.e.}, low
+Reynolds number experiments, may be used to study flows in turbine arrays.
 
 
 \subsection{Modes of Reynolds Number Dependence}
 
 We are looking at how Reynolds number scaling affects both the blade loading,
-i.e., turbine performance, and the near-wake. Typically, static airfoil data
-shows that the static stall angle increases with blade chord Reynolds number
+\emph{i.e.}, turbine performance, and the near-wake. Typically, static airfoil data
+show that the static stall angle increases with blade chord Reynolds number
 $Re_c$ \cite{Jacobs1937}. A review of Reynolds number effects on airfoil
 behavior is presented in \cite{Lissaman1983}. In general, airfoil
-performance---often characterized by the profile's lift-to-drag ratio---is
+performance, often characterized by the profile's lift-to-drag ratio, is
 enhanced as the boundary layer on the foil transitions to turbulence closer to
 the leading edge, which enables it to advance further downstream against the
 adverse pressure gradient on the suction side, delaying separation to higher
 angles of attack. For smooth airfoils, this transition can cause a dramatic
 increase in foil performance at a blade chord Reynolds number on the order of
-$10^5$ \cite{McMasters1980}. Note that there is a distinct lack of highly
+\mbox{$10^5$ \cite{McMasters1980}}. Note~that there is a distinct lack of highly
 reliable data for airfoils in this transitional regime and below. An evaluation
 of the various databases relevant to cross-flow turbines is presented in
 \cite{Bedon2014}.
 
-Static foil performance does not tell the whole story for a cross-flow turbine.
-The azimuthal, and therefore temporal variation of $\alpha$ in a cross-flow
-turbine implies dynamic loading, encountering dynamic stall for tip speed ratios
+\textls[-10]{Static foil performance does not tell the whole story for a cross-flow turbine.
+The azimuthal, and} therefore, temporal, variation of $\alpha$ in a cross-flow
+turbine implies dynamic loading, encountering \textls[-10]{dynamic stall for tip speed ratios
 near and below those of maximum rotor torque \cite{Para2002}. Bousman
-\cite{Bousman2000-evaluation} states that dynamic stall is relatively
-insensitive to Reynolds number for $Re=1.0 \times 10^5$--$2.5 \times
-10^5$---judging from measurements on a pitching VR-7 foil in a wind and water
-tunnel---since the loading is dominated by vortex shedding. However, Singleton
+\cite{Bousman2000-evaluation}} states that dynamic stall is relatively
+insensitive to Reynolds number for $Re=1.0 \times 10^5$ to $2.5 \times
+10^5$, judging from measurements on a pitching VR-7 foil in a wind and water
+tunnel, since the loading is dominated by vortex shedding. However, Singleton
 and Yeager Jr. \cite{Singleton2000} state that the effect of Reynolds number on
 dynamic stall remains an unsolved question.
 
 Despite lower lift on the blades at lower $Re$, we expect stronger tip vortex
-shedding \cite{Yoon2005}. As mentioned previously, the dynamic stall vortex
+shedding \cite{Yoon2005}. As~mentioned previously, the dynamic stall vortex
 shedding is not expected to be highly sensitive to Reynolds number, though a
 larger separation bubble at lower $Re$ may induce higher levels of turbulence as
 shed vortices become unstable and break down. 
 
-Chamorro et al. \cite{Chamorro2012} showed that turbulence statistics in an AFT
-wake became $Re$-independent at $Re_D \approx 1 \times 10^5$, and that mean
+Chamorro \emph{et al.} \cite{Chamorro2012} showed that turbulence statistics in an AFT%please define
+wake became $Re$-independent at $Re_D \approx 1 \times 10^5$ and that mean
 velocity profiles became $Re$-independent slightly earlier at $Re_D \approx 5
-\times 10^4$. Note that in this study the tip chord Reynolds number was not
+\times 10^4$. Note that in this study, the tip chord Reynolds number was not
 reported, but is estimated to be $Re_c \approx 4 \times 10^4$ at $Re_D=1 \times
 10^5$. It is therefore our objective to observe similar scaling relationships
 for a cross-flow turbine near-wake.
@@ -286,93 +301,110 @@ for a cross-flow turbine near-wake.
 \section{Experimental Setup}
 
 Experiments were performed in a turbine test bed specifically designed for
-cross-flow turbines. The test bed was integrated as part of the UNH tow tank,
-which is a 36 m long facility with a 3.66 m wide and 2.44 m deep cross-section.
+cross-flow turbines. The test bed was integrated as part of the \hl {University of New Hampshire (UNH)} 
+ tow tank,
+which is a 36 m-long facility with a 3.66 m-wide and 2.44 m-deep cross-section.
 The turbine model used in this study was the UNH Reference Vertical Axis Turbine
 (RVAT), which was designed to be a generic case for numerical model testing,
-similar to the Sandia National Labs/US Department of Energy RM2 River Turbine
-\cite{Neary2014}, but with higher solidity, or blade chord-to-radius ratio.
+similar to the Sandia National Labs/U.S. Department of Energy RM2%please define
+ River Turbine
+\cite{Neary2014}, but with a higher solidity or blade chord-to-radius ratio.
 
-The UNH-RVAT turbine has three blades made from NACA 0020 profiles with 0.14 m
-chord. The blades are mounted at mid-chord w.r.t. the turbine axis, and the
-turbine has a height (blade span) of 1 m and a diameter of 1 m, c.f.
+The UNH-RVAT turbine has three blades made from \hl {NACA} 0020 profiles
+%please define NACA and add the information of Manufacturer, City, Country
+  with a 0.14 m
+chord. The~blades are mounted at mid-chord w.r.t. the turbine axis, and the
+turbine has a height (blade span) of 1 m and a diameter of 1 m; \textit{cf}.
 Figure~\ref{fig:turbine}. The blockage ratio produced by the rotor's frontal
 area is 11\%, which we decided not to correct for, as reliable methods are
-not yet agreed upon for CFTs \cite{Cavagnaro2014}. As such, blockage should be
-taken into account when using these data for model validation, i.e., the
+not yet agreed upon for \hl {CFTs} %please define
+\cite{Cavagnaro2014}. As such, blockage should be
+taken into account when using these data for model validation, \emph{i.e.}, the
 experimental domain should be mimicked. The rotor has a relatively high solidity
-$Nc/(\pi D) = 0.13$ and large chord-to-radius ratio $c/R = 0.28$. A CAD model of
+$Nc/(\pi D) = 0.13$ and a large chord-to-radius ratio $c/R = 0.28$. A CAD model of
 the turbine is available from \cite{Bachant2014-RVAT-CAD}.
 
-\begin{figure}[ht!]
+\begin{figure}[H]
 \centering
 
 \includegraphics[width=0.4\textwidth]{figures/turbine}
 
-\caption{UNH-RVAT turbine model. Turbine blades and struts made from NACA 0020
-    profiles with 0.140 m chord. Note that the upper and lower mounting flanges have
-    been excluded as these were included in the tare drag measurements.}
+\caption{\hl {University of New Hampshire (UNH)}-Reference Vertical Axis Turbine (RVAT) turbine model. Turbine blades and struts made from NACA 0020
+ profiles with 0.140-m chord. Note that the upper and lower mounting flanges have
+ been excluded, as these were included in the tare drag measurements.}
 
 \label{fig:turbine}
 \end{figure}
 
 The turbine was mounted in a frame constructed from NACA 0020 sections, shown in
 Figure~\ref{fig:exp-setup}. The turbine shaft ran up through the water surface,
-coupled to a Kollmorgen AKM permanent magnet servo motor with a 20:1 gearbox,
-providing precise control over shaft RPM. This servo was controlled by the tow
+coupled to a Kollmorgen \hl {AKM}
+%please define AKM and RPM
+  permanent magnet servo \hl {motor (Manufacturer, City, Country)} with a 20:1 gearbox,
+providing precise control over shaft \hl {RPM}. This servo was controlled by the tow
 tank's main motion controller for high synchronization with the carriage motion,
-thereby giving precise measurement and control of tip speed ratio. An Interface
-T8 200 Nm capacity rotary torque transducer was installed inline between the
+thereby giving precise measurement and control of the tip speed ratio. An Interface
+T8 200-Nm capacity rotary torque \hl {transducer (Manufacturer, City, Country)} was installed inline between the
 servo and the turbine, and the servo was also mounted on a slewing ring bearing,
 which allowed a redundant measurement of torque via an arm and load cell used to
 counteract the turbine moment. The frame was mounted to the carriage via linear
 guides, such that the total streamwise drag force was transferred to a pair of
-Sentran ZB3 500 lbf capacity S-beam load cells, providing the rotor drag
-measurements, after a separately measured tare drag was subtracted in post
-processing. Similarly, a tare torque was measured by rotating the turbine shaft
+Sentran \hl {ZB3 500-lbf} %please define/check the unit
+ capacity S-beam \hl {load cells (Manufacturer, City, Country)}, providing the rotor drag
+measurements, after a separately measured tare drag was subtracted in post-processing. Similarly, a tare torque was measured by rotating the turbine shaft
 in air. Turbine angular and tow carriage linear position were measured using
-quadrature encoder signals, with $10^5$ counts-per-rev for the turbine and 10
-$\mathrm{\mu m}$ resolution for the carriage position. These signals, along with
+quadrature encoder signals, with $10^5$ counts-per-rev for the turbine and 10 ${\mu}$m resolution for the carriage position. These~signals, along with
 the torque and drag signals, were sampled at 2 kHz.
 
-\begin{figure}[ht!]
-    \centering
 
-    \includegraphics[width=0.8\textwidth]{figures/exp-setup-photo}
-    
-    \includegraphics[width=0.8\textwidth]{figures/exp_setup_drawing}
-    
-    \caption{Experimental setup: turbine test bed installed in UNH tow tank.}
-    
-    \label{fig:exp-setup}
-\end{figure}
 
-Wake velocity was measured using a Nortek Vectrino+ acoustic Doppler velocimeter
-(ADV), which has an approximately 6 mm diameter sampling volume, and sampled at
+Wake velocity was measured using a Nortek Vectrino+ acoustic Doppler \hl {velocimeter
+(ADV)  (Manufacturer, City, Country)}, which has an approximately 6-mm diameter sampling volume and sampled at
 200 Hz. The probe was mounted on an automated positioning system, also
-controlled by the tow tank's main motion controller. The ADV and DAQ systems'
+controlled by the tow tank's main motion controller. The ADV and \hl {DAQ (please define)} systems'
 sampling times were synchronized by triggering the start of data acquisition via
 a pulse sent from the motion controller. Additional details of the turbine and
 experimental setup are described in \cite{Bachant2015-JoT}.
 
+\begin{figure}[H]
+ \centering
+
+ \includegraphics[width=0.7\textwidth]{figures/exp-setup-photo}
+ 
+ \includegraphics[width=0.7\textwidth]{figures/exp_setup_drawing}
+ 
+ \caption{\hl {Experimental} setup: turbine test bed installed in the UNH tow tank.}
+ %please mark (a) and (b) in the figure and label (a) and (b) in the figure caption.
+ 
+ \label{fig:exp-setup}
+\end{figure}
+
 
 \subsection{Test Plan}
 
-Approximately 1500 tows were conducted for the study reported here, each tow was
+Approximately 1500 tows were conducted for the study reported here; each tow was
 used for a single data point on either a performance curve or wake map. Each
-performance curve consisted of 31 tows, where during each tow the mean turbine
-tip speed ratio was held constant, ranging from 0.1--3.1 in 0.1 increments. Full
-performance curve data were acquired for tow speeds from 0.4 to 1.2 m/s in 0.2
-m/s increments, for which turbine diameter and approximate blade chord Reynolds
+performance curve consisted of 31~tows, where during each tow, the mean turbine
+tip speed ratio was held constant, ranging from 0.1 to 3.1 in 0.1 increments. Full
+performance curve data were acquired for tow speeds from 0.4 to 1.2 m/s in 0.2-m/s increments, for which the turbine diameter and approximate blade chord Reynolds
 number are presented in Table~\ref{tab:Re}. Performance was also measured for
 $\lambda=1.9$ at tow speeds $[0.3, 0.5, 0.7, 0.9, 1.1, 1.3]$ m/s for two tows
 each.
 
-\begin{table}
+Each wake map was generated by positioning a Nortek Vectrino+ acoustic Doppler
+Velocimeter (ADV), measuring three components of velocity at a 200-Hz sampling
+frequency, at 270 different locations, varied in the cross-stream and vertical
+directions at one turbine diameter downstream ($x/D=1$). These locations have
+vertical coordinates from the turbine centerline up to $z/H=0.625$, ranging in
+the cross-stream direction $y/R = \pm 3$. These locations are shown in
+Figure~\ref{fig:wake-locations}.
+
+\begin{table}[H]
 \centering
 \begin{tabular}{ccc}
-Tow speed (m/s) & $Re_D$ & $Re_{c,\mathrm{ave}}$ ($\lambda = 1.9$) \\
-\hline
+\toprule  
+\textbf{Tow Speed (m/s)} & \boldmath{$Re_D$} & \boldmath{$Re_{c,\mathrm{ave}}$} \textbf{(}\boldmath{$\lambda = 1.9$}\textbf{)} \\
+\midrule
 0.3 & $0.3 \times 10^6$ & $0.8 \times 10^5$ \\
 0.4 & $0.4 \times 10^6$ & $1.1 \times 10^5$ \\
 0.5 & $0.5 \times 10^6$ & $1.3 \times 10^5$ \\
@@ -384,28 +416,23 @@ Tow speed (m/s) & $Re_D$ & $Re_{c,\mathrm{ave}}$ ($\lambda = 1.9$) \\
 1.1 & $1.1 \times 10^6$ & $2.9 \times 10^5$ \\
 1.2 & $1.2 \times 10^6$ & $3.2 \times 10^5$ \\
 1.3 & $1.3 \times 10^6$ & $3.4 \times 10^5$ \\
+ \bottomrule
 \end{tabular}
 \caption{Turbine diameter and approximate blade chord Reynolds numbers for the
 tow speeds used in the experiment.}
 \label{tab:Re}
 \end{table}
-
-Each wake map was generated by positioning a Nortek Vectrino+ acoustic Doppler
-Velocimeter (ADV), measuring three components of velocity at 200 Hz sampling
-frequency, at 270 different locations, varied in the cross-stream and vertical
-directions at one turbine diameter downstream ($x/D=1$). These locations have
-vertical coordinates from the turbine centerline up to $z/H=0.625$, ranging in
-the cross-stream direction $y/R = \pm 3$. These locations are shown in
-Figure~\ref{fig:wake-locations}.
+\unskip
 
 
-\begin{figure}
+
+\begin{figure}[H]
 \centering
 
 \includegraphics[width=0.9\textwidth]{figures/turbine_coordinate_system}
 
 \caption{Wake measurement coordinate system and locations. Dimensions are in
-    meters.}
+ meters.}
 
 \label{fig:wake-locations}
 \end{figure}
@@ -422,8 +449,8 @@ scheme on the respective position measurements. Power and drag coefficients were
 calculated as instantaneous quantities using the carriage speed as the free
 stream velocity.
 
-Wake velocity data were filtered for spurious ``spikes'' by removing datapoints
-8 standard deviations, or 0.9 m/s from the mean. The experimental data and code
+Wake velocity data were filtered for spurious ``spikes'' by removing data points
+8 standard deviations, or 0.9 m/s, from the mean. The experimental data and code
 for processing and visualization are available from
 \cite{Bachant2015-RVAT-Re-dep-data}.
 
@@ -438,39 +465,39 @@ quantities derived from multiple measurements, followed the procedures outlined
 in Coleman and Steele \cite{ColemanSteele}, described below.
 
 An expanded uncertainty interval with 95\% confidence was computed for
-$C_P$, $C_D$, and mean wake velocities
+$C_P$, $C_D$, and mean wake velocities:
 \begin{equation}
-    U_{95} = t_{95} u_c,
+ U_{95} = t_{95} u_c,
 \end{equation}
-where $t_{95}$ is the value from the Student-$t$ distribution for a 95\%
+where $t_{95}$ is the value from the Student $t$-distribution for a 95\%
 confidence interval and $u_c$ is the combined standard uncertainty. Combined
-standard uncertainty for a given quantity $X$ is calculated by
+standard uncertainty for a given quantity $X$ is calculated~by:
 \begin{equation}
-    u_X^2 = s_{\bar{X}}^2 + b_X^2,
+ u_X^2 = s_{\bar{X}}^2 + b_X^2,
 \end{equation}
 where $s_{\bar{X}}$ is the sample standard deviation of the mean per turbine
-revolution, and $b_X$ is the systematic uncertainty, computed by
+revolution, and $b_X$ is the systematic uncertainty, computed by:
 \begin{equation}
-    b_{X}^2 = \sum_{i=1}^J \left( \frac{\partial X}{\partial x_i} \right)^2
-    b_{x_i}^2,
+ b_{X}^2 = \sum_{i=1}^J \left( \frac{\partial X}{\partial x_i} \right)^2
+ b_{x_i}^2,
 \end{equation}
-where $x_i$ is a primitive quantity used to calculate $X$ (e.g. $T$, $\omega$,
+where $x_i$ is a primitive quantity used to calculate $X$ (e.g., $T$, $\omega$,
 and $U_\infty$ for calculating $C_P$), and $b_{x_i}$ is the primitive quantity's
 systematic uncertainty, estimated as half the value listed on the sensor
 manufacturer's documentation.
 
 Selecting $t_{95}$ requires an estimate for degrees of freedom $\nu_X$, which
-was obtained using the Welch--Satterthwaite formula
+was obtained using the Welch--Satterthwaite formula:
 \begin{equation}
-    \nu_X = \frac{\left(s_X^2 + \sum_{k=1}^M b_k^2 \right)^2} {s_X^4/\nu_{s_X} +
-    \sum_{k=1}^M b_k^4/\nu_{b_k}},
+ \nu_X = \frac{\left(s_X^2 + \sum_{k=1}^M b_k^2 \right)^2} {s_X^4/\nu_{s_X} +
+ \sum_{k=1}^M b_k^4/\nu_{b_k}},
 \end{equation}
 where $\nu_{s_X}$ is the number of degrees of freedom associated with $s_X$ and
 $\nu_{b_k}$ is the number of degrees of freedom associated with $b_k$.
 $\nu_{s_X}$ is assumed to be $(N-1)$, where $N$ is the number of independent
-samples (or turbine revolutions). $\nu_{b_k}$ was estimated as
+samples (or turbine revolutions). $\nu_{b_k}$ was estimated as:
 \begin{equation}
-    \nu_{b_k} = \frac{1}{2} \left( \frac{\Delta b_k}{b_k} \right)^{-2},
+ \nu_{b_k} = \frac{1}{2} \left( \frac{\Delta b_k}{b_k} \right)^{-2},
 \end{equation}
 where the quantity in parentheses is the relative uncertainty of $b_k$, assumed
 to be 0.25.
@@ -479,19 +506,21 @@ For the Reynolds number dependence of turbine performance, error bars are
 included on the plots. Expanded uncertainty estimates for mean wake velocities
 (averaged over all runs) are listed in Table~\ref{tab:vel-unc}.
 
-\begin{table}
-    \centering
+\begin{table}[H]
+ \centering
 \begin{tabular}{cccc}
-$U_\infty$ (m/s) &          $U$ (m/s) &          $V$ (m/s) &          $W$ (m/s) \\
-\hline
-           $0.4$ & $1 \times 10^{-2}$ & $7 \times 10^{-3}$ & $6 \times 10^{-3}$ \\
-           $0.6$ & $1 \times 10^{-2}$ & $8 \times 10^{-3}$ & $8 \times 10^{-3}$ \\
-           $0.8$ & $2 \times 10^{-2}$ & $1 \times 10^{-2}$ & $1 \times 10^{-2}$ \\
-           $1.0$ & $2 \times 10^{-2}$ & $1 \times 10^{-2}$ & $1 \times 10^{-2}$ \\
-           $1.2$ & $2 \times 10^{-2}$ & $1 \times 10^{-2}$ & $1 \times 10^{-2}$ \\
+\toprule  
+\boldmath{$U_\infty$} \textbf{(m/s)} &   \boldmath{$U$} \textbf{(m/s)} &   \boldmath{$V$} \textbf{(m/s)} &   \boldmath{$W$} \textbf{(m/s)} \\
+ \midrule
+   $0.4$ & $1 \times 10^{-2}$ & $7 \times 10^{-3}$ & $6 \times 10^{-3}$ \\
+   $0.6$ & $1 \times 10^{-2}$ & $8 \times 10^{-3}$ & $8 \times 10^{-3}$ \\
+   $0.8$ & $2 \times 10^{-2}$ & $1 \times 10^{-2}$ & $1 \times 10^{-2}$ \\
+   $1.0$ & $2 \times 10^{-2}$ & $1 \times 10^{-2}$ & $1 \times 10^{-2}$ \\
+   $1.2$ & $2 \times 10^{-2}$ & $1 \times 10^{-2}$ & $1 \times 10^{-2}$ \\
+\bottomrule
 \end{tabular}
-\caption{Average expanded uncertainty estimates (with 95\% confidence) for mean
-    velocity measurements at each tow speed.} 
+\caption{\textls[-10]{Average expanded uncertainty estimates (with 95\% confidence) for mean
+ velocity measurements} at each tow speed.} 
 
 \label{tab:vel-unc}
 \end{table}
@@ -502,44 +531,46 @@ $U_\infty$ (m/s) &          $U$ (m/s) &          $V$ (m/s) &          $W$ (m/s) 
 
 \subsection{Performance}
 
-Full power and rotor drag (a.k.a. thrust) coefficient curves for various
-Reynolds numbers are plotted in Figure~\ref{fig:cp-curves} and
-Figure~\ref{fig:cd-curves}, respectively. In general, maximum $C_P$ increases
+Full-power and rotor drag (also known as thrust) coefficient curves for various
+Reynolds numbers are plotted in Figures~\ref{fig:cp-curves} and
+\ref{fig:cd-curves}, respectively. In general, maximum $C_P$ increases
 with Reynolds number. The power coefficient curves also show a slight downward
-shift in the optimal tip speed ratio (peak performance) with increasing Reynolds
+shift in the optimal tip speed ratio (peak~performance) with increasing Reynolds
 number, from about $\lambda \approx$ 2.0 to 1.9. This is caused by the stall
 delay from a more turbulent boundary layer on the blade suction side. There is
-essentially no change in the shape of the drag coefficient curves---merely a
-slight upward shift in $C_D$ with increasing $Re$.
+essentially no change in the shape of the drag coefficient curves, merely a
+slight upward shift in $C_D$ with increasing~ $Re$.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 
 \includegraphics[width=0.65\textwidth]{figures/cp_curves}
 
-\caption{Mean power coefficient curves plotted for multiple Reynolds numbers.}
-
+\caption{\hl {Mean} power coefficient curves plotted for multiple Reynolds numbers.}
+%is it better to mark different color to the lines?
 \label{fig:cp-curves}
 \end{figure}
+\unskip
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 
 \includegraphics[width=0.65\textwidth]{figures/cd_curves}
 
-\caption{Mean rotor drag coefficient curves plotted for multiple Reynolds
-    numbers.}
+\caption{\hl {Mean} rotor drag coefficient curves plotted for multiple Reynolds
+ numbers.}
+ % is it better to mark different color to the lines?
 
 \label{fig:cd-curves}
 \end{figure}
 
-Mean power and drag coefficients at $\lambda=1.9$ are plotted versus Reynolds
+Mean power and drag coefficients at $\lambda=1.9$ are plotted \textit{versus} the Reynolds
 number in Figure~\ref{fig:perf-Re-dep}. Note that the large error bars for $C_P$
 at low $Re$ are dominated by systematic error estimates for the torque
 transducer, since torque values are at the lower end of its measurement range.
 However, the uncertainty due to random error or repeatability remains relatively
 low. There is a drastic improvement in $C_P$ with increasing Reynolds number at
-lower values of Reynolds number. The power coefficient then becomes  essentially
+lower values of the Reynolds number. The power coefficient then becomes essentially
 $Re$-independent at $Re_D = 0.8 \times 10^6$, which corresponds to an
 approximate average blade chord Reynolds number $Re_{c, \mathrm{ave}} = 2.1
 \times 10^5$. This threshold is consistent with the behavior of the blade
@@ -547,78 +578,82 @@ boundary layer transitioning from laminar to turbulent, thereby promoting either
 the suppression or reattachment of the laminar separation bubble
 \cite{Lissaman1983}.
 
-The behavior of the mean rotor drag coefficient $C_D$ is similar, though the
-changes are less dramatic. This is likely due to cross-flow turbine geometry,
-where increases in blade drag at lower $Re$ somewhat offsets the reduction in
-lift, causing the total streamwise force to vary less than the rotor torque. The
-tendency for $C_D$ to continue increasing with $Re$ may also include the effects
-of an increasing Froude number (from faster tow speeds), which increases free
-surface deformation and wave drag during towing without increasing flow through
-the turbine.
 
-\begin{figure}[ht]
+
+\begin{figure}[H]
 \centering
 
 \includegraphics[width=0.9\textwidth]{figures/perf_re_dep}
 
-\caption{UNH-RVAT measured mean power (left) and drag (right) coefficients at
-    $\lambda=1.9$ plotted versus Reynolds number. Error bars indicate expanded
-    uncertainty estimates for 95\% confidence, which for $C_P$ is dominated by
-    systematic error estimates from the torque transducer operating at the lower end
-    of its measurement range.}
+\caption{UNH-RVAT measured mean power (\hl {left}) and drag (right) coefficients at
+ $\lambda=1.9$ plotted \textit{versus} the Reynolds number. Error bars indicate expanded
+ uncertainty estimates for 95\% confidence, which for $C_P$ is dominated by
+ systematic error estimates from the torque transducer operating at the lower end
+ of its measurement range.}
+ 
+%please use (a) and (b) to instead left and right and mark (a) and (b) in the figure.
 
 \label{fig:perf-Re-dep}
 \end{figure}
 
+The behavior of the mean rotor drag coefficient $C_D$ is similar, though the
+changes are less dramatic. This is likely due to cross-flow turbine geometry,
+where increases in blade drag at lower $Re$ somewhat offset the reduction in
+lift, causing the total streamwise force to vary less than the rotor torque. The~tendency for $C_D$ to continue increasing with $Re$ may also include the effects
+of an increasing Froude number (from faster tow speeds), which increases free
+surface deformation and wave drag during towing without increasing flow through
+the turbine.
 
 \subsubsection{Relation to Static Foil Characteristics}
 
-To help understand---and possibly predict---the $Re$-sensitivity on turbine
+To help understand, and possibly predict, the $Re$-sensitivity on turbine
 performance, a series of static foil coefficient datasets were computed with the
-XFOIL viscous panel method code \cite{Drela1989}, a commonly used tool for
-airfoil analysis, e.g. \cite{Castelli2011, Walker2014}, implemented as part of
+\hl {XFOIL (please define)} viscous panel method code \cite{Drela1989}, a commonly-used tool for
+airfoil analysis, e.g., \cite{Castelli2011, Walker2014}, implemented as part of
 the open source turbine design software QBlade \cite{Marten2013}. Simulations
-were run for an angle of attack range of 0--40 degrees, in increments of 0.5
-degrees. Solver parameters used were 100 panels, a fixed speed, zero Mach
-number, \texttt{NCrit=9} (default $\mathrm{e}^n$ transition criteria parameter
-for an average wind tunnel), and no forced boundary layer transition.
+were run for an angle of attack range of 0$^{\circ}$
+ to 40$^{\circ}$, in increments of 0.5$^{\circ}$. Solver parameters used were 100 panels, a fixed speed, zero Mach
+number, \texttt{NCrit = 9} %please check the use of \texttt here
+ (default $\mathrm{e}^n$ transition criteria parameter
+for an average wind tunnel) and no forced boundary layer transition.
 Characteristics were computed for the approximate average blade chord Reynolds
 numbers encountered in the tow tank experiments.
 
 To investigate the effects of the blades' ``virtual camber'' due to their
 circular path \cite{Migliore1980}, the XFOIL calculations were performed for
-20\% thick foils with 0\% (NACA 0020), 2\% (NACA 2520), and 4\% (NACA 4520)
+20\% thick foils with 0\% (NACA 0020), 2\% (NACA 2520) and 4\% (NACA 4520)
 camber about their half-chord location. A 4\% camber approximates the maximum
-distance between the blade chord line and path for the UNH-RVAT and the 2\%
+distance between the blade chord line and path for the UNH-RVAT, and the 2\%
 camber takes into account the reduction in virtual flow curvature from the
 non-curved inflow velocity by dividing by the tip speed ratio $\lambda=1.9$.
 
 Results from the XFOIL calculations for the airfoil profiles are shown in
-Figure~\ref{fig:foil-Re-dep}, where values of maximum lift coefficient
-$C_{l_{\max}}$, minimum drag coefficient $C_{d_{\min}}$, and maximum
-lift-to-drag ratio are normalized (for comparison between foils) and plotted
-versus $Re_c$. In general, larger camber is associated with decreased foil
+Figure~\ref{fig:foil-Re-dep}, where values of the maximum lift coefficient
+$C_{l_{\max}}$, minimum drag coefficient $C_{d_{\min}}$ and maximum
+lift-to-drag ratio are normalized (for the comparison between foils) and plotted
+\textit{versus} $Re_c$. In general, larger camber is associated with decreased foil
 performance at lower Reynolds number. The data and processing code for these
 calculations is available from \cite{Bachant2015-NACAXX20-XFOIL}.
 
-\begin{figure}[ht!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.9\textwidth]{figures/all_foils_re_dep}
 \caption{Foil section characteristics computed by XFOIL for various $Re_c$.}
 \label{fig:foil-Re-dep}
 \end{figure}
 
+
 In conjunction with the cross-flow turbine blade kinematics, the foil
 coefficients were used to approximate turbine performance by calculating the
 peak torque coefficient on the upstream half of the blade path. The turbine
 torque coefficient $C_T$ can be related to the blade section chordwise force
-coefficient $C_c$ by
+coefficient $C_c$ by:
 \begin{equation}
 C_T = \frac{C_c c}{2R} \frac{|U_\mathrm{rel}|^2}{U_\infty^2},
 \label{eq:ct}
 \end{equation}
 where the blade section chordwise force coefficient (for zero preset pitch) is
-given by
+given by:
 \begin{equation}
 C_c = C_l \sin \alpha - C_d \cos \alpha.
 \label{eq:cc}
@@ -626,17 +661,17 @@ C_c = C_l \sin \alpha - C_d \cos \alpha.
 
 The relative blade velocity $U_\mathrm{rel}$ was calculated by vector addition
 of the free stream velocity and the opposite of the blade tangential velocity.
-Note that this neglects any induction, or slowing of the free stream by the
-turbine forces, which would be present in a momentum/streamtube model. Since the
-goal of this approach was not to predict absolute performance but rather gain
-insight into relative changes with $Re$, this method was deemed acceptable as it
-is extremely simple and fast to compute.
+Note that this neglects any induction or slowing of the free stream by the
+turbine forces, which would be present in a momentum/streamtube model. Since~the
+goal of this approach was not to predict absolute performance, but rather gain
+insight into relative changes with $Re$, this method was deemed acceptable, as it
+is extremely simple and fast to~compute.
 
-Values for the blade angle of attack, relative velocity, and torque coefficient
+Values for the blade angle of attack, relative velocity and torque coefficient
 are plotted in Figure~\ref{fig:blade-kinematics} for the upstream half of
 rotation of the turbine. The effects of static stall are clearly present in the
 torque coefficient plot, and by the time the angle of attack has decreased below
-that of stall, the relative velocity is so low that there is not much
+that of the stall, the relative velocity is so low that there is not much
 contribution to the torque coefficient.
 
 \begin{figure}[ht!]
@@ -644,14 +679,14 @@ contribution to the torque coefficient.
 
 \includegraphics[width=0.9\textwidth]{figures/foil_kinematics_ct}
 
-\caption{Geometric angle of attack, relative velocity and torque coefficient
-    calculated with a NACA 0020 foil operating at $\lambda=1.9$.}
-
+\caption{\hl {Geometric} angle of attack, relative velocity and torque coefficient
+ calculated with a NACA 0020 foil operating at $\lambda=1.9$.}
+%please mark (a) and (b), (c) in the figure and label them in the caption
 \label{fig:blade-kinematics}
 \end{figure}
 
 Results for the normalized peak torque coefficient for each foil are plotted
-versus $Re_c$ in Figure~\ref{fig:foils-C_T-Re-dep}. It is interesting that the
+\textit{versus} $Re_c$ in Figure~\ref{fig:foils-C_T-Re-dep}. It is interesting that the
 convergence of $C_{T_\mathrm{max}}$ with increasing Reynolds number is more
 dramatic than any of the common foil performance characteristics plotted in
 Figure~\ref{fig:foil-Re-dep}, meaning that the cross-flow turbine's unique
@@ -660,25 +695,26 @@ transitional Reynolds numbers on turbine performance.
 
 From the peak torque coefficient metric plotted in
 Figure~\ref{fig:foils-C_T-Re-dep}, the Reynolds number independence is achieved
-at lower values, and more dramatically. We see that the trend of the
+at lower values and more dramatically. We see that the trend of the
 (non-cambered) NACA 0020 curve matches almost perfectly up to $Re_c \approx 2.1
 \times 10^5$, but then continues to increase slowly and linearly with $Re$. This
 is not matched by the experimental data, which at higher $Re$ looks more like
 the cambered foil results. Though this method does not provide absolute
 predictions of turbine performance, it predicts the transitional Reynolds number
-regime for cross-flow turbine performance using only 2-D static airfoil
-characteristics, i.e., Reynolds number scaling of the peak $C_T$ computed this
+regime for cross-flow turbine performance using only 2D static airfoil
+characteristics, \emph{i.e.}, the Reynolds number scaling of the peak $C_T$ computed this
 way behaves much like that of the measured turbine performance.
 
-\begin{figure}[ht!]
+\begin{figure}[H]
 \centering
 
-\includegraphics[width=0.65\textwidth]{figures/cft_re_dep_foils}
+\includegraphics[width=0.8\textwidth]{figures/cft_re_dep_foils}
 
-\caption{Reynolds number dependence of the normalized peak torque coefficient
-    calculated from static foil coefficients and blade kinematics, compared to
-    experimental data from a cross-flow turbine. Note that the experimental data
-    represents the mean torque coefficient, not the maximum.}
+\caption{\hl {Reynolds} number dependence of the normalized peak torque coefficient
+ calculated from static foil coefficients and blade kinematics, compared to
+ experimental data from a cross-flow turbine. Note that the experimental data
+ represents the mean torque coefficient, not the maximum.}
+ %please pay attention to the value ``1e5'' in the figure. is it ``\times 10^5''. If yes, please revise it to \times 10 ^5 in the figure. meanwhile, is it better to make different color with the lines?
 
 \label{fig:foils-C_T-Re-dep}
 \end{figure}
@@ -686,12 +722,12 @@ way behaves much like that of the measured turbine performance.
 
 \subsection{Wake Characteristics}
 
-The near-wake of this turbine at $x/D=1$, $\lambda=1.9$, and momentum and
+The near-wake of this turbine at $x/D=1$, $\lambda=1.9$ and momentum and
 kinetic energy balances at a $Re_D = 1.0 \times 10^6$ were discussed in
-\cite{Bachant2015-JoT}. Similar data were taken for the experiment here, and
+\cite{Bachant2015-JoT}. Similar data were taken for the experiment here, and the
 results for the mean velocity field and turbulence kinetic energy calculated
 from wake maps of 270 individual measurements (tows) are shown in
-Figure~\ref{fig:meancontquiv} and Figure~\ref{fig:kcont}, respectively, looking
+Figures~\ref{fig:meancontquiv} and \ref{fig:kcont}, respectively, looking
 upstream towards the turbine. With respect to the mean velocity field, we see
 asymmetry and a mean vortex structure created by blade tip vortex shedding. The
 effects of the tip vortices are also seen in the turbulence kinetic energy
@@ -699,44 +735,46 @@ measurements, along with turbulence generated by the blades undergoing dynamic
 stall on the $-y$ side of the turbine.
 
 These same wake maps were measured for $Re_D = 0.4 \times 10^6$, $0.6 \times
-10^6$, $0.8 \times 10^6$, and $1.2 \times 10^6$. Qualitatively, these look very
+10^6$, $0.8 \times 10^6$ and $1.2 \times 10^6$. Qualitatively, these look very
 similar, so they have not been plotted here, though profiles at $z/H=0.0$ are
 compared in Figure~\ref{fig:profiles} to illustrate the subtlety of the
 differences at different $Re$. We will instead compare and contrast the wake
 behavior by examining spectra and wake transport terms in the equations that
 govern the downstream evolution of mean momentum and kinetic energy.
 
-\begin{figure}[ht!]
-    \centering
-    
-    \includegraphics[width=0.8\textwidth]{figures/meancontquiv_10}
-    
-    \caption{Mean velocity field at $x/D=1$, $\lambda=1.9$, and $Re_D=1.0 \times
-        10^6$.}
-    
-    \label{fig:meancontquiv}
+\begin{figure}[H]
+ \centering
+ 
+ \includegraphics[width=0.8\textwidth]{figures/meancontquiv_10}
+ 
+ \caption{Mean velocity field at $x/D=1$, $\lambda=1.9$ and $Re_D=1.0 \times
+ 10^6$.}
+ 
+ \label{fig:meancontquiv}
 \end{figure}
+\unskip
 
-\begin{figure}[ht!]
-    \centering
-    
-    \includegraphics[width=0.8\textwidth]{figures/k_contours_10}
-    
-    \caption{Turbulence kinetic energy at $x/D=1$, $\lambda=1.9$, and $Re_D=1.0
-        \times 10^6$.}
-    
-    \label{fig:kcont}
+\begin{figure}[H]
+ \centering
+ 
+ \includegraphics[width=0.8\textwidth]{figures/k_contours_10}
+ 
+ \caption{Turbulence kinetic energy at $x/D=1$, $\lambda=1.9$ and $Re_D=1.0
+ \times 10^6$.}
+ 
+ \label{fig:kcont}
 \end{figure}
+\unskip
 
-\begin{figure}[ht!]
-    \centering
-    
-    \includegraphics[width=0.85\textwidth]{figures/mean_u_k_profiles}
-    
-    \caption{Mean streamwise velocity (left) and turbulence kinetic energy
-        (right) profiles at $z/H=0.0$. Legend indicates $Re_D$.}
-    
-    \label{fig:profiles}
+\begin{figure}[H]
+ \centering
+ 
+ \includegraphics[width=0.85\textwidth]{figures/mean_u_k_profiles}
+ 
+ \caption{Mean streamwise velocity \hl {(left)} and turbulence kinetic energy
+ (right) profiles at $z/H=0.0$. The legend indicates $Re_D$.}
+ %please use (a) and (b) to instead left and right and mark (a) and (b) in the figure.
+ \label{fig:profiles}
 \end{figure}
 
 
@@ -746,24 +784,24 @@ Spectra of the cross-stream velocity normalized by the free stream were
 computed using a fast Fourier transform-based method, applying a Hanning window
 and averaging over four adjacent frequency bands to decrease confidence
 intervals. These spectra are plotted in Figure~\ref{fig:wake-spectra} for
-regions on either side of the turbine. On the $-y$ side of the turbine there is
-broadband turbulence produced by blade stall, and on the $+y$ side there is a
-clear peak in the spectra caused by the blade passage. We see that on both sides
+regions on either side of the turbine. On the $-y$ side of the turbine, there is
+broadband turbulence produced by blade stall, and on the $+y$ side, there is a
+clear peak in the spectra caused by the blade passage. We see that on both sides,
 there is higher spectral energy at lower Reynolds numbers. On the $+y$ side of
-the turbine we notice higher spectral energy at the blade passage frequency's
+the turbine, we notice higher spectral energy at the blade passage frequency's
 first harmonic, or $6 f_\mathrm{turbine}$. This is likely due to the blade's
 shed vorticity being less stable at higher $Re$.
 
-\begin{figure}[ht!]
+\begin{figure}[H]
 \centering
 
 \includegraphics[width=0.85\textwidth]{figures/wake_spectra}
 
 \caption{Cross-stream velocity (normalized by $U_\infty$) spectra at $z/H=0.25$,
-    $y/R=-1.0$ ($-0.5$ m in Figure~\ref{fig:wake-locations}) (a) and $y/R=1.5$
-    ($+0.75$ m in Figure~\ref{fig:wake-locations}) (b). Dashed vertical lines
-    indicate $[1, 3, 6, 9]$ times the turbine rotational frequency. Shaded regions
-    indicate 95\% confidence intervals assuming a $\chi^2$ distribution.}
+ $y/R=-1.0$ ($-0.5$ m in Figure~\ref{fig:wake-locations}) (\textbf{a}) and $y/R=1.5$
+ ($+0.75$ m in Figure~\ref{fig:wake-locations}) (\textbf{b}). Dashed vertical lines
+ indicate $[1, 3, 6, 9]$ times the turbine rotational frequency. Shaded regions
+ indicate 95\% confidence intervals assuming a $\chi^2$~distribution.}
 
 \label{fig:wake-spectra}
 \end{figure}
@@ -776,11 +814,11 @@ The relative importance of various physical processes on mean streamwise
 momentum and kinetic energy transport/recovery in the streamwise direction were
 assessed by examining the governing equations rearranged to isolate the
 streamwise partial derivative ($\partial / \partial x$) for the quantities of
-interest \cite{Bachant2015-JoT}, i.e. momentum:
+interest~\cite{Bachant2015-JoT}, \emph{i.e.}, momentum:
 
 \begin{equation}
 	\begin{split}
-		\frac{\p U}{\p x}  =  
+		\frac{\p U}{\p x} = 
 		\frac{1}{U} \bigg{[}
 		& - V\frac{\p U}{\p y}
 		- W\frac{\p U}{\p z} \\
@@ -802,7 +840,8 @@ and mean kinetic energy:
 		=
 		\frac{1}{U}
 		\bigg{[}
-		& - \underbrace{V \frac{\p K}{\p y}}_{y\text{-adv.}}
+		& - \underbrace{V \frac{\p K}{\p y}}_{y\text{-adv.%please define/check the convention
+		}}
 		- \underbrace{W \frac{\p K}{\p z}}_{z\text{-adv.}}
 		% Pressure work:
 		- \frac{1}{\rho}\frac{\p}{\p x_j} P U_i \delta_{ij}
@@ -811,161 +850,166 @@ and mean kinetic energy:
 		% Turbulent transport of K
 		- \underbrace{
 		\frac{1}{2}\frac{\p}{\p x_j} \overline{u_i' u_j'} U_i
-		}_{\text{Turb. trans.}} \\
+		}_{\text{Turb.%please define/check the convention
+		trans.%please define/check the convention
+		}} \\
 		% Production of k
 		& + 
 		\underbrace{
 		\overline{u_i' u_j'} \frac{\p U_i}{\p x_j}
-		}_{k\text{-prod.}}
+		}_{k\text{-prod.%please define/check the convention
+		}}
 		% Mean dissipation
 		- 
 		\underbrace{
 		2 \nu S_{ij}S_{ij}
-		}_{\text{Mean diss.}}
+		}_{\text{Mean diss.%please define/check the convention
+		}}
 		\bigg{]}.
 	\label{eq:K-full}
 	\end{split}
 \end{equation}
-Note that Equations~\ref{eq:momentum} and \ref{eq:K-full} only differ from the
+
+Note that Equations~(\ref{eq:momentum}) and (\ref{eq:K-full}) only differ from the
 typical forms of the mean momentum and mean kinetic energy equations by a factor
 of $1/U$, but importantly, the other convective terms ( $\partial U/\partial y$,
-$\partial U/\partial z$, and $\partial K/\partial y$, $\partial K/\partial z$ )
-are moved to the right-hand-sides of the equations to illustrate with what sign
+$\partial U/\partial z$ and $\partial K/\partial y$, $\partial K/\partial z$ )
+are moved to the right-hand sides of the equations to illustrate with what sign
 they add to the streamwise recovery of streamwise momentum or mean kinetic
 energy.
 
-Results from the terms that can be computed from the experimental data (i.e.
-excluding $\partial / \partial x$) from the right hand sides of
-Equations~\ref{eq:momentum} and \ref{eq:K-full} are plotted in
+Results from the terms that can be computed from the experimental data (\emph{i.e.},
+excluding $\partial / \partial x$) from the right-hand sides of
+Equations~(\ref{eq:momentum}) and (\ref{eq:K-full}) are plotted in
 Figures~\ref{fig:mom-bar-graph} and \ref{fig:K-bar-graph}, respectively.
 Derivatives were computed using a second order finite difference scheme, with
-central differencing for interior points, and inward facing schemes for the
+central differencing for interior points and inward facing schemes for the
 boundaries. A weighted average for each term was then calculated based on the
 grid spacing. We note that similar to \cite{Bachant2015-JoT}, the vertical
 advection at this point in the wake is the dominant contributor to positive wake
 recovery, caused by the unique vortex pattern created by the blade tips and
 blade wakes.
 
+\begin{figure}[H]
+ \centering
+ 
+ \includegraphics[width=0.9\textwidth]{figures/mom_bar_graph}
+ 
+ \caption{Normalized momentum transport quantities computed as weighted
+ averages from Equation~(\ref{eq:momentum}).}
+ 
+ \label{fig:mom-bar-graph}
+\end{figure}
+
+\begin{figure}[H]
+ \centering
+ 
+ \includegraphics[width=0.9\textwidth]{figures/K_trans_bar_graph}
+ 
+ \caption{Normalized mean kinetic energy transport quantities computed as
+ weighted averages based on Equation~(\ref{eq:K-full}), omitting the
+ non-measured streamwise derivatives. Note that directions of the turbulent
+ transport terms refer to the directions of their partial derivatives.}
+ 
+ \label{fig:K-bar-graph}
+\end{figure}
+
 We see that in general, levels of turbulent transport are slightly lower at
 larger Reynolds numbers. The viscous diffusion and dissipation, though still
 three orders of magnitude smaller than the other terms, do increase at low
 Reynolds numbers, which is consistent with the physical meaning of the Reynolds
-number itself. From these results one might expect that the viscous effects will
-become significant to the wake dynamics as Reynolds number is decreased below
+number itself. From these results, one might expect that the viscous effects will
+become significant to the wake dynamics as the Reynolds number is decreased below
 $Re_D \sim 10^4$.
 
 Transport due to cross-stream advection appears to become more negative at
-higher $Re$. This could be a consequence of increasing free surface deformation
+higher $Re$. This~could be a consequence of increasing free surface deformation
 (higher $Fr$), which then decreases the effective flow cross-sectional area
 downstream of the turbine, forcing more flow to accelerate around the sides of
 the turbine. Note that we also observe slightly higher drag coefficients at
 higher $Re$ (potentially for the same reason), which also helps explain larger
 negative values of cross-stream advection.
 
-\begin{figure}[ht!]
-    \centering
-    
-    \includegraphics[width=0.9\textwidth]{figures/mom_bar_graph}
-    
-    \caption{Normalized momentum transport quantities computed as weighted
-        averages from Equation~\ref{eq:momentum}.}
-    
-    \label{fig:mom-bar-graph}
-\end{figure}
 
-\begin{figure}[ht!]
-    \centering
-    
-    \includegraphics[width=0.9\textwidth]{figures/K_trans_bar_graph}
-    
-    \caption{Normalized mean kinetic energy transport quantities computed as
-        weighted averages based on Equation~\ref{eq:K-full}, omitting the
-        non-measured streamwise derivatives. Note that directions of the turbulent
-        transport terms refer to the directions of their partial derivatives.}
-    
-    \label{fig:K-bar-graph}
-\end{figure}
 
-The totals for all the wake transport terms calculated in
+The totals for all of the wake transport terms calculated in
 Figures~\ref{fig:mom-bar-graph} and \ref{fig:K-bar-graph} are plotted in
-Figure~\ref{fig:wake-trans-totals}. We see that in general wake transport of
+Figure~\ref{fig:wake-trans-totals}. We see that in general, the wake transport of
 both mean streamwise momentum and kinetic energy is enhanced at lower Reynolds
 numbers and levels off consistent with the behavior of the turbine power
 coefficient. This is an important consideration if studying sub-scale models of
 turbine arrays, where increased levels of wake recovery could motivate different
-ideal array configurations when compared with full-scale turbines if the scale
+ideal array configurations when compared to full-scale turbines if the scale
 model Reynolds number is too low.
 
-\begin{figure}[ht!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.65\textwidth]{figures/wake_trans_totals}
 \caption{Normalized transport totals from Figures~\ref{fig:mom-bar-graph} and
-\ref{fig:K-bar-graph} plotted versus Reynolds number.}
+\ref{fig:K-bar-graph} plotted \textit{versus} the Reynolds number.}
 \label{fig:wake-trans-totals}
 \end{figure}
-
+%\unskip
 
 \section{Conclusions}
 
-In this study it was demonstrated that the performance of a high solidity
+In this study, it was demonstrated that the performance of a high solidity
 ($c/R=0.28$) cross-flow turbine becomes essentially $Re$-independent at a
-Reynolds number based on turbine diameter of $Re_D \approx 10^6$, or an
-approximate Reynolds number based on blade chord of $Re_c \approx 2 \times
-10^5$. The power coefficient values on the left hand side of the
-$C_P$--$\lambda$ curve are reduced more than those on the right hand side at low
+Reynolds number based on a turbine diameter of $Re_D \approx 10^6$ or an
+approximate Reynolds number based on a blade chord of $Re_c \approx 2 \times
+10^5$. The power coefficient values on the left-hand side of the
+$C_P$-$\lambda$ curve are reduced more than those on the right-hand side at low
 $Re$ due to deeper stalling. The $Re$-independent threshold corresponds to that
 at which the foil suction surface boundary layer becomes turbulent before having
 to recover static pressure against the adverse pressure gradient, highlighted in
 \cite{Lissaman1983, McMasters1980, Carmichael1981}.
 
-We propose a method for predicting Reynolds number dependence of a cross-flow
+We propose a method for predicting the Reynolds number dependence of a cross-flow
 turbine using static airfoil characteristics and turbine blade kinematics:
 \begin{enumerate}
-    \item Acquire static lift and drag coefficient data for the desired blade
-    profile.
-    
-    \item For azimuthal angles of 0--180 degrees and a given tip speed ratio,
-    calculate the geometric angle of attack and relative velocity magnitude from
-    the blade and undisturbed free stream velocity ($\equiv 1$) vectors.
-    
-    \item With arrays of geometric angle of attack and relative velocity
-    magnitude, calculate the blade chordwise force and then rotor torque
-    coefficient from Equations~\ref{eq:cc} and \ref{eq:ct}, respectively.
-    
-    \item Extract the maximum value of $C_T$, and repeat this process for static
-    foil data at multiple $Re$.
+\item Acquire static lift and drag coefficient data for the desired blade
+ profile.
+\item For azimuthal angles of 0 to 180 degrees and a given tip speed ratio,
+ calculate the geometric angle of attack and relative velocity magnitude from
+ the blade and undisturbed free stream velocity \hl {($\equiv 1$)} vectors.
+ %please check this symbol
+\item With arrays of geometric angle of attack and relative velocity
+ magnitude, calculate the blade chordwise force and then the rotor torque
+ coefficient from Equations~(\ref{eq:ct}) and (\ref{eq:cc}), respectively.
+\item Extract the maximum value of $C_T$, and repeat this process for static
+ foil data at multiple $Re$.
 \end{enumerate}
 
 It was shown that the peak torque coefficient computed this way shows similar
-Reynolds number sensitivity---a better predictor than conventional
-quantifications of airfoil performance, e.g., lift-to-drag ratio. Note that this
+Reynolds number sensitivity, a better predictor than conventional
+quantifications of airfoil performance, e.g., the lift-to-drag ratio. Note that this
 method is not restricted to standard symmetrical NACA foils, though those
-evaluated here with higher camber were more sensitive at lower $Re$ but had
-smaller slopes in the linear regime.
+evaluated here with higher camber were more sensitive at lower $Re$, but had
+smaller slopes in the linear~regime.
 
-In the near-wake of the turbine we observed lower levels of turbulence with
+In the near-wake of the turbine, we observed lower levels of turbulence with
 increasing Reynolds number, along with lower levels of turbulent transport with
 respect to mean streamwise momentum and mean kinetic energy recovery in the
-streamwise direction. Vertical advection---the largest transport mechanism
-measured---showed little $Re$-dependence, whereas the negative effects of
+streamwise direction. Vertical advection, the largest transport mechanism
+measured, showed little $Re$-dependence, whereas the negative effects of
 cross-stream advection were enhanced at high $Re$, which may be due to larger
 free surface deformation effectively reducing the near-wake's cross-sectional
 area. Despite being orders of magnitude smaller than other transport processes,
-viscous diffusion increased rapidly with decreasing $Re$, and is expected to
+viscous diffusion increased rapidly with decreasing $Re$ and is expected to
 become significant to the wake dynamics around $Re_D \sim 10^4$. Overall, the
 total wake transport measured leveled off at essentially the same Reynolds
-number that the performance did---$Re_D \approx 0.8 \times 10^6$.
+number that the performance did: $Re_D \approx 0.8 \times 10^6$.
 
-From these results we recommend that physical model tests of cross-flow turbines
+From these results, we recommend that physical model tests of cross-flow turbines
 be performed at $Re_D \sim 10^6$ or greater to provide reasonable predictions of
 full-scale performance. This threshold also applies to the validation of
 predictive engineering models, especially for high-fidelity CFD models where the
 boundary layer is to be resolved, since transition to turbulence plays an
-important role in overall blade loading. Note that in our case blockage, though
-reasonably low, may be increasing flow through the turbine compared with a free
+important role in overall blade loading. Note that in our case, blockage, though
+reasonably low, may be increasing flow through the turbine compared to a free
 case, which could mean $Re$ thresholds for free flows could be slightly higher,
 though a reliable blockage correction algorithm has not yet been agreed upon for
-CFTs \cite{Cavagnaro2014}.
+CFTs~ \cite{Cavagnaro2014}.
 
 If using scaled physical models to predict array performance, where turbine
 power output is measured, it may also be important to keep all turbines in the
@@ -973,23 +1017,287 @@ regime where the power coefficient varies linearly to avoid exaggerated power
 deficiencies for downstream turbines, despite similarities in wake
 characteristics. Results here also suggest that low Reynolds number physical
 model studies of turbine arrays may see exaggerated levels of wake recovery,
-leading to inadequate or inappropriate spacing or layouts.
+leading to inadequate or inappropriate spacing or \hl {layouts}.
+%please define CAREER, PI, NSF-CBET
 
+\vspace{6pt}
+\acknowledgments{\textbf{Acknowledgments:} The authors would like to acknowledge funding through a National Science
+Foundation CAREER %please define
+ award (PI %please define
+  Wosnik, NSF-CBET%please define
+ 1150797, program manager 
+Gregory L. Rorrer), a grant through the \linebreak Leslie S. Hubbard Marine Program
+Endowment to purchase acoustic flow measurement instrumentation and a grant for
+laboratory infrastructure upgrades through the U.S. Department of Energy.}
 
-\acknowledgements{Acknowledgements}
+\authorcontributions{\textbf{Author Contributions:} \hl{For research articles with several authors, a short paragraph specifying their individual contributions must be provided.}}
 
-The authors would like to acknowledge funding through a National Science
-Foundation CAREER award (PI Wosnik, NSF-CBET 1150797, program manager Dr.
-Gregory L. Rorrer), a grant through the Leslie S. Hubbard Marine Program
-Endowment to purchase acoustic flow measurement instrumentation, and a grant for
-laboratory infrastructure upgrades through the US Department of Energy.
+\conflictofinterests{\textbf{Conflicts of Interest:} The authors declare no conflict of interest.}
 
-\conflictofinterests{Conflicts of Interest}
-
-The authors declare no conflict of interest.
-
-
-\bibliography{library}
 \bibliographystyle{mdpi}
+\renewcommand\bibname{References}
+%\bibliography{library}
+%\bibliographystyle{mdpi}
+%
+%\begin{thebibliography}{999}
+%%\providecommand{\natexlab}[1]{#1}
+%
+%\end{thebibliography}
+
+\begin{thebibliography}{999}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[Acheson(1990)]{Acheson1990}
+Acheson, D.
+\newblock {\em Elementary Fluid Dynamics}; Oxford University Press: \hl{City, Country,} 1990.
+
+\bibitem[Baker and Brockie(1991)]{Baker1991}
+Baker, C.; Brockie, N.
+\newblock Wind tunnel tests to obtain train aerodynamic drag coefficients:
+ {R}eynolds number and ground simulation effects.
+\newblock {\em J. Wind Eng. Ind. Aerodyn.} {\bf
+ 1991}, {\em 38},~23--28.
+
+\bibitem[Paraschivoiu(2002)]{Para2002}
+Paraschivoiu, I.
+\newblock {\em Wind Turbine Design with Emphasis on Darrieus Concept}, 1st ed.;
+ Polytechnic International: Montreal, QC, Canada, 2002.
+
+\bibitem[Templin(1974)]{Templin1974}
+Templin, R.J.
+\newblock \emph{Aerodynamic Performance Theory for the NRC Vertical Axis Wind
+ Turbine};
+\newblock Technical Report LTR-LA-160; \hl {NRC (Please define)} of Canada: \hl{City, Country,} 1974.
+
+\bibitem[Fiedler and Tullis(2009)]{Fiedler2009}
+Fiedler, A.J.; Tullis, S.
+\newblock Blade offset and pitch effects on a high solidity vertical axis wind
+ turbine.
+\newblock {\em Wind~Eng.} {\bf 2009}, {\em 33},~237--246.
+
+\bibitem[Migliore \em{et~al.}(1980)Migliore, Wolfe, and Fanucci]{Migliore1980}
+Migliore, P.G.; Wolfe, W.P.; Fanucci, J.B.
+\newblock Flow curvature effects on {d}arrieus turbine blade aerodynamics.
+\newblock {\em J.~Energy} {\bf 1980}, {\em 4},~49--55.
+
+\bibitem[Blackwell \em{et~al.}(1976)Blackwell, Sheldahl, and
+ Feltz]{Blackwell1976}
+Blackwell, B.; Sheldahl, R.; Feltz, L.
+\newblock \emph{Wind Tunnel Performance Data for the {Darrieus} Wind Turbine with
+ {NACA} 0012 Blades};
+\newblock Report SAND76-0130; Sandia National Laboratories: Albuquerque, NM, USA,
+ 1976.
+
+\bibitem[Polagye \em{et~al.}(2013)Polagye, Cavagnaro, and
+ Niblick]{Polagye2013b}
+Polagye, B.L.; Cavagnaro, R.J.; Niblick, A.L.
+\newblock Micropower from tidal turbines.
+\newblock In Proceedings of the ASME Fluids Engineering Division Summer Meeting, \hl{City, Country,} \hl{Day Month} 2013.
+
+\bibitem[Bravo \em{et~al.}(2007)Bravo, Tullis, and Ziada]{Bravo2007}
+Bravo, R.; Tullis, S.; Ziada, S.
+\newblock Performance testing of a small vertical-axis wind turbine.
+\newblock In Proceedings of the 21st Canadian Congress of Applied Mechanics
+ CANCAM, \hl{City, Country,} \hl{Day Month} 2007.
+
+\bibitem[Bachant and Wosnik(2014)]{Bachant2014}
+Bachant, P.; Wosnik, M.
+\newblock Reynolds number dependence of cross-flow turbine performance and
+ near-wake characteristics.
+\newblock In Proceedings of the 2nd Marine Energy Technology Symposium METS2014, \hl{City, Country,} \hl{Day Month} 2014.
+
+\bibitem[Brochier \em{et~al.}(1986)Brochier, Fraunie, Beguier, and
+ Paraschivoiu]{Brochier1986}
+Brochier, G.; Fraunie, P.; Beguier, C.; Paraschivoiu, I.
+\newblock Water channel experiments of dynamic stall on darrieus wind turbine
+ blades.
+\newblock {\em AIAA J. Propuls. Power} {\bf 1986}, {\em
+ 2},~46--510.
+
+\bibitem[Fujisawa and Shibuya(2001)]{Fujisawa2001}
+Fujisawa, N.; Shibuya, S.
+\newblock Observations of dynamic stall on Darrieus wind turbine blades.
+\newblock {\em J. Wind Eng. Ind.~Aerodyn.} {\bf
+ 2001}, {\em 89},~201--214.
+
+\bibitem[Tescione \em{et~al.}(2014)Tescione, Ragni, He, Ferreira, and
+ G.J]{Tescione2014}
+Tescione, G.; Ragni, D.; He, C.; Ferreira, C.S.; G.J.
+\newblock Near wake flow analysis of a vertical axis wind turbine by
+ stereoscopic particle image velocimetery.
+\newblock {\em Renew. Energy} {\bf 2014}, {\em 70},~47--61.
+
+\bibitem[Krogstad and Adaramola(2012)]{Krogstad2012a}
+Krogstad, P.; Adaramola, M.S.
+\newblock Performance and near wake measurements of a model horizontal axis
+ wind turbine.
+\newblock {\em Wind Energy} {\bf 2012}, {\em 15},~743--756.
+
+\bibitem[Walker \em{et~al.}(2014)Walker, Flack, Lust, and Luznik]{Walker2014}
+Walker, J.M.; Flack, K.A.; Lust, E.E.; Luznik, M.P.S.L.
+\newblock Experimental and numerical studies of blade roughness and fouling on
+ marine current turbine performance.
+\newblock {\em Renew. Energy} {\bf 2014}, {\em 66},~257--267.
+
+\bibitem[McTavish \em{et~al.}(2013)McTavish, Feszty, and
+ Nitzsche]{McTavish2013}
+McTavish, S.; Feszty, D.; Nitzsche, F.
+\newblock Evaluating {R}eynolds number effects in small-scale wind turbine
+ experiments.
+\newblock {\em J. Wind Eng. Ind. Aerodyn.} {\bf 2013}, {\em 120},~81--90.
+
+\bibitem[Chamorro \em{et~al.}(2011)Chamorro, Arndt, and
+ Sotiropoulos]{Chamorro2011}
+Chamorro, L.P.; Arndt, R.E.A.; Sotiropoulos, F.
+\newblock Turbulent flow properties around a staggered wind farm.
+\newblock {\em Bound. Layer Meteorol.} {\bf 2011}, \emph{141}, 349--367.
+
+\bibitem[Chamorro and Porte-Agel(2011)]{Chamorro2011b}
+Chamorro, L.P.; Porte-Agel, F.
+\newblock Turbulent flow inside and above a wind farm: A wind-tunnel study.
+\newblock {\em Energies} {\bf 2011}, {\em 4}, 1916--1936.
+
+\bibitem[Goldenberg and Fekete(1983)]{Goldenberg1983}
+Goldenberg, J.; Fekete, G.
+\newblock Mean flow energy content of boundary layer downstream of
+ vertical-axis wind-turbine simulators.
+\newblock {\em J. Wind Eng. Ind. Aerodyn.} {\bf
+ 1983}, {\em 12},~1--14.
+
+\bibitem[Dabiri(2011)]{Dabiri2011}
+Dabiri, J.
+\newblock Potential order-of-magnitude enhancement of wind farm power density
+ via counter-rotating vertical-axis wind turbine arrays.
+\newblock {\em J. Renew. Sustain. Energy} {\bf 2011}, {\em
+ 3},~1--13.
+
+\bibitem[Kinzel \em{et~al.}(2012)Kinzel, Mulligan, and Dabiri]{Kinzel2012}
+Kinzel, M.; Mulligan, Q.; Dabiri, J.O.
+\newblock Energy exchange in an array of vertical-axis wind turbines.
+\newblock {\em J. Turbul.} {\bf 2012}, {\em 13},~1--13.
+
+\bibitem[Bachant and Wosnik(2015)]{Bachant2015-JoT}
+Bachant, P.; Wosnik, M.
+\newblock Characterising the near-wake of a cross-flow turbine.
+\newblock {\em J. Turbul.} {\bf 2015}, {\em 16},~392--410.
+
+\bibitem[Jacobs and Sherman(1937)]{Jacobs1937}
+Jacobs, E.N.; Sherman, A.
+\newblock \emph{Airfoil Section Characteristics as Affected by Variation of the
+ Reynolds Number};
+\newblock Technical Report; National Advisory Committee for Aeronautics: \hl{City, Country}, 1937.
+
+\bibitem[Lissaman(1983)]{Lissaman1983}
+Lissaman, P.B.S.
+\newblock Low-{R}eynolds-number airfoils.
+\newblock {\em Ann. Rev. Fluid Mech.} {\bf 1983}, {\em
+ 15},~223--239.
+
+\bibitem[McMasters and Henderson(1980)]{McMasters1980}
+McMasters, J.H.; Henderson, M.L.
+\newblock Low-speed single-element airfoil synthesis.
+\newblock {\em Tech. Soar.} {\bf 1980}, {\em 6},~1--21.
+
+\bibitem[Bedon \em{et~al.}(2014)Bedon, Antonini, Betta, Castelli, and
+ Benini]{Bedon2014}
+Bedon, G.; Antonini, E.G.; Betta, S.D.; Castelli, M.R.; Benini, E.
+\newblock Evaluation of the different aerodynamic databases for vertical axis
+ wind turbine simulations.
+\newblock {\em Renew. Sustain. Energy Rev.} {\bf 2014}, {\em 40}, 386--399.
+
+\bibitem[Bousman(2000)]{Bousman2000-evaluation}
+Bousman, W.G.
+\newblock Evaluation of airfoil dynamic stall characteristics for
+ maneuverability.
+\newblock In Proceedings of the 26th {E}uropean Rotorcraft Forum, \hl{City, Country,} \hl{Day Month} 2000.
+
+\bibitem[Singleton and Yeager(2000)]{Singleton2000}
+Singleton, J.D.; Yeager, W.T., Jr.
+\newblock Important scaling parameters for testing model-scale helicopter
+ rotors.
+\newblock {\em J.~Aircr.} {\bf 2000}, {\em 37},~396--402.
+
+\bibitem[Yoon \em{et~al.}(2005)Yoon, Hill, Balachandar, Adrian, and
+ Ha]{Yoon2005}
+Yoon, H.; Hill, D.; Balachandar, S.; Adrian, R.; Ha, M.
+\newblock Reynolds number scaling of flow in a Rushton turbine stirred tank.
+ Part I—Mean flow, circular jet and tip vortex scaling.
+\newblock {\em Chem. Eng. Sci.} {\bf 2005}, {\em 60},~3169--3183.
+
+\bibitem[Chamorro \em{et~al.}(2012)Chamorro, Arndt, and
+ Sotiropolous]{Chamorro2012}
+Chamorro, L.P.; Arndt, R.E.A.; Sotiropolous, F.
+\newblock Reynolds number dependence of turbulence statistics in the wake of
+ wind turbines.
+\newblock {\em Wind Energy} {\bf 2012}, {\em 15},~733--742.
+
+\bibitem[Neary \em{et~al.}(2014)Neary, Previsic, Jepsen, Lawson, Yu, Copping,
+ Fontaine, Hallett, and Murray]{Neary2014}
+Neary, V.S.; Previsic, M.; Jepsen, R.A.; Lawson, M.J.; Yu, Y.H.; Copping, A.E.;
+ Fontaine, A.A.; Hallett, K.C.; Murray, D.K.
+\newblock \emph{Methodology for Design and Economic Analysis of Marine Energy
+ Conversion ({MEC}) Technologies};
+\newblock Technical Report SAND2014-9040; Sandia National Laboratories: \hl{City, Country}, 2014.
+
+\bibitem[Cavagnaro and Polagye(2014)]{Cavagnaro2014}
+Cavagnaro, R.; Polagye, B.
+\newblock An evaluation of blockage corrections for a helical cross-flow
+ turbine.
+\newblock In~Proceedings of the 3rd Oxford Tidal Energy Workshop, \hl{City, Country,} \hl{Day Month} 2014.
+
+\bibitem[Bachant and Wosnik(2014)]{Bachant2014-RVAT-CAD}
+Bachant, P.; Wosnik, M.
+\newblock {UNH-RVAT CAD Models}.
+\newblock \hl {Fig\textbf{share}}. 
+%Is it necessary to make the type of share bold?
+Available online: 
+ \url{http://dx.doi.org/10.6084/m9.figshare.1062009} (accessed on \hl{Day Month} 2014).
+
+\bibitem[Bachant and Wosnik(2015)]{Bachant2015-RVAT-Re-dep-data}
+Bachant, P.; Wosnik, M.
+\newblock {UNH-RVAT} {R}eynolds Number Dependence Experiment: Reduced Dataset
+ and Processing Code.
+\newblock Fig\textbf{share}. Available online: 
+ \url{http://dx.doi.org/10.6084/m9.figshare.1286960} (accessed on \hl{Day Month} 2015).
+
+\bibitem[Coleman and Steele(2009)]{ColemanSteele}
+Coleman, H.W.; Steele, W.G.
+\newblock {\em Experimentation, Validation, and Uncertainty Analysis for
+ Engineers}, 3rd ed.; John~ Wiley \& Sons: \hl{ Hoboken, NJ, USA,} 2009.
+
+\bibitem[Drela(1989)]{Drela1989}
+Drela, M.
+\newblock XFOIL: An Analysis and Design System for Low Reynolds Number
+ Airfoils. In {\em Low Reynolds Number Aerodynamics}; Lecture Notes in Engineering; Springer Verlag: \hl{Berlin, Germany,} 1989;
+ Volume~54.
+
+\bibitem[Castelli \em{et~al.}(2011)Castelli, Garbo, and Benini]{Castelli2011}
+Castelli, M.R.; Garbo, F.; Benini, E.
+\newblock Numerical investigation of laminar to turbulent boundary layer
+ transition on a NACA 0012 airfoil for vertical-axis wind turbine
+ applications.
+\newblock {\em Wind Eng.} {\bf 2011}, {\em 35},~661--686.
+
+\bibitem[Marten \em{et~al.}(2013)Marten, Wendler, Pechlivanoglou, Nayeri, and
+ Paschereit]{Marten2013}
+Marten, D.; Wendler, J.; Pechlivanoglou, G.; Nayeri, C.; Paschereit, C.
+\newblock {QB}lade: An open source tool for design and simulation of horizontal
+ and vertical axis wind turbines.
+\newblock {\em Int. J. Emerg. Technol. Adv.
+ Eng.} {\bf 2013}, {\em 3},~264--269.
+
+\bibitem[Bachant and Wosnik(2015)]{Bachant2015-NACAXX20-XFOIL}
+Bachant, P.; Wosnik, M.
+\newblock NACA XX20 XFOIL Coefficients.
+\newblock Zenodo. Available online: \url{http://dx.doi.org/10.5281/zenodo.32054} (accessed on \hl{Day Month} 2015).
+
+\bibitem[Carmichael(1981)]{Carmichael1981}
+Carmichael, B.H.
+\newblock \emph{Low {R}eynolds Number Airfoil Survey Volume {I}}.
+\newblock Technical Report, National Aeronautics and Space Administration: \hl{City, Country},
+ 1981.
+
+\end{thebibliography}
+
 
 \end{document}
