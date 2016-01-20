@@ -1,3 +1,6 @@
 [submodule "RVAT-Re-dep"]
 	path = RVAT-Re-dep
 	url = git@github.com:UNH-CORE/RVAT-Re-dep.git
+[submodule "NACAXX20-XFOIL"]
+	path = NACAXX20-XFOIL
+	url = git@github.com:petebachant/NACAXX20-XFOIL.git
