@@ -129,25 +129,22 @@ hydrokinetic energy}; wind energy; {VAWT}; scale model}
 \section{Introduction}
 
 Scaled physical models are often used in science and engineering to approximate
-real-world systems. The principle of dynamic similarity allows for geometrically-scaled systems to be dynamically identical if certain nondimensional physical
-parameters are matched. In the case of fluid systems, the most important
-nondimensional parameter is often the Reynolds number, $Re$, which quantifies
-the importance of inertial forces over viscous forces on the flow physics
-\cite{Acheson1990}: \hl {$Re \equiv Ul/\nu$, } 
-%please check the symbol ``\equiv '' and make sure it is correct
-where $U$ and $l$ are characteristic
-velocity and length scales, respectively, and $\nu$ is the fluid kinematic
-viscosity. The~other common dynamical scale, for systems with a free
-surface, is the Froude number \hl {$Fr \equiv U/\sqrt{gl}$,}
-%please check the symbol ``\equiv '' and make sure it is correct
-  where $g$ is the
-gravitational acceleration. Matching both the Froude and Reynolds number is not
-possible for a scaled model in a given fluid, which is illustrated by the
-relation $Re = l^{3/2} g^{1/2} Fr / \nu$, since $Re$ scales linearly with $l$,
-or the geometric scale. In general, the geometric scale of a physical model is
-not necessarily the same as its dynamical scale. As such, hereafter, we will use
-the word ``scale'' to refer to this dynamical scale or the Reynolds number and
-assume the Froude number is small enough to be~ negligible.
+real-world systems. The principle of dynamic similarity allows for
+geometrically-scaled systems to be dynamically identical if certain
+nondimensional physical parameters are matched. In the case of fluid systems,
+the most important nondimensional parameter is often the Reynolds number, $Re$,
+which quantifies the importance of inertial forces over viscous forces on the
+flow physics \cite{Acheson1990}: $Re = Ul/\nu$, where $U$ and $l$ are
+characteristic velocity and length scales, respectively, and $\nu$ is the fluid
+kinematic viscosity. The~other common dynamical scale, for systems with a free
+surface, is the Froude number $Fr = U/\sqrt{gl}$, where $g$ is the gravitational
+acceleration. Matching both the Froude and Reynolds number is not possible for a
+scaled model in a given fluid, which is illustrated by the relation $Re =
+l^{3/2} g^{1/2} Fr / \nu$, since $Re$ scales linearly with $l$, or the geometric
+scale. In general, the geometric scale of a physical model is not necessarily
+the same as its dynamical scale. As such, hereafter, we will use the word
+``scale'' to refer to this dynamical scale or the Reynolds number and assume the
+Froude number is small enough to be negligible.
 
 With regards to wind and marine hydrokinetic (MHK) turbines, scaled physical
 models are used to validate predictive numerical models, predict full-scale
@@ -161,18 +158,16 @@ extrapolation of small-scale experiments can be found in \cite{Baker1991}.
 The performance and wake characteristics of cross-flow (vertical-axis) turbines
 depend on turbine solidity, blade profile (lift/drag, dynamic stall at reduced
 frequency of turbine rotation, symmetry, thickness, camber), blade pitch, number
-of blades, strut drag and operational parameters, such as tip speed ratio, {
- and} on the Reynolds number \cite{Para2002}. Note that an average blade chord
+of blades, strut drag and operational parameters, such as tip speed ratio---and
+on the Reynolds number \cite{Para2002}. Note that an average blade chord
 Reynolds number, $Re_{c,\mathrm{avg}} \approx \lambda U_\infty c/ \nu$, can be
-expressed in terms of tip speed ratio \hl {$\lambda \equiv \omega R/ U_\infty$, } 
-%please check the symbol ``\equiv '' and make sure it is correct
-where
+expressed in terms of tip speed ratio $\lambda = \omega R/ U_\infty$, where
 $U_\infty$ is the free stream velocity, $c$ is the blade chord length, $\nu$ is
 the fluid kinematic viscosity, $\omega$ is the rotor's angular velocity and $R$
 is the rotor radius. The value of $\lambda$ at which a turbine reaches peak
 performance in general decreases with turbine solidity $Nc/(\pi D)$
 \cite{Templin1974}, which allows for the use of a simpler Reynolds number based
-on turbine diameter $Re_D \equiv U_\infty D/\nu$.
+on turbine diameter $Re_D = U_\infty D/\nu$.
 
 Solidity often directly correlates with the chord-to-radius ratio $c/R$. Rotors
 with $c/R \ge 0.1$ are considered to have high solidity \cite{Fiedler2009}, for which
@@ -181,22 +176,22 @@ so-called flow curvature or virtual camber effects become significant
 paths and can complicate the comparison with the behavior of an airfoil in a linear
 flow.
 
-Blackwell \emph{et al.} \cite{Blackwell1976} investigated the effects of Reynolds
-number on the performance of a 2-m diameter Darrieus vertical-axis cross-flow
-wind turbine with NACA 0012 blades. By varying wind tunnel speed, the turbine
-was made to operate at an approximately constant blade chord Reynolds number $Re_c$
-ranging from $1 \times 10^5$ to $3 \times 10^5$. In this regime, the turbine
-power coefficient $C_P$ was shown to be sensitive to $Re_c$, with sensitivity
-diminishing at the higher Reynolds numbers, especially for turbines of lower
-solidity ($Nc/R$, where $N$ is the number of blades and $R$ is the turbine's
-maximum radius). More recently, Polagye and Cavagnaro \cite{Polagye2013b}
-observed significant Reynolds number sensitivity for a high solidity helical
-cross-flow turbine, and Bravo \emph{et al.} \cite{Bravo2007} observed the power
-coefficient of a straight-bladed VAWT to become Reynolds number independent at
-$Re_c \approx 4 \times 10^5$. Bachant and Wosnik \cite{Bachant2014} observed
-Reynolds number independence of the power coefficient at the optimal tip speed ratio for
-a high solidity cross-flow turbine at $Re_D \approx 10^6$ or
-$Re_{c,\mathrm{avg}} \approx 2 \times 10^5$.
+Blackwell \emph{et al.} \cite{Blackwell1976} investigated the effects of
+Reynolds number on the performance of a 2-m diameter Darrieus vertical-axis
+cross-flow wind turbine with NACA 0012 blades. By varying wind tunnel speed, the
+turbine was made to operate at an approximately constant blade chord Reynolds
+number $Re_c$ ranging from $1 \times 10^5$ to $3 \times 10^5$. In this regime,
+the turbine power coefficient $C_P$ was shown to be sensitive to $Re_c$, with
+sensitivity diminishing at the higher Reynolds numbers, especially for turbines
+of lower solidity ($Nc/R$, where $N$ is the number of blades and $R$ is the
+turbine's maximum radius). More recently, Polagye and Cavagnaro
+\cite{Polagye2013b} observed significant Reynolds number sensitivity for a high
+solidity helical cross-flow turbine, and Bravo \emph{et al.} \cite{Bravo2007}
+observed the power coefficient of a straight-bladed VAWT to become Reynolds
+number independent at $Re_c \approx 4 \times 10^5$. Bachant and Wosnik
+\cite{Bachant2014} observed Reynolds number independence of the power
+coefficient at the optimal tip speed ratio for a high solidity cross-flow
+turbine at $Re_D \approx 10^6$ or $Re_{c,\mathrm{avg}} \approx 2 \times 10^5$.
 
 The wake of a 2D cross-flow turbine in the dynamic stall regime has been
 studied via laser Doppler velocimetry by Brochier \emph{et al.} \cite{Brochier1986} and
@@ -967,17 +962,19 @@ to recover static pressure against the adverse pressure gradient, highlighted in
 We propose a method for predicting the Reynolds number dependence of a cross-flow
 turbine using static airfoil characteristics and turbine blade kinematics:
 \begin{enumerate}
-\item Acquire static lift and drag coefficient data for the desired blade
- profile.
-\item For azimuthal angles of 0 to 180 degrees and a given tip speed ratio,
- calculate the geometric angle of attack and relative velocity magnitude from
- the blade and undisturbed free stream velocity \hl {($\equiv 1$)} vectors.
- %please check this symbol
-\item With arrays of geometric angle of attack and relative velocity
- magnitude, calculate the blade chordwise force and then the rotor torque
- coefficient from Equations~(\ref{eq:ct}) and (\ref{eq:cc}), respectively.
-\item Extract the maximum value of $C_T$, and repeat this process for static
- foil data at multiple $Re$.
+    \item Acquire static lift and drag coefficient data for the desired blade
+    profile.
+
+    \item For azimuthal angles of 0 to 180 degrees and a given tip speed ratio,
+    calculate the geometric angle of attack and relative velocity magnitude from
+    the blade and undisturbed free stream velocity (taken as unity) vectors.
+
+    \item With arrays of geometric angle of attack and relative velocity
+    magnitude, calculate the blade chordwise force and then the rotor torque
+    coefficient from Equations~(\ref{eq:ct}) and (\ref{eq:cc}), respectively.
+
+    \item Extract the maximum value of $C_T$, and repeat this process for static
+    foil data at multiple $Re$.
 \end{enumerate}
 
 It was shown that the peak torque coefficient computed this way shows similar
