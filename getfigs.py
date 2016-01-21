@@ -7,8 +7,7 @@ import os
 import sys
 import shutil
 
-figdir = os.path.join(os.path.expanduser("~"), "Research",
-                      "Experiments", "RVAT Re dep", "Figures")
+figdir = os.path.join("RVAT-Re-dep", "Figures")
 
 figlist = ["cp_curves.pdf",
            "cd_curves.pdf",
@@ -17,8 +16,6 @@ figlist = ["cp_curves.pdf",
            "mom_bar_graph.pdf",
            "wake_spectra.pdf",
            "wake_trans_totals.pdf",
-           "meancontquiv_10.pdf",
-           "k_contours_10.pdf",
            "mean_u_k_profiles.pdf"]
 
 for fig in figlist:
