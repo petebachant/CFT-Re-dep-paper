@@ -24,8 +24,7 @@ for fig in figlist:
     shutil.copy2(os.path.join(figdir, fig), os.path.join("figures", fig))
 
 
-figdir = os.path.join(os.path.expanduser("~"), "Google Drive", "Research",
-                      "Foils", "Data", "NACAXX20_QBlade", "figures")
+figdir = os.path.join("NACAXX20-XFOIL", "figures")
 
 figlist = ["all_foils_re_dep.pdf",
            "cft_re_dep_foils.pdf",
