@@ -44,6 +44,8 @@
 \usepackage{multirow}
 \usepackage{soul}
 \usepackage{microtype}
+\usepackage{caption}
+\usepackage{subcaption}
 \def \p{\partial}
 \def \d{\mathrm{d}}
 \def \D{\mathrm{D}}
@@ -367,16 +369,25 @@ controller. Additional details of the turbine and experimental setup are
 described in \cite{Bachant2015-JoT}.
 
 \begin{figure}[H]
- \centering
+    \centering
+    \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[width=0.7\textwidth]{figures/exp-setup-photo}
+        \caption{}
+        \label{fig:exp-setup-photo}
+    \end{subfigure}
 
- \includegraphics[width=0.7\textwidth]{figures/exp-setup-photo}
+    \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[width=0.7\textwidth]{figures/exp_setup_drawing}
+        \caption{}
+        \label{fig:exp-setup-dwg}
+    \end{subfigure}
+    
+    \caption{Experimental setup photo (a) and drawing (b): turbine test bed
+        installed in the UNH tow tank.}
  
- \includegraphics[width=0.7\textwidth]{figures/exp_setup_drawing}
- 
- \caption{\hl {Experimental} setup: turbine test bed installed in the UNH tow tank.}
- %please mark (a) and (b) in the figure and label (a) and (b) in the figure caption.
- 
- \label{fig:exp-setup}
+    \label{fig:exp-setup}
 \end{figure}
 
 
