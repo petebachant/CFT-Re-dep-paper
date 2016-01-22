@@ -1,7 +1,5 @@
 #!/usr/bin/env python
-"""
-This script zips up all the necessary source files to compile the paper.
-"""
+"""This script zips up all the necessary source files to compile the paper."""
 
 from zipfile import ZipFile
 from subprocess import check_output
