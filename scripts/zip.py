@@ -11,9 +11,11 @@ import os
 version = check_output(["git", "describe"]).strip().decode()
 
 figures = ["figures/" + f for f in os.listdir("figures")
-           if f not in ["SolidWorks", "McMasters-Henderson-1980"]]
+           if f not in ["SolidWorks",
+                        "McMasters-Henderson-1980",
+                        "McMasters-Henderson-1980.PNG"]]
 
-files = ["paper.tex", "library.bib", "mdpi.bst", "mdpi.cls"]
+files = ["paper.tex", "mdpi.bst", "mdpi.cls"]
 
 with ZipFile("archive/paper-{}.zip".format(version), "w") as f:
     for fig in figures:
