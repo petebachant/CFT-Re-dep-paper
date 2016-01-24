@@ -13,7 +13,8 @@ figures = ["figures/" + f for f in os.listdir("figures")
                         "McMasters-Henderson-1980",
                         "McMasters-Henderson-1980.PNG"]]
 
-files = ["paper.tex", "mdpi.bst", "mdpi.cls"]
+files = ["paper.tex", "mdpi.bst", "mdpi.cls", "logo-ccby.png", "logo-mdpi.png",
+         "energies-logo.png"]
 
 with ZipFile("archive/paper-{}.zip".format(version), "w") as f:
     for fig in figures:
