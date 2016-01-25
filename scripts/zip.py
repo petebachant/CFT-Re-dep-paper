@@ -11,7 +11,8 @@ version = check_output(["git", "describe"]).strip().decode()
 figures = ["figures/" + f for f in os.listdir("figures")
            if f not in ["SolidWorks",
                         "McMasters-Henderson-1980",
-                        "McMasters-Henderson-1980.PNG"]]
+                        "McMasters-Henderson-1980.PNG",
+                        "summary"]]
 
 files = ["paper.tex", "mdpi.bst", "mdpi.cls", "logo-ccby.png", "logo-mdpi.png",
          "energies-logo.png", "graphical-abstract.png"]
