@@ -93,7 +93,8 @@ Colovos Rd., \mbox{Durham, NH 03824, USA}}
 % Contact information of the corresponding author (Add [2] after \corres if
 % there are more than one corresponding author.)
 \corres[2]{\hspace{-1em} Correspondence: pxL3@unh.edu (P.B.);
-    martin.wosnik@unh.edu (M.W.); \linebreak Tel.: +1-603-862-1891 (M.W.)}
+    martin.wosnik@unh.edu (M.W.); \linebreak Tel.: +1-603-862-1891 \hl {(M.W.)}}
+    %please also provide the author (P.B.)'s office number. and please also pay attention to the keywords section, can we define VAWT as vertical-axis wind turbine?
 
 %\linenumbers
 
@@ -118,7 +119,7 @@ Colovos Rd., \mbox{Durham, NH 03824, USA}}
 
 % Keywords: add 3 to 10 keywords
 \keyword{\textls[-10]{Reynolds number; cross-flow turbine; turbine performance; marine
-hydrokinetic energy}; wind energy; {VAWT}; scale model}
+hydrokinetic energy}; wind energy; {vertical-axis wind turbine (VAWT)}; scale model}
 
 % The fields PACS, MSC, and JEL may be left empty or commented out if not
 % applicable
@@ -147,7 +148,7 @@ l^{3/2} g^{1/2} Fr / \nu$, since $Re$ scales linearly with $l$, or the geometric
 scale. In general, the geometric scale of a physical model is not necessarily
 the same as its dynamical scale. As such, hereafter, we will use the word
 ``scale'' to refer to this dynamical scale or the Reynolds number and assume the
-Froude number is small enough to be negligible.
+Froude number is small enough to be~ negligible.
 
 With regards to wind and marine hydrokinetic (MHK) turbines, scaled physical
 models are used to validate predictive numerical models, predict full-scale
@@ -191,7 +192,7 @@ of lower solidity ($Nc/R$, where $N$ is the number of blades and $R$ is the
 turbine's maximum radius). More recently, Polagye and Cavagnaro
 \cite{Polagye2013b} observed significant Reynolds number sensitivity for a high
 solidity helical cross-flow turbine, and Bravo \emph{et al.} \cite{Bravo2007}
-observed the power coefficient of a straight-bladed VAWT to become Reynolds
+observed the power coefficient of a straight-bladed \hl {vertical-axis wind turbine (VAWT)} to become Reynolds
 number independent at $Re_c \approx 4 \times 10^5$. Bachant and Wosnik
 \cite{Bachant2014} observed Reynolds number independence of the power
 coefficient at the optimal tip speed ratio for a high solidity cross-flow
@@ -372,20 +373,20 @@ described in \cite{Bachant2015-JoT}.
     \centering
     \begin{subfigure}[t]{\textwidth}
         \centering
-        \includegraphics[width=0.7\textwidth]{figures/exp-setup-photo}
+        \includegraphics[width=0.6\textwidth]{figures/exp-setup-photo}
         \caption{}
         \label{fig:exp-setup-photo}
     \end{subfigure}
 
     \begin{subfigure}[t]{\textwidth}
         \centering
-        \includegraphics[width=0.7\textwidth]{figures/exp_setup_drawing}
+        \includegraphics[width=0.6\textwidth]{figures/exp_setup_drawing}
         \caption{}
         \label{fig:exp-setup-dwg}
     \end{subfigure}
     
     \caption{Experimental setup photo (a) and drawing (b): turbine test bed
-        installed in the UNH tow tank.}
+        installed in the UNH tow~ tank.}
  
     \label{fig:exp-setup}
 \end{figure}
@@ -439,7 +440,7 @@ tow speeds used in the experiment.}
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.9\textwidth]{figures/turbine_coordinate_system}
+\includegraphics[width=0.8\textwidth]{figures/turbine_coordinate_system}
 
 \caption{Wake measurement coordinate system and locations. Dimensions are in
  meters.}
@@ -593,8 +594,8 @@ the suppression or reattachment of the laminar separation bubble
 \centering
 
 \includegraphics[width=0.9\textwidth]{figures/perf_re_dep}
-
-\caption{UNH-RVAT measured mean power \textbf{(a)} and drag \textbf{(b)}
+%Please use scientific notation in the figure. for instance, please revise 1e6 to \times 10^6
+\caption{\hl {UNH-RVAT} measured mean power (\textbf{a}) and drag (\textbf{b})
     coefficients at $\lambda=1.9$ plotted \textit{versus} the Reynolds number. Error
     bars indicate expanded uncertainty estimates for 95\% confidence, which for
     $C_P$ is dominated by systematic error estimates from the torque transducer
@@ -624,7 +625,7 @@ airfoil analysis, e.g., \cite{Castelli2011, Walker2014}, implemented as part of
 the open source turbine design software QBlade \cite{Marten2013}. Simulations
 were run for an angle of attack range of 0$^{\circ}$ to 40$^{\circ}$, in
 increments of 0.5$^{\circ}$. Solver parameters used were 100 panels, a fixed
-speed, zero Mach number, \texttt{NCrit = 9} (default $\mathrm{e}^n$ transition
+speed, zero Mach number, \linebreak \texttt{NCrit = 9} (default $\mathrm{e}^n$ transition
 criteria parameter for an average wind tunnel) and no forced boundary layer
 transition. Characteristics were computed for the approximate average blade
 chord Reynolds numbers encountered in the tow tank experiments.
@@ -650,9 +651,9 @@ and processing code for these calculations is available from
     \centering
     
     \includegraphics[width=0.9\textwidth]{figures/all_foils_re_dep}
-    
-    \caption{Normalized maximum lift coefficient \textbf{(a)}, drag coefficient
-        \textbf{(b)}, and lift-to-drag ratio \textbf{(c)} computed by XFOIL at
+ % Please use scientific notation in the figure. for instance, please revise 1e5 to \times 10^5 
+    \caption{\hl {Normalized maximum} lift coefficient (\textbf{a}), drag coefficient
+        (\textbf{b}), and lift-to-drag ratio (\textbf{c}) computed by XFOIL at
         various $Re_c$  for each profile.}
     
     \label{fig:foil-Re-dep}
@@ -694,8 +695,8 @@ contribution to the torque coefficient.
 
     \includegraphics[width=0.9\textwidth]{figures/foil_kinematics_ct}
 
-    \caption{Geometric angle of attack \textbf{(a)}, relative velocity
-        \textbf{(b)},  and torque coefficient \textbf{(c)} calculated with a NACA
+    \caption{Geometric angle of attack (\textbf{a}), relative velocity
+        (\textbf{b}),  and torque coefficient (\textbf{c}) calculated with a NACA
         0020 foil operating at $\lambda=1.9$.}
 
     \label{fig:blade-kinematics}
@@ -725,8 +726,8 @@ computed this way behaves much like that of the measured turbine performance.
     \centering
 
     \includegraphics[width=0.8\textwidth]{figures/cft_re_dep_foils}
-
-    \caption{Reynolds number dependence of the normalized peak torque
+%Please use scientific notation in the figure. for instance, please revise 1e6 to \times 10^6
+    \caption{\hl {Reynolds} number dependence of the normalized peak torque
         coefficient calculated from static foil coefficients and blade kinematics,
         compared to experimental data from a cross-flow turbine. Note that the
         experimental data represents the mean torque coefficient, not the maximum.}
@@ -786,8 +787,8 @@ govern the downstream evolution of mean momentum and kinetic energy.
  
     \includegraphics[width=0.85\textwidth]{figures/mean_u_k_profiles}
  
-     \caption{Mean streamwise velocity \textbf{(a)} and turbulence kinetic
-         energy \textbf{(b)} profiles at $z/H=0.0$. Turbine diameter Reynolds number
+     \caption{Mean streamwise velocity (\textbf{a}) and turbulence kinetic
+         energy (\textbf{b}) profiles at $z/H=0.0$. Turbine diameter Reynolds number
          $Re_D$ is indicated by the legend.}
 
     \label{fig:profiles}
@@ -1050,7 +1051,7 @@ leading to inadequate or inappropriate spacing or layouts.
     (principal investigator Martin Wosnik, NSF 1150797, Energy for Sustainability,
     program manager Gregory L. Rorrer), a grant through the Leslie S. Hubbard Marine
     Program Endowment to purchase acoustic flow measurement instrumentation, and a
-    grant for laboratory infrastructure upgrades through the U.S. Department of
+    grant for laboratory infrastructure upgrades through the U.S. Department of~
     Energy.}
 
 \authorcontributions{\textbf{Author Contributions:} Peter Bachant conducted the
